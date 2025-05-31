@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root {
+    --color-accent2: #e8ebc8;
+    --color-accent: #b2af98;
+    --color-dark: #1B1511;
+    --color-light: #fbfffa;
+
+    /*Fonts*/
+    --font-questrial: 'Questrial', sans-serif;
+
+
+    --font-serif: 'Playfair Display', serif;
+  }
+
+
+
+  .questrial-regular {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }

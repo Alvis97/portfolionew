@@ -1,0 +1,38 @@
+.DarkmodeBtn {
+    padding: 15px 15px;
+    border: 1px solid var(--color-light);
+    border-radius: 50%;
+    background-color: rgba(255, 192, 203, 0);
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+  
+    span {
+      display: inline-block;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .fadeIn {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      pointer-events: auto;
+    }
+  
+    .fadeOut {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+      pointer-events: none;
+    }
+  }
+  
