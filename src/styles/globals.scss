@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root {
+    --color-accent2: #e8ebc8;
+    --color-accent: #b2af98;
+    --color-dark: #1B1511;
+    --color-light: #fbfffa;
+
+    /*Fonts*/
+    --font-questrial: 'Questrial', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+  }
+
+  .questrial-regular {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  main{
+    margin: 0;
+  }
+  
+  .App-body{
+    background-color: var(--color-light);
+    height: 400px;
+    margin: 0;
+  }
+  
+  .App-body.dark{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  } 
+
+
+  /*Navigation*/
+
+  .parent{
+    background-color: var( --color-light);
+    background-color: rgba(255, 192, 203, 0);
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.parent.dark{
+    background-color: var( --color-dark);
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+}
+
+.linkWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+  
+    .link {
+      text-decoration: none;
+      font-family: var(--font-questrial);
+      letter-spacing: 2px;
+      color: var(--color-dark); 
+      position: relative;
+      padding-bottom: 1px;
+    }
+
+    body.dark & .link {
+      color: var(--color-light); 
+    }
+  
+    .underline {
+      height: 1px;
+      width: 0%;
+      background-color: var(--color-dark);
+      transition: width 0.3s ease;
+      transform-origin: center;
+    }
+
+    body.dark & .underline{
+      background-color: var(--color-light);
+    }
+  
+    &:hover .underline {
+      width: 100%;
+    }
+  }
+  
+
+.menuButton{
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: #fbfffa00;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: white;
+    fill: white;
+
+    &.open{
+      transform: rotate(90deg);
+    }
+}
+
+.menuIcon{
+  stroke: var(--color-dark);
+
+  body.dark &{
+    stroke: var(--color-light);
+  }
+}
+
+.hamburger{
+  background-color: var(--color-light) 0.8;
+  backdrop-filter: blur(10px); // this blurs the background *behind* the element
+  -webkit-backdrop-filter: blur(10px);
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  top: 50px;
+  left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  transform: translateY(-10px);
+  transition:  opacity 1s ease, transform 1s ease;
+  opacity: 0;
+}
+
+.hamburger.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.hamburgerLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: right;
+  height: 200px;
+  width: 80vw;
+  margin: auto;
+  position: relative;
+
+  a{
+    color: var(--color-dark);
+    text-decoration: none;
+    font-family: var(--font-questrial);
+    letter-spacing: 2px;
+    font-size: 34px;
+    position: relative;
+    transition: transform 0.2s ease;
+    filter: blur(0);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+body.dark a {
+  color: var(--color-light);
+}
+
+.selector{
+  rotate: -90deg;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.hoverIcon {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  .selector {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover .selector {
+    opacity: 1;
+  }
+}
+
+@media  screen and (max-width: 800px) {
+
+    .menuButton{
+        display:block;
+    }
+
+    .links{
+      display: none;
+    }
+}
+
+.icon {
+  stroke: var(--color-dark); // Light mode
+}
+
+body.dark .icon {
+  stroke: var(--color-light); // Dark mode
+}
+
+
+

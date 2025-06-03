@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
 import NavBar from './components/NavBar';
-import './styles/globals.module.css';
+import './styles/globals.scss';
 
 function App() {
   return (
@@ -9,6 +8,9 @@ function App() {
       <header className="App-header">
        <NavBar/>
       </header>
+      <body className='App-body'>
+        <h1>hello</h1>
+      </body>
     </div>
   );
 }

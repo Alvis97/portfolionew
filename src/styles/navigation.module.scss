@@ -1,5 +1,6 @@
 .parent{
-    background-color: var( --color-dark);
+    //background-color: var( --color-light);
+    background-color: rgba(255, 192, 203, 0);
     height: 40px;
     width: 100vw;
     position: fixed;
@@ -9,6 +10,10 @@
     margin: 0;
     padding: 0 20px;
     box-sizing: border-box;
+}
+
+body.dark .parent{
+    //background-color: var( --color-dark);
 }
 
 .links{
@@ -27,7 +32,7 @@
   
     a {
       text-decoration: none;
-      font-family: var(--font-questrial);
+      //font-family: var(--font-questrial);
       letter-spacing: 2px;
       color: var(--color-light); // Optional
       position: relative;
@@ -37,7 +42,7 @@
     .underline {
       height: 1px;
       width: 0%;
-      background-color: var(--color-light);
+      //background-color: var(--color-light);
       transition: width 0.3s ease;
       transform-origin: center;
     }
@@ -49,7 +54,7 @@
   
 
 .menuButton{
-    background-color: orange;
+   // background-color: orange;
     display: none;
 
 }
@@ -57,7 +62,7 @@
 @media  screen and (max-width: 800px) {
 
     .menuButton{
-        background-color: orange;
+       // background-color: orange;
         display:block;
     
     }
