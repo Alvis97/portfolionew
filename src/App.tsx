@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import './styles/globals.scss';
+import HomeSection from './components/HomeSection';
 
 function App() {
   return (
@@ -8,9 +9,9 @@ function App() {
       <header className="App-header">
        <NavBar/>
       </header>
-      <body className='App-body'>
-        <h1>hello</h1>
-      </body>
+      <main className="App-body">
+  <HomeSection/>
+</main>
     </div>
   );
 }

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kapakana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
 :root {
     --color-accent2: #e8ebc8;
@@ -9,6 +11,8 @@
     /*Fonts*/
     --font-questrial: 'Questrial', sans-serif;
     --font-serif: 'Playfair Display', serif;
+    --font-kapakana: 'Kapakana', cursive;
+    --font-onest: "Onest", sans-serif;
   }
 
   .questrial-regular {
@@ -17,27 +21,78 @@
     font-style: normal;
   }
 
+  .onest {
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 2px;
+  }
+
+
+  .kapakana {
+    font-family: "Kapakana", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  h2{
+    font-family: var(--font-kapakana);
+  }
+
+  h1{
+     font-family: var(--font-onest);
+  }
+
+  h3{
+    font-family: var(--font-questrial);
+  }
+
+  h4{
+    font-family: var(--font-questrial);
+    border: 1px solid var(--color-dark);
+    padding: 7px 12px;
+    border-radius: 30px;
+  }
+
   main{
+    margin: 0;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .App{
     margin: 0;
   }
   
   .App-body{
     background-color: var(--color-light);
-    height: 400px;
+    width: 100vw;
+    height: 100%;
     margin: 0;
+    margin-top: 0;
+    z-index: 0;
   }
   
-  .App-body.dark{
+  body.dark .App-body{
     background-color: var(--color-dark);
     color: var(--color-light);
   } 
+
+  a{
+    font-family: var(--font-questrial);
+  }
 
 
   /*Navigation*/
 
   .parent{
     background-color: var( --color-light);
-    background-color: rgba(255, 192, 203, 0);
     height: 50px;
     width: 100vw;
     position: fixed;
@@ -47,11 +102,13 @@
     margin: 0;
     padding: 0 20px;
     box-sizing: border-box;
+    z-index: 5000;
 }
 
-.parent.dark{
-    background-color: var( --color-dark);
+body.dark .parent{
+  background-color: var( --color-dark);
 }
+
 
 .links{
     display: flex;
@@ -206,13 +263,6 @@ body.dark a {
     }
 }
 
-.icon {
-  stroke: var(--color-dark); // Light mode
-}
-
-body.dark .icon {
-  stroke: var(--color-light); // Dark mode
-}
 
 
 

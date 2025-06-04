@@ -1,0 +1,33 @@
+.parent{
+width: 100vw;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.cirkle{
+    background-color:rgba(188, 152, 152, 0.27);
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    filter: blur(50px);
+}
+
+.textContent{
+    position: absolute;
+    text-align: center;
+}
+
+.category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cities{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
