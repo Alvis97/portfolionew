@@ -11,7 +11,7 @@ function DarkMode() {
           document.body.classList.toggle('dark', newMode); 
           localStorage.setItem('theme', newMode ? 'dark' : 'light');
           return newMode;
-        });
+        }, );
       };
 
     useEffect(() => {
@@ -20,7 +20,7 @@ function DarkMode() {
             setIsDarkmodeSelected(true);
             document.body.classList.add('dark');
         }
-    })  
+    }, []);  
 
   return (
     <div>
