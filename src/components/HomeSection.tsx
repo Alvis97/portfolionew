@@ -15,10 +15,10 @@ function HomeSection() {
                 <h3>Web3</h3>
             </span>
             <span className={HomeStyle.hearts}>
-                <LogoLarge/>
-                <LogoLarge/>
-                <LogoLarge/>
-                <LogoLarge/>
+                <LogoLarge className={HomeStyle.heart1}/>
+                <LogoLarge className={HomeStyle.heart2}/>
+                <LogoLarge className={HomeStyle.heart3}/>
+                <LogoLarge className={HomeStyle.heart1}/>
             </span>
             <span className={HomeStyle.cities}>
                 <h4>London</h4>
