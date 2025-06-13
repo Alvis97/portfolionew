@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import './styles/globals.scss';
 import HomeSection from './components/HomeSection';
 import Footer from './components/Footer';
+import About from './components/About';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
        <NavBar/>
       </header>
       <main className="App-body">
-  <HomeSection/>
+  <HomeSection isDarkmodeSelected={false}/>
+  <About/>
 
 </main>
      <Footer/>

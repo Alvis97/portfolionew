@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import  "../styles/globals.scss"
+import navStyle from "../styles/navigation.module.scss"
 import LogoSmall from "../components/LogoSmall"
 import DarkMode from '../components/Darkmode';
 import LogoLarge from './LogoLarge';
@@ -14,45 +14,47 @@ function NavBar() {
     };
 
   return (
-    <div className="parent"> 
+    <div className={navStyle.parent}> 
 
             <LogoSmall/>
 
-            <span className="links">
-            <div className="linkWrapper">
-                <a href="" className="link">Home</a>
-                <span className="underline"></span>
+            <span className={navStyle.links}>
+            <div className={navStyle.linkWrapper}>
+                <a href="" className={navStyle.link}>Home</a>
+                <span className={navStyle.underline}></span>
             </div>
-            <div className="linkWrapper">
-                <a href="" className="link">About</a>
-                <span className="underline"></span>
+            <div className={navStyle.linkWrapper}>
+                <a href="" className={navStyle.link}>About</a>
+                <span className={navStyle.underline}></span>
             </div>
-            <div className="linkWrapper">
-                <a className="link" href="">Projects</a>
-                <span className="underline"></span>
+            <div className={navStyle.linkWrapper}>
+                <a className={navStyle.link} href="">Projects</a>
+                <span className={navStyle.underline}></span>
             </div>
             </span>
 
             <DarkMode/>
 
-            <button onClick={handleMenuClick} className={`menuButton ${isMenuOpen ? 'open' : ''}`}>
-             <Menu className='menuIcon'/>
+            <button 
+            onClick={handleMenuClick} 
+            className={`${navStyle.menuButton} ${isMenuOpen ? 'open' : ''}`}>
+             <Menu className={navStyle.menuIcon}/>
             </button>
         
-            <div className={`hamburger ${isMenuOpen ? 'open' : ''}` }>
-           <div className="hamburgerLinks">
+            <div className={`${navStyle.hamburger} ${isMenuOpen ? 'open' : ''}`}>
+           <div className={navStyle.hamburgerLinks}>
             
-            <span className="hoverIcon">
-                <LogoSmall className="selector"/>
+            <span className={navStyle.hoverIcon}>
+                <LogoSmall className={navStyle.selector}/>
                  <a href="">Home</a>
             </span> 
-            <span className="hoverIcon">
-                <LogoSmall className='selector'/> 
+            <span className={navStyle.hoverIcon}>
+                <LogoSmall className={navStyle.selector}/> 
                 <a href="">About</a>
             </span> 
 
-            <span className="hoverIcon">
-                <LogoSmall className='selector'/>
+            <span className={navStyle.hoverIcon}>
+                <LogoSmall className={navStyle.selector}/>
                 <a href="">Projects</a>
             </span> 
            
@@ -60,6 +62,7 @@ function NavBar() {
 
             </div>
          
+
     </div>
   )
 }

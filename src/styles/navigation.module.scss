@@ -1,69 +1,142 @@
-.parent{
-    //background-color: var( --color-light);
-    background-color: rgba(255, 192, 203, 0);
-    height: 40px;
-    width: 100vw;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
+@import './mixins';
 
-body.dark .parent{
-    //background-color: var( --color-dark);
+/*Navigation*/
+.parent{
+@include navigationBackground();
 }
 
 .links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
 }
 
 .linkWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: fit-content;
-  
-    a {
-      text-decoration: none;
-      //font-family: var(--font-questrial);
-      letter-spacing: 2px;
-      color: var(--color-light); // Optional
-      position: relative;
-      padding-bottom: 1px;
-    }
-  
-    .underline {
-      height: 1px;
-      width: 0%;
-      //background-color: var(--color-light);
-      transition: width 0.3s ease;
-      transform-origin: center;
-    }
-  
-    &:hover .underline {
-      width: 100%;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+
+  .link {
+  @include link-styles();
   }
-  
 
-.menuButton{
-   // background-color: orange;
-    display: none;
+  .underline {
+  @include underline-effect();
+  }
 
+  &:hover .underline {
+    width: 100%;
+  }
 }
 
-@media  screen and (max-width: 800px) {
 
-    .menuButton{
-       // background-color: orange;
-        display:block;
-    
-    }
+.menuButton{
+  display: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: #fbfffa00;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: white;
+  fill: white;
+
+  &.open{
+    transform: rotate(90deg);
+  }
+}
+
+.menuIcon{
+stroke: var(--color-dark);
+
+body.dark &{
+  stroke: var(--color-light);
+}
+}
+
+.hamburger{
+background-color: var(--color-light) 0.95;
+backdrop-filter: blur(80px); // this blurs the background *behind* the element
+-webkit-backdrop-filter: blur(10px);
+height: 100vh;
+width: 100vw;
+box-sizing: border-box;
+top: 58px;
+left: 0;
+position: absolute;
+display: flex;
+justify-content: right;
+text-align: right;
+transform: translateY(-5px);
+transition:  opacity 1s ease, transform 1s ease;
+opacity: 0;
+}
+
+.hamburger.open {
+opacity: 1;
+transform: translateY(0);
+pointer-events: auto;
+}
+
+.hamburgerLinks{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: right;
+height: 200px;
+width: 80vw;
+margin: auto;
+position: relative;
+
+a{
+  color: var(--color-dark);
+  text-decoration: none;
+  font-family: var(--font-questrial);
+  letter-spacing: 2px;
+  font-size: 34px;
+  position: relative;
+  transition: transform 0.2s ease;
+  filter: blur(0);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+}
+
+body.dark a {
+color: var(--color-light);
+}
+
+.selector{
+rotate: -90deg;
+height: 40px;
+margin-right: 10px;
+}
+
+.hoverIcon {
+display: flex;
+justify-content: right;
+align-items: center;
+
+.selector {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+&:hover .selector {
+  opacity: 1;
+}
+}
+
+@media  screen and (max-width: 768px) {
+
+  .menuButton{
+      display:block;
+  }
+
+  .links{
+    display: none;
+  }
 }

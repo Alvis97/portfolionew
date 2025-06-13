@@ -1,33 +1,37 @@
 import React from 'react'
-import HomeStyle from "../styles/homeStyle.module.scss";
+import homeStyle from "../styles/home.module.scss";
 import LogoLarge from './LogoLarge';
 
-function HomeSection() {
+interface HomeSectionProps {
+    isDarkmodeSelected: boolean;
+};
+
+const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
   return (
-    <div className={HomeStyle.parent}>
-        <div className={HomeStyle.cirkle}></div>
-        <div className={HomeStyle.textContent}>
-            <h2>Alva Jonsson</h2>
-            <h1>WEB & GRAPHICS</h1>
-            <span className={HomeStyle.category}>
-                <h3>Web2</h3>
-                <h3>Graphics</h3>
-                <h3>Web3</h3>
-            </span>
-            <span className={HomeStyle.hearts}>
-                <LogoLarge className={HomeStyle.heart1}/>
-                <LogoLarge className={HomeStyle.heart2}/>
-                <LogoLarge className={HomeStyle.heart3}/>
-                <LogoLarge className={HomeStyle.heart1}/>
-            </span>
-            <span className={HomeStyle.cities}>
-                <h4>London</h4>
-                <h4>Örebro</h4>
-            </span>
+    <section className={`${homeStyle.homeSection} ${isDarkmodeSelected ? homeStyle.dark : ''}`}>
+        <div   className={homeStyle.circle}></div>
+        <div  className={homeStyle.textContent}>
+            <span   className={homeStyle.name}>Alva Jonsson</span>
+            <span  className={homeStyle.topic}>WEB & GRAPHICS</span>
+            <div  className={homeStyle.category}>
+                <span>Web2</span>
+                <span>Graphics</span>
+                <span>Web3</span>
+            </div>
+            <div  className={homeStyle.hearts}>
+            <LogoLarge className={`${homeStyle.heart1} ${homeStyle.heart}`} />
+            <LogoLarge className={`${homeStyle.heart2} ${homeStyle.heart}`} />
+            <LogoLarge className={`${homeStyle.heart3} ${homeStyle.heart}`} />
+            <LogoLarge className={`${homeStyle.heart2} ${homeStyle.heart}`} />
+            </div>
+            <div  className={homeStyle.cities}>
+                <span>London</span>
+                <span>Örebro</span>
+            </div>
 
         </div>
       
-    </div>
+    </section>
   )
 }
 

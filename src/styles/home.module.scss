@@ -1,0 +1,258 @@
+@import './mixins';
+  
+  //Home Page
+  .homeSection{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    }
+    
+    .textContent{
+        position: absolute;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+    }
+    
+    .category{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        margin: 0 auto 20px auto;
+    }
+    
+    .cities{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 50%;
+     margin: auto;
+    }
+
+    .circle{
+      @include circle();
+      height: 500px;
+      width: 500px;
+    }
+    
+    .hearts{
+        display: flex;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .heart{
+      height: 170px;
+      width: 220px;
+      padding: -50px;
+      margin: -20px;
+    }
+    
+    .heart2{
+        rotate: -130deg;
+        position: relative;
+        top: -15px;
+        margin: 0px;
+        padding: -50px;
+        margin: 0 -18px 0 -26px;
+    }
+    
+    .heart3{
+        rotate: 180deg;
+        position: relative;
+        top: -7px;
+        margin: 0px;
+        padding: -50px;
+        margin: -20px;
+    }
+
+  .name{
+    @include name();
+  }
+
+.topic{
+     font-family: var(--font-onest);
+     font-size: 74px;
+     font-weight:500;
+     margin: 0px;
+  }
+
+  .category span{
+     @include categoryText();
+  }
+
+  .cities span{
+    font-family: var(--font-questrial);
+    border: 1px solid var(--color-dark);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  body.dark .cities span{
+    border: 1px solid var(--color-light);
+  }
+
+  @media  screen and (max-width: 880px) {
+    .topic{
+      font-size: 62px;
+   }
+
+    .name{
+      font-size: 48px;
+    }
+
+    .category span{
+      font-size: 20px;
+      margin: 0px 0px 30px 0;
+    }
+
+    .cities span{
+      padding: 7px 18px;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  
+  .heart{
+    height: 140px;
+    width: 190px;
+  }
+
+  .category{
+      width: 60%;
+      margin: 0 auto 20px auto;
+  }
+  
+  .cities{
+   width: 40%;
+  }
+  }
+
+  @media  screen and (max-width: 768px) {
+    .topic{
+      font-size: 48px;
+   }
+
+    .name{
+      font-size: 38px;
+    }
+
+    .category span{
+      font-size: 18px;
+      margin: 0px 0px 30px 0;
+    }
+
+    .cities span{
+      padding: 5px 16px;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+  .heart{
+    height: 100px;
+    width: 150px;
+  }
+
+  .category{
+      width: 45%;
+      margin: 0 auto 15px auto;
+  }
+  
+  .cities{
+   width: 35%;
+  }
+
+  .cirkle{
+    @include circle();
+    height: 400px;
+    width: 400px;
+  }
+  }
+
+  @media  screen and (max-width: 500px) {
+    .topic{
+      font-size: 42px;
+   }
+
+    .name{
+      font-size: 38px;
+    }
+
+    .category span{
+      font-size: 16px;
+      margin: 0px 0px 30px 0;
+    }
+
+    .cities span{
+      padding: 5px 12px;
+      font-size: 14px;
+      margin-top: 0px;
+    }
+
+  .heart{
+    height: 90px;
+    width: 140px;
+  }
+
+  .category{
+      width: 40%;
+      margin: 0 auto 15px auto;
+  }
+  
+  .cities{
+   width: 30%;
+  }
+
+  .cirkle{
+      @include circle();
+      height: 200px;
+      width: 200px;
+    }
+  }
+
+
+  @media  screen and (max-width: 430px) {
+    .topic{
+      font-size: 34px;
+   }
+
+    .name{
+      font-size: 36px;
+    }
+
+    .category span{
+      font-size: 16px;
+      margin: 0px 0px 30px 0;
+    }
+
+    .cities span{
+      padding: 5px 12px;
+      font-size: 14px;
+      margin-top: 0px;
+    }
+
+  .heart{
+    height: 70px;
+    width: 120px;
+  }
+
+  .category{
+      width: 33%;
+      margin: 0 auto 15px auto;
+  }
+  
+  .cities{
+   width: 28%;
+  }
+
+  .circle{
+      height: 150px;
+      width: 150px;
+  }
+  }
