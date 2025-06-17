@@ -31,6 +31,16 @@
     filter: blur(50px);
 }
 
+@mixin cities{
+  border: 1px solid var(--color-dark);
+  color: var(--color-dark);
+
+  :global(.dark) & {
+    border: 1px solid var(--color-light);
+    color: var(--color-light);
+  }
+}
+
 @mixin categoryText{
     font-family: var(--font-questrial);
     margin: 10px 0px 40px 0;
@@ -130,8 +140,62 @@
     }
   }
 
-
+  @mixin iconLink{
+    background-color: var(--color-accent);
+    padding: 7px;
+    margin: 0px 7px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
   
+   :global(.dark) & {
+    background-color: var(--color-accent2);
+   }
+  }
+
+  @mixin footerIcon{
+    color: var(--color-accent2);
+
+    :global(.dark) & {
+      color: var(--color-accent);
+    }
+  }
+
+  @mixin iconMenu {
+    stroke: var(--color-dark);
+
+    :global(.dark) & {
+   stroke: var(--color-light);
+    }
+  }
+  
+  @mixin textColor{
+    color: var(--color-dark);
+
+    :global(.dark) & {
+      color: var(--color-light);
+    }
+  }
+
+  @mixin projectBox {
+    background-color: rgba(255, 255, 255, 0.1); // lighter, more glass-like
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3); // subtle glass border
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); // smooth ambient shadow
+    height: 500px;
+    width: 100%;
+    transition: all 0.3s ease;
+  
+    :global(.dark) & {
+      background-color: rgba(0, 0, 0, 0.2); // slightly darker background in dark mode
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    }
+  }
 
 
 

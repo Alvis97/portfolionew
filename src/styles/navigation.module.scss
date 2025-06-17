@@ -48,11 +48,7 @@
 }
 
 .menuIcon{
-stroke: var(--color-dark);
-
-body.dark &{
-  stroke: var(--color-light);
-}
+@include iconMenu;;
 }
 
 .hamburger{
@@ -71,6 +67,7 @@ text-align: right;
 transform: translateY(-5px);
 transition:  opacity 1s ease, transform 1s ease;
 opacity: 0;
+pointer-events: none; 
 }
 
 .hamburger.open {

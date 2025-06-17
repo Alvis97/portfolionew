@@ -4,6 +4,7 @@ import './styles/globals.scss';
 import HomeSection from './components/HomeSection';
 import Footer from './components/Footer';
 import About from './components/About';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <main className="App-body">
   <HomeSection isDarkmodeSelected={false}/>
   <About/>
+  <Projects/>
 
 </main>
      <Footer/>

@@ -1,0 +1,29 @@
+@import "./mixins.scss";
+
+.projectSection{
+    height: 100vh;
+    width: 100vw;
+    padding: 70px 70px;
+    box-sizing: border-box;
+    z-index: 9000;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+
+    button{
+        @include textColor();
+        background-color: transparent;
+        border: 0;
+        font-family: var(--font-questrial);
+        font-size: 20px;
+    }
+}
+
+.projectContainer{
+    @include projectBox();
+}
+

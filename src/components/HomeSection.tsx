@@ -25,8 +25,8 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
             <LogoLarge className={`${homeStyle.heart2} ${homeStyle.heart}`} />
             </div>
             <div  className={homeStyle.cities}>
-                <span>London</span>
-                <span>Örebro</span>
+                <span className={homeStyle.town}>London</span>
+                <span className={homeStyle.town}>Örebro</span>
             </div>
 
         </div>

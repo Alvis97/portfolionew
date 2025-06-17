@@ -34,6 +34,10 @@
      margin: auto;
     }
 
+    .town{
+      @include cities();
+    }
+
     .circle{
       @include circle();
       height: 500px;
