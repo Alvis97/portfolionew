@@ -5,7 +5,7 @@
     font-family: var(--font-questrial);
     font-size: 20px;
     position: relative;
-    z-index: 5000;
+
     cursor: pointer;
     margin-top: 20px;
     border-radius: 20px;
@@ -29,6 +29,13 @@
     width: 500px;
     border-radius: 100%;
     filter: blur(50px);
+}
+
+@media screen and (max-width:900px) {
+  @mixin circle{
+    height: 400px;
+    width: 400px;
+}
 }
 
 @mixin cities{
@@ -68,7 +75,8 @@
   @mixin navigationBackground {
     background-color: var( --color-light) 0.5;
     width: 100vw;
-    position: fixed;
+    position:fixed;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -149,18 +157,10 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease;
-  
-   :global(.dark) & {
-    background-color: var(--color-accent2);
-   }
   }
 
   @mixin footerIcon{
     color: var(--color-accent2);
-
-    :global(.dark) & {
-      color: var(--color-accent);
-    }
   }
 
   @mixin iconMenu {
@@ -180,7 +180,7 @@
   }
 
   @mixin projectBox {
-    background-color: rgba(255, 255, 255, 0.1); // lighter, more glass-like
+    background-color: #d9c8cd88; // lighter, more glass-like
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-radius: 20px;
@@ -191,11 +191,52 @@
     transition: all 0.3s ease;
   
     :global(.dark) & {
-      background-color: rgba(0, 0, 0, 0.2); // slightly darker background in dark mode
+      background-color: #98988fa2; // slightly darker background in dark mode
       border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
     }
   }
+
+  @mixin graphicCard{
+    cursor: pointer;
+    background-color: var(--color-accent2);
+    height: 370px;
+    width: 280px;
+    padding: 15px 10px;
+    border-radius: 7px;
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    -webkit-box-shadow: 0px 10px 13px -4px rgba(0,0,0,0.71); 
+    box-shadow: 0px 10px 13px -4px rgba(0, 0, 0, 0.457);
+    border: 2px solid rgb(161, 166, 161);
+
+    h4{
+      font-family: var( --font-onest);
+      font-weight: 900;
+      font-size: 24px;
+      color: rgb(98, 101, 98);
+      text-align: left;
+      margin: 15px 0 10px 0;
+      width: 100%;
+  }
+
+  p{
+      font-family: var(--font-onest);
+      font-weight: 100;
+      font-size: 16px;
+      color: rgb(98, 101, 98);
+      text-align: left;
+      margin: 0;
+      width: 250px;
+  }
+  }
+
+ 
+
+
 
 
 

@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kapakana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-
 :root {
-    --color-accent2: #e8ebc8;
+    --color-accent2: #e1e3cb;
     --color-accent: #b2af98;
     --color-dark: #1B1511;
     --color-light: #fbfffa;
@@ -26,9 +25,8 @@
   .onest {
     font-family: "Onest", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: weight;
     font-style: normal;
-    letter-spacing: 2px;
   }
 
 
