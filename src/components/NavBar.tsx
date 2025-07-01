@@ -8,7 +8,6 @@ import { Menu } from './Icons';
 function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
     const handleMenuClick = () => {
         setIsMenuOpen(prev => !prev);
     };
@@ -37,11 +36,11 @@ function NavBar() {
 
             <button 
             onClick={handleMenuClick} 
-            className={`${navStyle.menuButton} ${isMenuOpen ? 'open' : ''}`}>
+            className={`${navStyle.menuButton} ${isMenuOpen ? navStyle.open : ''}`}>
              <Menu className={navStyle.menuIcon}/>
             </button>
         
-            <div className={`${navStyle.hamburger} ${isMenuOpen ? 'open' : ''}`}>
+            <div className={`${navStyle.hamburger} ${isMenuOpen ? navStyle.open : ''}`}>
            <div className={navStyle.hamburgerLinks}>
             
             <span className={navStyle.hoverIcon}>

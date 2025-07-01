@@ -2,7 +2,18 @@
 
 /*Navigation*/
 .parent{
-@include navigationBackground();
+   width: 100vw;
+    position:fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 5000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); // for Safari
 }
 
 .links{
@@ -52,9 +63,9 @@
 }
 
 .hamburger{
-background-color: var(--color-light) 0.95;
+@include hamburgerMenuColor;  
 backdrop-filter: blur(80px); // this blurs the background *behind* the element
--webkit-backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(80px);
 height: 100vh;
 width: 100vw;
 box-sizing: border-box;
@@ -68,12 +79,14 @@ transform: translateY(-5px);
 transition:  opacity 1s ease, transform 1s ease;
 opacity: 0;
 pointer-events: none; 
-}
 
-.hamburger.open {
+&.open{ 
 opacity: 1;
 transform: translateY(0);
 pointer-events: auto;
+backdrop-filter: blur(80px); // this blurs the background *behind* the element
+-webkit-backdrop-filter: blur(80px);
+}
 }
 
 .hamburgerLinks{
@@ -100,10 +113,6 @@ a{
     transform: scale(1.1);
   }
 }
-}
-
-body.dark a {
-color: var(--color-light);
 }
 
 .selector{

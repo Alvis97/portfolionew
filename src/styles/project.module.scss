@@ -1,16 +1,8 @@
 @import "./mixins.scss";
 
 .projectSection{
-    height: 100vh;
-    width: 100vw;
-    padding: 70px 0px;
-    box-sizing: border-box;
-    z-index: 9000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to bottom, #1b151100 0%, rgba(188, 152, 152, 0.27) 100%);
+    @include projectFade();
+    padding: 100px 0px;
 }
 
 .menu{
@@ -52,26 +44,16 @@
 
 @media screen and (max-width: 750px){
     .projectSection{
-        height: 100vh;
-        width: 100vw;
         padding: 130px 20px;
-        box-sizing: border-box;
-        z-index: 9000;
     }
 
     .projectFolder{
-        width: 100%;
         height: fit-content;
-        display: flex;
-        align-items: center;
         justify-content: space-between;
     }
 
     .menu{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 380px;
+        width: 350px;
     }
 }
 

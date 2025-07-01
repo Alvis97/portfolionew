@@ -22,7 +22,7 @@
 }
 
 .circleBackground{
-    background-color:rgba(188, 152, 152, 0.27);
+    @include circle();
     height: 400px;
     width: 400px;
     margin: auto;

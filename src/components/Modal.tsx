@@ -1,4 +1,5 @@
 import React from 'react'
+import modalStyle from '../styles/modal.module.scss';
 
 type ModalProps = {
     isOpen: boolean;
@@ -25,14 +26,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, img, title, desc, role, 
   if (!isOpen) return null;
 
     return (
-    <div style={{
-        position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-        backgroundColor: 'green', display: 'flex', justifyContent: 'center', alignItems: 'center',
-        zIndex: 1000
-      }}>
+    <div className={modalStyle.modalBackground}>
       
    
-    <div style={{ backgroundColor: 'white', padding: 20, borderRadius: 10 }}>
+    <div className={modalStyle.modal}>
+        <div className={modalStyle.scrollDiv}>
         <div>
         <img src={img} alt={title} style={{ width: '100%' }} />
         </div>
@@ -48,6 +46,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, img, title, desc, role, 
         <img src={img3} alt="" />
         <p>{lastWord}</p>
         <button onClick={onClose}>Close</button>
+        </div>
     </div>
     </div>
   )

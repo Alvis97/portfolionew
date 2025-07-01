@@ -2,8 +2,6 @@
 
 //Footer
 .footer{
-  background-color: var(--color-light) 0.5;
-  color: var(--color-dark);
   width: 100vw;
   position:fixed;
   bottom: 0;
@@ -11,8 +9,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px 20px;
   box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .socials{
