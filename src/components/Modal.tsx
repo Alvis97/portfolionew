@@ -1,5 +1,6 @@
 import React from 'react'
 import modalStyle from '../styles/modal.module.scss';
+import { CircleX } from 'lucide-react';
 
 type ModalProps = {
     isOpen: boolean;
@@ -30,11 +31,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, img, title, desc, role, 
       
    
     <div className={modalStyle.modal}>
+    <button className={modalStyle.exitBtn} onClick={onClose}><CircleX/></button>
         <div className={modalStyle.scrollDiv}>
-        <div>
+        <div className={modalStyle.imgContainer}>
         <img src={img} alt={title} style={{ width: '100%' }} />
         </div>
-        <h2>{title}</h2>
+        <div className={modalStyle.textContent}>
+        <h1>{title}</h1>
         <h3>{role}</h3>
         <h3>{tool}</h3>
         <p>{text1}</p>
@@ -45,7 +48,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, img, title, desc, role, 
         <p>{text3}</p>
         <img src={img3} alt="" />
         <p>{lastWord}</p>
-        <button onClick={onClose}>Close</button>
+        <br />
+        <br />
+        <br />
+        <br />
+        </div>
         </div>
     </div>
     </div>
