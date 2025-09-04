@@ -1,91 +1,81 @@
 @import '../styles/mixins.scss';
 
+//For Graphics
 .cardContainer{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-}
-
-.projectFolder{
-    width: 100%;
+    border-radius: 20px;
+    height: 300px;
+    height: fit-content;
 }
 
 .card{
-    @include graphicCard();
+    @include webCard();
     transition: transform 0.3s ease;
+    
+
+    .visibleContainer,
+    .hiddenContainer{
+        transition: opacity 0.3s ease;
+    }
+
+    .visibleContainer{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .hiddenContainer{
+       opacity: 0;
+       visibility: hidden;
+    }
 
     &:hover {
-      transform: scale(1.01); // or another value greater than 1
+      transform: scale(1.01); 
+
+      .visibleContainer{
+        opacity: 0;
+        visibility: hidden;
     }
 
-    h4{
-        text-align: left;
+    .hiddenContainer{
+       opacity: 1;
+       visibility: visible;
     }
+    }
+
+
 }
 
-.image{
-    width: 90%;
-}
-
-@media screen and (max-width: 910px) {
-
-    .image{
-        width: 100%;
-    }
+@media screen and (max-width: 1100px) {
 
     .card{
-        @include graphicCard();
-        height: 300px;
-        width: 200px;
-        padding: 15px 15px;
-    
-        h4{
-            font-size: 18px;
-        }
-    
-        p{
-            font-size: 12px;
-            width: 100%;
-        }
-    }
+        height: 140px;
+        width: 250px;
 
-    .cardContainer{
-        padding: 0 10px;
+        .visibleContainer{
+
+            h4{
+                font-size: 20px;
+            }
+        }
+
+        .hiddenContainer{
+
+            p{
+                font-size: 16px;
+            }
+        }
     }
+  
 }
 
-@media screen and (max-width: 750px) {
-
-    .image{
-        height: 100%;
-        width: auto;
-        margin-left: 10px;
-    }
-
-    .card{
-        @include graphicCard();
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
-        height: 150px;
-        min-width: 400px;
-        padding: 10px 20px;
-    
-        h4{
-            font-size: 24px;
-        }
-    
-        p{
-            font-size: 16px;
-            width: 100%;
-        }
-    }
+@media screen and (max-width: 850px) {
 
     .cardContainer{
-        padding: 0px;
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
     }
 }

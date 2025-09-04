@@ -15,23 +15,29 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        width: 800px;
+        width: 100vw;
     }
     
     .category{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
-        width: 70%;
-        margin: 0 auto 20px auto;
+        width: 800px;
+        margin: 0 auto 22px auto;
     }
+
+    .category span{
+      @include categoryText();
+      font-size: 30px;
+   }
     
     .cities{
      display: flex;
-     justify-content: space-between;
+     justify-content: space-evenly;
      align-items: center;
-     width: 50%;
+     width: 800px;
      margin: auto;
+     padding: 0
     }
 
     .town{
@@ -48,6 +54,7 @@
         display: flex;
         width: fit-content;
         margin: auto;
+        height: 150px;
     }
 
     .heart{
@@ -86,177 +93,529 @@
      margin: 0px;
   }
 
-  .category span{
-     @include categoryText();
-  }
-
   .cities span{
     font-family: var(--font-questrial);
     border: 1px solid var(--color-dark);
     padding: 10px 24px;
     border-radius: 30px;
     font-size: 24px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   body.dark .cities span{
     border: 1px solid var(--color-light);
   }
 
-  @media  screen and (max-width: 880px) {
-    .topic{
-      font-size: 62px;
-   }
-
+  @media  screen and (max-width: 900px) {
+      
+      .category{
+          justify-content: space-evenly;
+          width: 700px;
+          margin: 0 auto 20px auto;
+      }
+  
+      .category span{
+        @include categoryText();
+        font-size: 24px;
+     }
+      
+      .cities{
+       justify-content: space-evenly;
+       width: 700px;
+      }
+  
+      .heart{
+        height: 150px;
+        width: 200px;
+        padding: -50px;
+        margin: -20px;
+      }
+      
+      .heart2{
+          rotate: -130deg;
+          position: relative;
+          top: -15px;
+          margin: 0px;
+          padding: -50px;
+          margin: 0 -18px 0 -26px;
+      }
+      
+      .heart3{
+          rotate: 180deg;
+          position: relative;
+          top: -7px;
+          margin: 0px;
+          padding: -50px;
+          margin: -20px;
+      }
+  
     .name{
-      font-size: 48px;
+      @include name();
     }
-
-    .category span{
-      font-size: 20px;
-      margin: 0px 0px 30px 0;
+  
+  .topic{
+       font-size: 68px;
     }
-
+  
     .cities span{
-      padding: 7px 18px;
       font-size: 20px;
       margin-top: 10px;
     }
-  
-  .heart{
-    height: 140px;
-    width: 190px;
+    
   }
 
-  .category{
-      width: 60%;
-      margin: 0 auto 20px auto;
-  }
-  
-  .cities{
-   width: 40%;
-  }
-  }
-
-  @media  screen and (max-width: 768px) {
-    .topic{
-      font-size: 48px;
-   }
-
-    .name{
-      font-size: 38px;
+  @media  screen and (max-width: 760px) {
+      
+    .category{
+        justify-content: space-evenly;
+        width: 600px;
+        margin: 0 auto 10px auto;
     }
 
     .category span{
-      font-size: 18px;
-      margin: 0px 0px 30px 0;
-    }
-
-    .cities span{
-      padding: 5px 16px;
-      font-size: 16px;
-      margin-top: 5px;
-    }
-
-  .heart{
-    height: 100px;
-    width: 150px;
-  }
-
-  .category{
-      width: 45%;
-      margin: 0 auto 15px auto;
-  }
-  
-  .cities{
-   width: 35%;
-  }
-
-  .cirkle{
-    @include circle();
-    height: 300px;
-    width: 300px;
-  }
-  }
-
-  @media  screen and (max-width: 500px) {
-    .topic{
-      font-size: 42px;
+      @include categoryText();
+      font-size: 20px;
    }
-
-    .name{
-      font-size: 38px;
+    
+    .cities{
+     justify-content: space-evenly;
+     width: 550px;
     }
 
-    .category span{
-      font-size: 16px;
-      margin: 0px 0px 30px 0;
-    }
-
-    .cities span{
-      padding: 5px 12px;
-      font-size: 14px;
-      margin-top: 0px;
-    }
-
-  .heart{
-    height: 90px;
-    width: 140px;
+    .hearts{
+      height: 100px;
+      width: 500px;
   }
 
-  .category{
-      width: 40%;
-      margin: 0 auto 15px auto;
+    .heart{
+      height: 120px;
+      width: 180px;
+      margin: -20px;
+    }
+    
+    .heart2{
+        rotate: -130deg;
+        position: relative;
+        top: -15px;
+        margin: 0px;
+        padding: -50px;
+        margin: 0 -18px 0 -26px;
+    }
+    
+    .heart3{
+        rotate: 180deg;
+        position: relative;
+        top: -7px;
+        margin: 0px;
+        padding: -50px;
+        margin: -20px;
+    }
+
+  .name{
+    @include name();
+    font-size: 50px;
+  }
+
+.topic{
+     font-size: 54px;
+  }
+
+  .cities span{
+    padding: 8px 20px;
+    font-size: 18px;
+    margin-top: 18px;
   }
   
-  .cities{
-   width: 30%;
-  }
+}
 
-  .cirkle{
-      @include circle();
-      height: 200px;
-      width: 200px;
-    }
-  }
-
-
-  @media  screen and (max-width: 430px) {
-    .topic{
-      font-size: 34px;
-   }
-
-    .name{
-      font-size: 36px;
-    }
-
-    .category span{
-      font-size: 16px;
-      margin: 0px 0px 30px 0;
-    }
-
-    .cities span{
-      padding: 5px 12px;
-      font-size: 14px;
-      margin-top: 0px;
-    }
-
-  .heart{
-    height: 70px;
-    width: 120px;
-  }
-
+@media  screen and (max-width: 600px) {
+      
   .category{
-      width: 33%;
-      margin: 0 auto 15px auto;
+      justify-content: space-evenly;
+      width: 480px;
+      margin: 0 auto 5px auto;
   }
+
+  .category span{
+    @include categoryText();
+    font-size: 18px;
+ }
+
+ .circle{
+  @include circle();
+  height: 400px;
+  width: 400px;
+}
   
   .cities{
-   width: 28%;
+   justify-content: space-evenly;
+   width: 450px;
   }
 
-  .circle{
-      height: 150px;
-      width: 150px;
+  .hearts{
+    height: 80px;
+    width: 400px;
+}
+
+  .heart{
+    height: 95px;
   }
+  
+  .heart2{
+      rotate: -130deg;
+      position: relative;
+      top: -15px;
+      left: 2px;
+      margin: 0px;
+      padding: -50px;
+      margin: 0 -18px 0 -26px;
   }
+  
+  .heart3{
+      rotate: 180deg;
+      position: relative;
+      top: -7px;
+      left: 2px;
+      margin: 0px;
+      padding: -50px;
+      margin: -20px;
+  }
+
+.name{
+  @include name();
+  font-size: 42px;
+}
+
+.topic{
+   font-size: 46px;
+}
+
+.cities span{
+  padding: 7px 18px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+}
+
+@media  screen and (max-width: 470px) {
+      
+  .category{
+      justify-content: space-evenly;
+      width: 380px;
+      margin: 0 auto 0px auto;
+  }
+
+  .category span{
+    @include categoryText();
+    font-size: 18px;
+    margin-top: 5px;
+ }
+
+ .circle{
+  @include circle();
+  height: 320px;
+  width: 320px;
+}
+  
+  .cities{
+   justify-content: space-evenly;
+   width: 380px;
+  }
+
+  .hearts{
+    height: 60px;
+    width: 320px;
+}
+
+  .heart{
+    height: 75px;
+  }
+  
+  .heart2{
+      rotate: -130deg;
+      position: relative;
+      top: -15px;
+      left: 4px;
+      margin: 0px;
+      padding: -50px;
+      margin: 0 -18px 0 -26px;
+  }
+  
+  .heart3{
+      rotate: 180deg;
+      position: relative;
+      top: -5px;
+      left: 3px;
+      margin: 0px;
+      padding: -50px;
+      margin: -20px;
+  }
+
+.name{
+  @include name();
+  font-size: 40px;
+}
+
+.topic{
+   font-size: 38px;
+}
+
+.cities span{
+  padding: 5px 16px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+}
+
+@media  screen and (max-width: 400px) {
+
+.name{
+  @include name();
+  font-size: 36px;
+}
+
+.topic{
+   font-size: 32px;
+   margin-top: 5px;
+}
+
+.circle{
+  @include circle();
+  height: 250px;
+  width: 250px;
+}
+      
+  .category{
+      justify-content: space-evenly;
+      width: 300px;
+      margin: 0 auto 0px auto;
+  }
+
+  .category span{
+    @include categoryText();
+    font-size: 14px;
+    margin: 7px 0px 40px 0;
+ }
+  
+  .cities{
+   justify-content: space-around;
+   width: 240px;
+  }
+
+  .hearts{
+    height: 45px;
+    width: 270px;
+}
+
+  .heart{
+    height: 65px;
+  }
+  
+  .heart2{
+      rotate: -130deg;
+      position: relative;
+      top: -15px;
+      left: 3px;
+      margin: 0px;
+      padding: -50px;
+      margin: 0 -18px 0 -26px;
+  }
+  
+  .heart3{
+      rotate: 180deg;
+      position: relative;
+      top: -5px;
+      left: 1px;
+      margin: 0px;
+      padding: -50px;
+      margin: -20px;
+  }
+
+.name{
+  @include name();
+  font-size: 32px;
+}
+
+.topic{
+   font-size: 30px;
+}
+
+.cities span{
+  padding: 4px 14px;
+  font-size: 12px;
+  margin-top: 15px;
+}
+}
+
+  // @media  screen and (max-width: 880px) {
+
+  //   .textContent{
+  //     position: absolute;
+  //     text-align: center;
+  //     display: flex;
+  //     flex-direction: column;
+  //     width: 100vw;
+  //     background-color: pink;
+  // }
+
+  //   .topic{
+  //     font-size: 62px;
+  //  }
+
+  //   .name{
+  //     font-size: 48px;
+  //   }
+
+  //   .category span{
+  //     font-size: 20px;
+  //     margin: 0px 0px 30px 0;
+  //   }
+
+  //   .cities span{
+  //     padding: 7px 18px;
+  //     font-size: 20px;
+  //     margin-top: 10px;
+  //   }
+  
+  // .heart{
+  //   height: 140px;
+  //   width: 190px;
+  // }
+
+  // .category{
+  //     width: 60%;
+  //     margin: 0 auto 20px auto;
+  // }
+  
+  // .cities{
+  //  width: 40%;
+  // }
+  // }
+
+  // @media  screen and (max-width: 768px) {
+  //   .topic{
+  //     font-size: 48px;
+  //     background-color: orange;
+  //     width: 100%;
+  //  }
+
+  //   .name{
+  //     font-size: 38px;
+  //     width: 100vw;
+  //     background-color: green;
+  //   }
+
+  //   .category span{
+  //     font-size: 18px;
+  //     margin: 0px 0px 30px 0;
+  //   }
+
+  //   .cities span{
+  //     padding: 5px 16px;
+  //     font-size: 16px;
+  //     margin-top: 5px;
+  //   }
+
+  // .heart{
+  //   height: 100px;
+  //   width: 150px;
+  // }
+
+  // .category{
+  //     width: 45%;
+  //     margin: 0 auto 15px auto;
+  // }
+  
+  // .cities{
+  //  width: 35%;
+  // }
+
+  // .cirkle{
+  //   @include circle();
+  //   height: 300px;
+  //   width: 300px;
+  // }
+  // }
+
+  // @media  screen and (max-width: 500px) {
+  //   .topic{
+  //     font-size: 42px;
+  //  }
+
+  //   .name{
+  //     font-size: 38px;
+  //   }
+
+  //   .category span{
+  //     font-size: 16px;
+  //     margin: 0px 0px 30px 0;
+  //   }
+
+  //   .cities span{
+  //     padding: 5px 12px;
+  //     font-size: 14px;
+  //     margin-top: 0px;
+  //   }
+
+  // .heart{
+  //   height: 90px;
+  //   width: 140px;
+  // }
+
+  // .category{
+  //     width: 40%;
+  //     margin: 0 auto 15px auto;
+  // }
+  
+  // .cities{
+  //  width: 30%;
+  // }
+
+  // .cirkle{
+  //     @include circle();
+  //     height: 200px;
+  //     width: 200px;
+  //   }
+  // }
+
+
+  // @media  screen and (max-width: 430px) {
+  //   .topic{
+  //     font-size: 34px;
+  //  }
+
+  //   .name{
+  //     font-size: 36px;
+  //   }
+
+  //   .category span{
+  //     font-size: 16px;
+  //     margin: 0px 0px 30px 0;
+  //   }
+
+  //   .cities span{
+  //     padding: 5px 12px;
+  //     font-size: 14px;
+  //     margin-top: 0px;
+  //   }
+
+  // .heart{
+  //   height: 70px;
+  //   width: 120px;
+  // }
+
+  // .category{
+  //     width: 33%;
+  //     margin: 0 auto 15px auto;
+  // }
+  
+  // .cities{
+  //  width: 28%;
+  // }
+
+  // .circle{
+  //     height: 150px;
+  //     width: 150px;
+  // }
+  // }

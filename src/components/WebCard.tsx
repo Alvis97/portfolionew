@@ -11,11 +11,14 @@ type WebCardProps = {
 function WebCard({ img, title, desc, onClick }: WebCardProps) {
   return (
     <div className={styles.card} onClick={onClick} style={{ cursor: 'pointer' }}>
-    <img className={styles.image} src={img} alt={title} />
-    <div>
+     <div className={styles.visibleContainer}>
+     <img className={styles.image} src={img} alt={title} />
     <h4>{title}</h4>
-    <p>{desc}</p>
-    </div>
+     </div>
+     <div className={styles.hiddenContainer}>
+     <p>{desc}</p>
+     </div>
+    
 </div>
   )
 }

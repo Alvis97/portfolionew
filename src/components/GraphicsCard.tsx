@@ -12,9 +12,11 @@ function GraphicsCard({img, title, desc, onClick }: GraphicsCardProps) {
 
   return (
     <div className={styles.card} onClick={onClick} style={{ cursor: 'pointer' }}>
+        <div className={styles.visibleContainer}>
         <img className={styles.image} src={img} alt={title} />
-        <div>
         <h4>{title}</h4>
+        </div>
+        <div className={styles.hiddenContainer}>
         <p>{desc}</p>
         </div>
     </div>

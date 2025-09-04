@@ -43,13 +43,9 @@ function Projects() {
         </div>
 
         <div className={style.projectContainer}>
-            <div className={style.projectFolder}>
             {selected === "Web2" && <div><Web2/></div>}
             {selected === "Graphics" && <Graphics/>}
             {selected === "Web3" && <div>Web3 Content</div>}
-
-            </div>
-
         </div>
       
     </section>
