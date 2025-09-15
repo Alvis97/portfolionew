@@ -9,16 +9,16 @@ import Projects from './components/Projects';
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
+      <header className="App-header">
        <NavBar/>
-      </header> */}
+      </header>
       <main className="App-body">
   <HomeSection isDarkmodeSelected={false}/>
-  {/* <About/>
-  <Projects/> */}
+  <About/>
+  <Projects/>
 
 </main>
-     {/* <Footer/> */}
+     <Footer/> 
     </div>
   );
 }

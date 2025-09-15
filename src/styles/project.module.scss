@@ -21,7 +21,7 @@
     margin-top: 0;
     margin: 50px auto;
     border-radius: 20px;
-}
+}   
 
 .menu{
     display: flex;
@@ -69,6 +69,53 @@
     .menu{
         width: 350px;
     }
+}
+
+@media screen and (max-width: 650px) {
+
+    .projectSection{
+        padding: 100px 0px;
+    }
+
+    .projectContainer{
+        @include backgroundProjects();
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        padding: 20px;
+        height: 460px;
+        margin-top: 0;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+
+    .menu{
+        width: 250px;
+    
+        button{
+            @include cities();
+            font-size: 16px;
+            padding: 7px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .projectContainer{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .projectContainer{
+        width: 90%;
+    }
+
 }
 
 

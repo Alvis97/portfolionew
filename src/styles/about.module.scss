@@ -100,7 +100,6 @@
         margin-left: 0px;
         margin: 0;
         height: 320px;
-
     }
 
     .textContent{
@@ -133,6 +132,30 @@
         width: 18px;
         margin: 0  15px;
       }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .circleBackground{
+        @include circle();
+        height: 300px;
+        width: 300px;
+        margin: auto;
+        border-radius: 100%;
+        filter: blur(50px);
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+
+    .circleBackground{
+        @include circle();
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        border-radius: 100%;
+        filter: blur(50px);
+    }
   }
 
 
