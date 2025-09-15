@@ -7,7 +7,6 @@
     width: 100%;
     border-radius: 20px;
     height: 300px;
-    height: fit-content;
 }
 
 .card{
@@ -43,8 +42,10 @@
        visibility: visible;
     }
     }
+}
 
-
+.image{
+    border-radius: 12px;
 }
 
 @media screen and (max-width: 1100px) {

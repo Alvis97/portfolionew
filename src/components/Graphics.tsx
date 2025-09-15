@@ -7,6 +7,7 @@ import style from "../styles/graphicCard.module.scss";
 function Graphics() {
     const [selectedCard, setSelectedCard] = useState<null | {
         index: number,
+        imgMain: string,
         img: string;
         title: string;
         desc: string;
@@ -31,7 +32,7 @@ function Graphics() {
 
                 <GraphicsCard
                 key={index}
-                img={item.img}
+                img={item.imgMain}
                 title={item.title}
                 desc={item.desc}
                 onClick={() => setSelectedCard(item)}

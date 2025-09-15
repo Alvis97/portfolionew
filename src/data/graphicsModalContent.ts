@@ -1,6 +1,8 @@
 import valborgImg from '../assets/valborg.jpg';
+import valborgMain from '../assets/valborg-main.jpg'
 import valborgColor from '../assets/colors.jpg';
 import FuneralFront from '../assets/BegravningFram.jpg';
+import FuneralMain from '../assets/funeral-main.jpg'
 import FuneralInside from '../assets/BegravningInsida.jpg';
 import portrait from '../assets/Pappa.jpg';
 import motherText from '../assets/text.jpg';
@@ -8,6 +10,7 @@ import songLyrics from '../assets/pappaLåt.jpg';
 
 export type GraphicsPostItem = {
     index: number;
+    imgMain: string;
     img: string;
     title: string;
     desc: string;
@@ -29,6 +32,7 @@ export type GraphicsPostItem = {
   export const graphicsModalContent: GraphicsPostItem[] = [
     {
       index: 1,  
+      imgMain: valborgMain,
       img: valborgImg,
       title: "Valborg Poster",
       desc: "A cheerful poster design for a local spring celebration.",
@@ -48,6 +52,7 @@ export type GraphicsPostItem = {
     },
     {
       index: 2,  
+      imgMain: FuneralMain,
       img: FuneralFront,
       title: "Funeral Program",
       desc: "A personal farewell: designed a non-traditional funeral program to honor my dad.",
