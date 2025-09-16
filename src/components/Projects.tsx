@@ -6,8 +6,10 @@ import Web3 from './Web3';
 import {graphicsModalContent} from '../data/graphicsModalContent';
 import GraphicsCard from './GraphicsCard';
 import ButtonBubble from './BubbleBtn';
+import Modal from './Modal';
 
 function Projects() {
+    const [modalContent, setModalContent]=useState<React.ReactNode>(null);
     const [selected, setSelected] = useState("Web2");
 
     useEffect( () => {
@@ -16,6 +18,11 @@ function Projects() {
     }, [selected])
   return (
     <section className={style.projectSection}>
+      <Modal
+      isOpen={modalContent !== null}
+      onClose={() => setModalContent(null)}>
+        {modalContent}
+      </Modal>
         <div className={style.menu}> 
          <ButtonBubble
           isSelected={selected === "Web2"}
@@ -44,7 +51,7 @@ function Projects() {
 
         <div className={style.projectContainer}>
             {selected === "Web2" && <div><Web2/></div>}
-            {selected === "Graphics" && <Graphics/>}
+            {selected === "Graphics" && <Graphics setModalContent={setModalContent}/>}
             {selected === "Web3" && <div>Web3 Content</div>}
         </div>
       

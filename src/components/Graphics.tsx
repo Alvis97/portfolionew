@@ -4,28 +4,12 @@ import GraphicsCard from './GraphicsCard';
 import Modal from './Modal';
 import style from "../styles/graphicCard.module.scss";
 
-function Graphics() {
-    const [selectedCard, setSelectedCard] = useState<null | {
-        index: number,
-        imgMain: string,
-        img: string;
-        title: string;
-        desc: string;
-        role: string;
-        tool: string;
-        text1: string;
-        heading2: string;
-        text2: string;
-        img2: string;
-        heading3: string;
-        text3: string;
-        img3: string;
-        heading4: string;
-        text4: string;
-        img4: string;
-        lastWord: string;
-    }>(null);
+type GraphicProps = {
+  setModalContent: (content: React.ReactNode) => void;
+};
 
+function Graphics({setModalContent }: GraphicProps) {
+ 
   return (
     <div className={style.cardContainer}>
         {graphicsModalContent.map((item: GraphicsPostItem, index: number) => (
@@ -35,29 +19,29 @@ function Graphics() {
                 img={item.imgMain}
                 title={item.title}
                 desc={item.desc}
-                onClick={() => setSelectedCard(item)}
+                onClick={() => setModalContent(
+                <>
+                   <img src={item.img} alt="" />
+                <h1>{item.title}</h1>
+                <p>{item.desc}</p>
+                <p>{item.role}</p>
+                <p>{item.tool}</p>
+
+                <p>{item.text1}</p>
+                <h2>{item.heading2}</h2>
+                <p>{item.text2}</p>
+                {item.img2 && <img src={item.img2} alt="" />}
+                <h2>{item.heading3}</h2>
+                <p>{item.text3}</p>
+                {item.img3 && <img src={item.img3} alt="" />}
+                <h2>{item.heading4}</h2>
+                <p>{item.text4}</p>
+                {item.img4 && <img src={item.img4} alt="" />}
+                <p>{item.lastWord}</p>
+                </>)}
                 />
         ))}
-      <Modal 
-      isOpen={selectedCard !==null}
-      onClose={() => setSelectedCard(null)}
-      img={selectedCard?.img || ''}
-      title={selectedCard?.title || ''}
-      desc={selectedCard?.desc || ''}
-      role={selectedCard?.role || ''}
-      tool={selectedCard?.tool || ''}
-      text1={selectedCard?.text1 || ''}
-      heading2={selectedCard?.heading2 || ''}
-      text2={selectedCard?.text2 || ''}
-      img2={selectedCard?.img2 || ''}
-      heading3={selectedCard?.heading3 || ''}
-      text3={selectedCard?.text3 || ''}
-      img3={selectedCard?.img3 || ''}
-      heading4={selectedCard?.heading4 || ''}
-      text4={selectedCard?.text4 || ''}
-      img4={selectedCard?.img4 || ''}
-      lastWord={selectedCard?.lastWord || ''}
-      />
+  
     </div>
   )
 }
