@@ -2,29 +2,16 @@ import React, { useState } from 'react'
 import WebCard from './WebCard';
 import ModalWeb from './ModalWeb';
 import { WebPostItem, webModalContent } from '../data/webModalContent';
+import style from '../styles/graphicCard.module.scss';
 
-function Web2() {
-  const [selectedCard, setSelectedCard] = useState<null | {
-    index: number,
-    img: string;
-    title: string;
-    desc: string;
-    role: string;
-    tool: string;
-    text1: string;
-    heading2: string;
-    text2: string;
-    img2: string;
-    heading3: string;
-    text3: string;
-    img3: string;
-    heading4: string;
-    text4: string;
-    img4: string;
-    lastWord: string;
-  }>(null);
+type Web2Props = {
+  setModalContent: (content: React.ReactNode) => void;
+};
+
+function Web2({setModalContent }: Web2Props) {
+ 
   return (
-    <div>
+    <div className={style.cardContainer}>
       {webModalContent.map((item: WebPostItem, index: number) => (
         
         <WebCard
@@ -32,29 +19,37 @@ function Web2() {
         img={item.img}
         title={item.title}
         desc={item.desc}
-        onClick={() => setSelectedCard(item)}/>
+        onClick={() => setModalContent(
+          <>
+           <div className={style.moduleContainer}>
+                <div className={style.textContainer}>
+                <h1>{item.title}</h1>
+                <div className={style.roleContainer}>
+                <p>{item.role}</p>
+                <p>{item.tool}</p>
+                </div>
+                <p>{item.text1}</p>
+                <h2>{item.heading2}</h2>
+                <p>{item.text2}</p>
+                {item.img2 && <img src={item.img2} alt="" />}
+                <h2>{item.heading3}</h2>
+                <p>{item.text3}</p>
+                {item.img3 && <img src={item.img3} alt="" />}
+                <h2>{item.heading4}</h2>
+                <p>{item.text4}</p>
+                {item.img4 && <img src={item.img4} alt="" />}
+                <p>{item.lastWord}</p>
+                </div>
+                <div className={style.imgContainer}>
+                <img className={style.image} src={item.img} alt="" />
+                </div>
+                </div>
+
+          </>
+        )}/>
         
       ))}
-      <ModalWeb 
-      isOpen={selectedCard !== null}
-      onClose={() => setSelectedCard(null)}
-      img={selectedCard?.img || ''}
-      title={selectedCard?.title || ''}
-      desc={selectedCard?.desc || ''}
-      role={selectedCard?.role || ''}
-      tool={selectedCard?.tool || ''}
-      text1={selectedCard?.text1 || ''}
-      heading2={selectedCard?.heading2 || ''}
-      text2={selectedCard?.text2 || ''}
-      img2={selectedCard?.img2 || ''}
-      heading3={selectedCard?.heading3 || ''}
-      text3={selectedCard?.text3 || ''}
-      img3={selectedCard?.img3 || ''}
-      heading4={selectedCard?.heading4 || ''}
-      text4={selectedCard?.text4 || ''}
-      img4={selectedCard?.img4 || ''}
-      lastWord={selectedCard?.lastWord || ''}
-      />
+      
      </div>
   )
 }

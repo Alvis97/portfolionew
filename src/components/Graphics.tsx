@@ -21,12 +21,13 @@ function Graphics({setModalContent }: GraphicProps) {
                 desc={item.desc}
                 onClick={() => setModalContent(
                 <>
-                   <img src={item.img} alt="" />
+                <div className={style.moduleContainer}>
+                <div className={style.textContainer}>
                 <h1>{item.title}</h1>
-                <p>{item.desc}</p>
+                <div className={style.roleContainer}>
                 <p>{item.role}</p>
                 <p>{item.tool}</p>
-
+                </div>
                 <p>{item.text1}</p>
                 <h2>{item.heading2}</h2>
                 <p>{item.text2}</p>
@@ -38,6 +39,14 @@ function Graphics({setModalContent }: GraphicProps) {
                 <p>{item.text4}</p>
                 {item.img4 && <img src={item.img4} alt="" />}
                 <p>{item.lastWord}</p>
+                </div>
+                <div className={style.imgContainer}>
+                <img className={style.image} src={item.img} alt="" />
+                </div>
+                </div>
+               
+               
+          
                 </>)}
                 />
         ))}

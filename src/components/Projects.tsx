@@ -50,7 +50,7 @@ function Projects() {
         </div>
 
         <div className={style.projectContainer}>
-            {selected === "Web2" && <div><Web2/></div>}
+            {selected === "Web2" && <div><Web2 setModalContent={setModalContent}/></div>}
             {selected === "Graphics" && <Graphics setModalContent={setModalContent}/>}
             {selected === "Web3" && <div>Web3 Content</div>}
         </div>

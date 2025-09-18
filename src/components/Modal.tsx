@@ -16,7 +16,9 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
     <div className={modalStyle.modalBackground} onClick={onClose}>
     <div className={modalStyle.modalContent} onClick={(e) => e.stopPropagation()}>
     <button className={modalStyle.exitBtn} onClick={onClose}><CircleX/></button>
+    <div className={modalStyle.scrollDiv}>
     {children}
+    </div>
     </div>
     </div>,
     document.body

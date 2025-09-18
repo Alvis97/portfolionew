@@ -6,7 +6,6 @@
     justify-content: space-evenly;
     width: 100%;
     border-radius: 20px;
-    height: 300px;
 }
 
 .card{
@@ -44,9 +43,66 @@
     }
 }
 
-.image{
-    border-radius: 12px;
+
+//modal styling
+
+.moduleContainer{
+    width: 100%;
+    display: flex;
 }
+
+.imgContainer{
+    width: 50%;
+    padding-left: 35px;
+}
+
+.image{
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+
+.textContainer{
+    width: 50%;
+
+    img{
+        background-color: pink;
+    }
+}
+
+h1{
+   font-size: 30px;
+   margin-bottom: 5px;
+   font-family: var(--font-onest);
+}
+
+.roleContainer{
+
+    margin-bottom: 20px;
+
+    p{
+        margin: 0;
+        font-size: 16px;
+    }
+}
+
+h2{
+    font-size: 22px;
+    margin: 30px 0 0px 0;
+}
+
+h3{
+    font-size: 18px;
+    margin: 5px 0px;
+}
+
+p{
+    font-size: 16px;
+    margin: 5px 0px 20px 0px;
+}
+
+
 
 @media screen and (max-width: 1100px) {
 
@@ -70,6 +126,32 @@
     }
 }
 
+@media screen and (max-width: 950px) {
+    .moduleContainer{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction:column-reverse;
+    }
+
+    .imgContainer{
+        width: 90%;
+        margin: auto;
+        padding-left: 0px;
+        align-items: center;
+    }
+
+    .textContainer{
+        width: 100%;
+    
+        img{
+            background-color: pink;
+        }
+    }
+}
+
+
+
 @media screen and (max-width: 850px) {
 
     .cardContainer{
@@ -78,5 +160,61 @@
         justify-content: space-evenly;
         align-items: center;
     }
+}
+
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 24px;
+        margin-bottom: 5px;
+        font-family: var(--font-onest);
+     }
+     
+     .roleContainer{
+     
+         margin-bottom: 20px;
+     
+         p{
+             margin: 0;
+             font-size: 14px;
+         }
+     }
+     
+     h2{
+         font-size: 18px;
+         margin: 30px 0 0px 0;
+     }
+     
+     p{
+         font-size: 14px;
+         margin: 5px 0px 20px 0px;
+     }
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-family: var(--font-onest);
+     }
+     
+     .roleContainer{
+     
+         margin-bottom: 20px;
+     
+         p{
+             margin: 0;
+             font-size: 12px;
+         }
+     }
+     
+     h2{
+         font-size: 16px;
+         margin: 30px 0 0px 0;
+     }
+     
+     p{
+         font-size: 12px;
+         margin: 5px 0px 20px 0px;
+     }
 }
 
