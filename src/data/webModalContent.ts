@@ -7,7 +7,7 @@ import motherText from '../assets/text.jpg';
 
 export type WebPostItem = {
     index: number;
-    img: string;
+    imgMain: string;
     title: string;
     desc: string;
     role: string;
@@ -28,7 +28,7 @@ export type WebPostItem = {
 export const webModalContent: WebPostItem[] = [
     {
         index: 1,  
-        img: stickToIt,
+        imgMain: stickToIt,
         title: "Stick to it",
         desc: "Stick To It is a simple, collaborative space to create digital post-it notes, set tasks, share memos, and stay organized—solo or with your team.",
         role: "Role: Graphic design, illustration, layout, typography",

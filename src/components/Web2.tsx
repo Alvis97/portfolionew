@@ -16,7 +16,7 @@ function Web2({setModalContent }: Web2Props) {
         
         <WebCard
         key={index}
-        img={item.img}
+        img={item.imgMain}
         title={item.title}
         desc={item.desc}
         onClick={() => setModalContent(
@@ -41,7 +41,7 @@ function Web2({setModalContent }: Web2Props) {
                 <p>{item.lastWord}</p>
                 </div>
                 <div className={style.imgContainer}>
-                <img className={style.image} src={item.img} alt="" />
+                <img className={style.image} src={item.imgMain} alt="" />
                 </div>
                 </div>
 
