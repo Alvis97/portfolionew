@@ -52,7 +52,7 @@ function Projects() {
         <div className={style.projectContainer}>
             {selected === "Web2" && <div><Web2 setModalContent={setModalContent}/></div>}
             {selected === "Graphics" && <Graphics setModalContent={setModalContent}/>}
-            {selected === "Web3" && <div>Web3 Content</div>}
+            {selected === "Web3" && <div><Web3 setModalContent={setModalContent}/></div>}
         </div>
       
     </section>

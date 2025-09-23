@@ -1,15 +1,40 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Web3PostItem, web3ModalContent } from '../data/web3ModalContent';
 import style from '../styles/graphicCard.module.scss'
 import WebCard from './WebCard';
+import {
+  ConnectionProvider,
+  WalletProvider,
+} from "@solana/wallet-adapter-react";
+import {
+  WalletModalProvider,
+  WalletMultiButton,
+} from "@solana/wallet-adapter-react-ui";
+import { clusterApiUrl } from "@solana/web3.js";
+import '@solana/wallet-adapter-react-ui/styles.css';
+
 
 type Web3Props = {
   setModalContent: (content: React.ReactNode) => void;
 }
 
 function Web3({setModalContent }: Web3Props) {
+
+  const endpoint = clusterApiUrl("devnet");
+  const wallets = useMemo(() => [], []);
+
   return (
-    <div>
+    <ConnectionProvider endpoint={endpoint}>
+    <WalletProvider wallets={wallets}>
+    <WalletModalProvider>
+  
+      <div>
+      <div className={style.lockContainer}>
+        <h2>Please add your wallet to acces my web3 projects</h2>
+        <p>You wont be charged anything</p>
+      
+      <WalletMultiButton/>
+      </div>
       {web3ModalContent.map((item: Web3PostItem, index: number) => (
 
         <WebCard
@@ -47,10 +72,13 @@ function Web3({setModalContent }: Web3Props) {
         
         />
       ))}
+    </div> 
 
-
-    </div>
+    </WalletModalProvider>
+    </WalletProvider>
+    </ConnectionProvider>
   )
 }
 
 export default Web3
+
