@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import style from "../styles/project.module.scss"
 import Web2 from './Web2';
 import Graphics from './Graphics';
 import Web3 from './Web3';
@@ -7,6 +6,9 @@ import {graphicsModalContent} from '../data/graphicsModalContent';
 import GraphicsCard from './GraphicsCard';
 import ButtonBubble from './BubbleBtn';
 import Modal from './Modal';
+
+//Style
+import style from "../styles/project.module.scss"
 
 function Projects() {
     const [modalContent, setModalContent]=useState<React.ReactNode>(null);
