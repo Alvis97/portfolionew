@@ -1,4 +1,7 @@
 import React from 'react'
+import Bubble from '../assets/Bubble.svg';
+import { Github, Linkedin, Instagram, GithubIcon, Twitter} from "lucide-react";
+import IconStyle from '../styles/iconStyle.module.scss';
 
 type Props = {
     className?: string;
@@ -44,11 +47,61 @@ const NodeIcon: React.FC<Props> = ({ className }) => {
   )
 }
 
+const BubbleBtnLinkedIn: React.FC<Props> = ({ className }) => {
+  return (
+    <>
+    <a className={IconStyle.Link} href="">
+      <p><Linkedin/></p>
+      <img src={Bubble} alt="Bubble" />
+    </a>
+    </>
+  )
+}
+
+const BubbleBtnGithub: React.FC<Props> = ({ className }) => {
+  return (
+    <>
+    <a className={IconStyle.Link} href="">
+      <p><Github/></p>
+      <img src={Bubble} alt="Bubble" />
+    </a>
+    </>
+  )
+}
+
+const BubbleBtnInstagram: React.FC<Props> = ({ className }) => {
+  return (
+    <>
+    <a className={IconStyle.Link} href="">
+      <p><Instagram/></p>
+      <img src={Bubble} alt="Bubble" />
+    </a>
+    </>
+  )
+}
+
+const BubbleBtnTwitter: React.FC<Props> = ({ className }) => {
+  return (
+    <>
+    <a className={IconStyle.Link} href="">
+      <p><Twitter/></p>
+      <img src={Bubble} alt="Bubble" />
+    </a>
+    </>
+  )
+}
+
+
+
 export {
    Menu,
    ReIcon,
    TScript,
    Solana,
    Sass,
-   NodeIcon
+   NodeIcon,
+   BubbleBtnLinkedIn,
+   BubbleBtnGithub,
+   BubbleBtnInstagram,
+   BubbleBtnTwitter
 } 

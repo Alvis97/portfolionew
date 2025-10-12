@@ -10,8 +10,6 @@ function About() {
         <img className={styles.image} src={profileImg} alt="Portrait of Alva" />
       </div>
       <div className={styles.textWrapper}>
-        <div className={styles.circleBackground}></div>
-        <div className={styles.textContent}>
         <h2>Hi! I’m Alva</h2>
         <p>
           I'm a 27-year-old who moved to London to learn how to code. I've always been
@@ -32,8 +30,6 @@ function About() {
         </div>
 
         <button className={styles.projectBtn}>Check out my projects</button>
-
-        </div>
 
       </div>
     </section>

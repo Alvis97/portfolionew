@@ -4,6 +4,7 @@
   .homeSection{
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,33 +15,28 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content:space-between;
-        align-items:baseline;
+        justify-content: space-between;
+        align-items: flex-start;
         width: 100vw;
-        height: 100vh;
+        height: clamp(50vh, 70vh, 80vh);
+        padding: 0px 20px;
         box-sizing: border-box;
-        padding: 50px 20px;
         z-index: 3;
-    }
 
-    .heading{
-      h1{
-        font-size: 138px;
-        font-family: var(--font-onest);
-        line-height: 150px;
-        margin-top: 20px;
-      }
-    }
+        h1{
+          font-size: clamp(3rem, 10vw, 12rem);
+          font-family: var(--font-onest);
+          line-height: clamp(150px, 5vw, 250px);
+          margin: 0;
+        }
 
-    .description{
-      width: 100%;
-      display: flex;
-      flex-direction: row-reverse;
-      p{
-        font-size: 32px;
+        p{
+        font-size: clamp(1rem, 2vw, 6rem);
         font-family: var(--font-questrial);
-        width: 633px;
-        line-height: 45px;
+        width: clamp(50vw, 60vw, 80vw);
+        line-height: clamp(25px, 40px, 50px);
+        align-self: flex-end;
+        margin: 0;
       }
 
       span{
@@ -61,56 +57,52 @@
         justify-content: space-between;
         margin: auto;
         height: 100vh;
-        width: 100vw;
+        width: 95vw;
         box-sizing: border-box;
-        margin: 20px;
+        margin: 0px;
         position: absolute;
     }
 
     .heart{
-      height: 400px;
-      width: 550px;
+      height: auto;
+      width: 25%;
       z-index: 1;
-
     }
 
     @keyframes MovingHearts{
-      0% { transform: translateY(0);}
-      100% {transform: translateY(20px);}
+      0% { transform: scale(1);}
+      50% { transform: scale(1.05);}
+      100% {transform: scale(1);}
     }
 
-    @keyframes MovingHearts2{
-      0% { transform: translateX(0);}
-      100% {transform: translateX(-20px);}
-    }
-
-    @keyframes MovingHearts2{
-      0% { transform: translateY(0);}
-      100% {transform: translateY(-20px);}
+    @keyframes ShadowAnimation {
+      0% { transform: scale(1);}
+      50% { transform: scale(0.95);}
+      100% {transform: scale(1);}
     }
 
     .heart1{
        rotate: -10deg;
        margin-top: 300px;
-       animation: MovingHearts 3s infinite ease-in-out alternate;
+       animation: MovingHearts 5s 1s infinite ease-in-out alternate;
     }
     
     .heart2{
         rotate: -120deg;
-        margin-bottom: -50px;
-        animation: MovingHearts2 3s infinite ease-in-out alternate;
+        margin-bottom: -10px;
+        animation: MovingHearts 5s 2s infinite ease-in-out alternate;
     }
     
     .heart3{
      margin-bottom: 250px;
      rotate: 180deg;
-     animation: MovingHearts2 3s infinite ease-in-out alternate;
+     animation: MovingHearts 5s 3s infinite ease-in-out alternate;
     }
 
     .heart4{
       margin-top: -75px;
       rotate: 10deg;
-      animation: MovingHearts 3s infinite ease-in-out alternate;
+      animation: MovingHearts 5s 4s infinite ease-in-out alternate;
      }
 
      .heartShadows{
@@ -121,142 +113,162 @@
       height: 100vh;
       width: 100vw;
       box-sizing: border-box;
-      margin: 20px;
+      padding: 20px;
       position: absolute;
   }
 
   .shadow{
-    height: 400px;
-    width: 550px;
+    height: auto;
+    width: 25%;
     z-index: 0;
-    animation: MovingHearts 3s infinite ease-in-out alternate;
   }
 
   .shadow1{
      rotate: -10deg;
-     margin-top: 330px;
-     margin-left: 20px;
-     animation: MovingHearts 3s infinite ease-in-out alternate;
+     margin-top: 350px;
+     margin-left: 0px;
+     animation: ShadowAnimation 5s 1s infinite ease-in-out alternate;
   }
   
   .shadow2{
       rotate: -120deg;
       margin-right: -0px;
-      margin-bottom: -120px;
-      animation: MovingHearts2 3s infinite ease-in-out alternate;
+      margin-bottom: -70px;
+      animation: ShadowAnimation 5s 2s infinite ease-in-out alternate;
   }
   
   .shadow3{
    margin-bottom: 180px;
+   margin-left: -10px;
    rotate: 180deg;
-   animation: MovingHearts2 3s infinite ease-in-out alternate;
+   animation: ShadowAnimation 5s 3s infinite ease-in-out alternate;
   }
 
   .shadow4{
-    margin-top: -35px;
+    margin-top: -5px;
     rotate: 10deg;
-    animation: MovingHearts 3s infinite ease-in-out alternate;
+    animation: ShadowAnimation 5s 4s infinite ease-in-out alternate;
    }
 
    //add horisontal landskape design
-     
 
-  @media  screen and (max-width: 1400px) {
-    .heading{
-      h1{
-        font-size: 128px;
-        font-family: var(--font-onest);
-        line-height: 150px;
-        margin-top: 45px;
-      }
-    }
-  }  
-
-  @media  screen and (max-width: 1250px) {
-    .heading{
-      h1{
-        font-size: 118px;
-        font-family: var(--font-onest);
-        line-height: 150px;
-        margin-top: 65px;
-      }
-    }
-
-    .description{
-      width: 100%;
-      display: flex;
-      flex-direction: row-reverse;
-      p{
-        font-size: 28px;
-        font-family: var(--font-questrial);
-        width: 633px;
-        line-height: 45px;
-      }
-
-      span{
-        color: var(--color-orange);
-      }
-    }
-  } 
-
-  @media  screen and (max-width: 1135px) {
+   @media  screen and (orientation:landscape) and (max-width: 900px) {
 
     .textContent{
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content:space-around;
-      align-items:baseline;
-      width: 100vw;
-      height: 100vh;
-      box-sizing: border-box;
-      padding: 50px 20px;
-      z-index: 3;
+      height: clamp(50vh, 60vh, 70vh);
+
+      h1{
+        font-size: clamp(3rem, 9vw, 10rem);
+        line-height: clamp(50px, 100px, 100px);
+      }
+
+      p{
+      font-size: clamp(1rem, 2vw, 6rem);
+      width: clamp(50vw, 60vw, 80vw);
+      line-height: clamp(25px, 30px, 40px);
+    }
   }
 
-    .heading{
+.heart1{
+  margin-top: 220px;
+}
+
+.heart2{
+   margin-bottom: 0px;
+}
+
+.heart3{
+margin-bottom: 220px;
+}
+
+.heart4{
+ margin-top: 0px;
+}
+    
+   }
+
+   @media screen and (orientation:portrait) and (max-width: 1150px) {
+
+    .textContent{
+      height:  60vh;
+      padding: 0px 20px;
+
       h1{
-        font-size: 105px;
-        line-height: 130px;
+        font-size: clamp(24px, 70px, 140px);
+        line-height: clamp(50px, 100px, 150px);
       }
-    }
 
-    .description{
       p{
-        font-size: 24px;
-        width: 560px;
-        line-height: 40px;
-      }
+      font-size: clamp(14px, 18px, 24px);
+      width: clamp(50vw, 75vw, 80vw);
+      line-height: clamp(25px,30px,50px);
     }
-  } 
+  }
 
-  @media  screen and (max-width: 985px) {
-    .heading{
-      h1{
-        font-size: 92px;
-        font-family: var(--font-onest);
-        line-height: 130px;
-        margin-top: 85px;
-      }
-    }
+  .hearts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    height: 50vh;
+    width: 95vw;
+    box-sizing: border-box;
+    margin: 0px;
+    position: absolute;
+}
 
-    .description{
-      width: 100%;
-      display: flex;
-      flex-direction: row-reverse;
-      margin-bottom: 20px;
-      p{
-        font-size: 24px;
-        font-family: var(--font-questrial);
-        width: 560px;
-        line-height: 40px;
-      }
+  .heart1{
+    margin-top: 120px;
+ }
+ 
+ .heart2{
+     margin-bottom: 0px;
+ }
+ 
+ .heart3{
+  margin-bottom: -80px;
+  padding-right: 20px ;
+ }
 
-      span{
-        color: var(--color-orange);
-      }
-    }
-  } 
+ .heart4{
+   margin-top: -190px;
+   margin-left: -20px;
+  }
+
+  .heartShadows{
+    padding: 20px;
+}
+
+  .shadow1{
+   margin-top: 170px;
+   margin-left: 0;
+ }
+ 
+ .shadow2{
+margin: 0;
+margin-top: 50px;
+ }
+ 
+ .shadow3{
+margin: 0;
+margin-top: 40px;
+ }
+
+ .shadow4{
+margin: 0;
+margin-bottom: 140px;
+  }
+    
+   }
+
+
+
+
+
+
+
+
+
 
 
 
