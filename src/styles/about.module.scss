@@ -4,159 +4,123 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content:space-evenly;
     align-items: center;
-    padding: 20px;
     box-sizing: border-box;
+    background: linear-gradient(to bottom, #1B1511 0%, #ae8ea05b 50%, #1B1511 100%);
+    padding: 0px;
+}
+
+.image{
+    width: 25vw;
+    height: auto;
 }
 
 .textWrapper{
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50vw;
+    align-items:baseline;
+    justify-content: left;
+    width: 60vw;
     height: fit-content;
-    margin-left: 30px;
+
+    h2{
+        text-align: left;
+        font-size: clamp(34px, 3vw, 48px);
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    p{
+        text-align: left;
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: clamp(30px, 34px, 38px);
+        letter-spacing: 2px;
+        width: 90%;
+    }
 }
 
-.circleBackground{
-    @include circle();
-    height: 400px;
-    width: 400px;
-    margin: auto;
-    border-radius: 100%;
-    filter: blur(50px);
+.iconRow{
+    margin: 7px 0 ;
 }
 
-.textContent{
-    position: absolute;
-    margin: auto 0px;
+.btnDiv{
+    display: flex
 }
-
 
 .projectBtn{
+    margin-right: 20px;
     @include themeBtn();
+
 
     &:hover {
         transform: scale(1.02);
       }
 }
 
-@media screen and (max-width: 850px){
-
-    .projectBtn{
-        @include themeBtn();
-        font-size: 16px;
-    }
-  }
 
 .Icon{
     @include icons();
     margin: 0  15px;
-}
-
-@media screen and (max-width: 1000px) {
-    .Icon{
-      height: 25px;
-      width: 25px;
-      margin: 0  15px;
-    }
-  }
-
-.image{
+    width: clamp(25px, 2vw, 50px);
     height: auto;
-    width: auto;
+
+    &:hover{
+        animation: icons 1s ease-in-out forwards;
+      }
+    }      
+
+@keyframes icons {
+
+    0% {transform: scale(1);}
+    100% {transform: scale(1.1);}
+    
 }
 
-@media screen and (max-width: 850px) {
-    .image{
-        height: 270px;
-        width: auto;
-    }
-  }
 
   @media  screen and (max-width: 768px) {
 
     .aboutSection{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }  
     
     .image{
-        height: 200px;
-        width: auto;
-        margin-bottom: 20px;
+        height: auto;
+        width: 20vw;
+        margin-bottom: 30px;
     }
 
     .textWrapper{
-        position: relative;
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 70vw;
+        width: 100%;
         height: fit-content;
-        margin-left: 0px;
-        margin: 0;
-        height: 320px;
-    }
 
-    .textContent{
-        position: absolute;
-        margin: auto 0px;
-        text-align: center;
-    }
-
-    .projectBtn{
-        @include themeBtn();
-        margin: 20px auto;
-    }
-  }
-
-
-
-@media screen and (max-width: 660px) {
-    .image{
-        margin-bottom: 40px;
+        h2{
+            text-align: center;
+            font-size: clamp(28px, 3vw, 38px);
+            margin: 10px 0;
+        }
+    
+        p{
+            text-align: center;
+            font-size: clamp(14px, 2vw, 18px);
+            line-height: 30px;
+            width: clamp(80vw, 2vw, 60vw);
+        }
     }
 
     .projectBtn{
-        @include themeBtn();
-        font-size: 14px;
-        margin-top: 15px;
+        margin:  20px 10px 0 10px;
     }
 
-    .Icon{
-        height: 18px;
-        width: 18px;
-        margin: 0  15px;
-      }
   }
 
-  @media screen and (max-width: 500px) {
-
-    .circleBackground{
-        @include circle();
-        height: 300px;
-        width: 300px;
-        margin: auto;
-        border-radius: 100%;
-        filter: blur(50px);
-    }
-  }
-
-  @media screen and (max-width: 350px) {
-
-    .circleBackground{
-        @include circle();
-        height: 200px;
-        width: 200px;
-        margin: auto;
-        border-radius: 100%;
-        filter: blur(50px);
-    }
-  }
 
 
 

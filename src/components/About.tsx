@@ -1,25 +1,23 @@
 import React from 'react';
 import styles from '../styles/about.module.scss';
 import profileImg from '../assets/profile.jpg'; 
+import selfie from '../assets/Selfie.jpg';
 import { NodeIcon, ReIcon, Sass, Solana, TScript } from './Icons';
 
 function About() {
   return (
     <section className={styles.aboutSection}>
-      <div className={styles.imageWrapper}>
-        <img className={styles.image} src={profileImg} alt="Portrait of Alva" />
-      </div>
+
+      <img className={styles.image} src={selfie} alt="Portrait of Alva" />
+
       <div className={styles.textWrapper}>
-        <h2>Hi! I’m Alva</h2>
+        <h2>Hi! I’m Alva </h2>
         <p>
-          I'm a 27-year-old who moved to London to learn how to code. I've always been
-          interested in logic and art, and wanted to explore the digital world. That
-          curiosity led me into Web3 – I’m fascinated by the technical side of how it
-          all works.
-        </p>
-        <p>
-          Right now I'm mainly working with React and TypeScript, but I’ve also used
-          JavaScript, SCSS, PHP, SQL, Node, and Next.js.
+            I’m a front-end developer blending art and tech. 
+            Based in London with a background in design,
+            I build modern web apps using React, 
+            TypeScript & Next.js — and love exploring what the web can be, 
+            from Web2 layouts to Web3 experiments.
         </p>
         <div className={styles.iconRow}>
            <ReIcon className={styles.Icon}/>
@@ -29,8 +27,10 @@ function About() {
            <NodeIcon className={styles.Icon}/>
         </div>
 
-        <button className={styles.projectBtn}>Check out my projects</button>
-
+        <div className={styles.btnDiv}>
+          <button className={styles.projectBtn}>DownloadCV</button>
+          <button className={styles.projectBtn}>Check out my projects</button>
+        </div>
       </div>
     </section>
   );
