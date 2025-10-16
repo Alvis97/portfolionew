@@ -1,5 +1,6 @@
 @import './mixins';
   
+// Dsctop default styles
   //Home Page
   .homeSection{
     width: 100vw;
@@ -9,34 +10,36 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
     }
     
     .textContent{
-        position: absolute;
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         width: 100vw;
-        height: clamp(50vh, 70vh, 80vh);
+        height: clamp(35vh, 45vw, 75vh);
         padding: 0px 20px;
         box-sizing: border-box;
-        z-index: 3;
+        z-index: 5;
 
         h1{
-          font-size: clamp(3rem, 10vw, 12rem);
+          font-size: 136px;
+          font-size: clamp(44px, 10vw, 136px);
           font-family: var(--font-onest);
-          line-height: clamp(150px, 5vw, 250px);
+          line-height: clamp(60px, 12vw, 150px);
           margin: 0;
         }
 
         p{
-        font-size: clamp(1rem, 2vw, 6rem);
+        font-size: clamp(14px, 2vw, 30px);
         font-family: var(--font-questrial);
-        width: clamp(50vw, 60vw, 80vw);
-        line-height: clamp(25px, 40px, 50px);
+        line-height: clamp(25px, 5vw, 40px);
         align-self: flex-end;
         margin: 0;
+        max-width: 50ch; //Max 50 characters
       }
 
       span{
@@ -46,9 +49,12 @@
 
     .circle{
       @include circle();
-      height: 500px;
-      width: 500px;
+      max-height: 600px;
+      max-width: 600px;
+      min-height: 300px;
+      min-width: 300px;
       position: absolute;
+      z-index: 1;
     }
     
     .hearts{
@@ -56,17 +62,24 @@
         align-items: center;
         justify-content: space-between;
         margin: auto;
-        height: 100vh;
-        width: 95vw;
+        height: clamp(35vh, 45vw, 80vh);
+        width: 100vw;
+        padding: 5px;
         box-sizing: border-box;
         margin: 0px;
         position: absolute;
+        overflow: hidden;
+        z-index: 2;
+        //background-color: rgba(255, 166, 0, 0.614);
     }
 
     .heart{
       height: auto;
-      width: 25%;
-      z-index: 1;
+      width: 23%;
+      position: absolute;
+      z-index: 3;
+      margin: 20px;
+      opacity: 0.75;
     }
 
     @keyframes MovingHearts{
@@ -83,24 +96,25 @@
 
     .heart1{
        rotate: -10deg;
-       margin-top: 300px;
+       bottom: 0px;
        animation: MovingHearts 5s 1s infinite ease-in-out alternate;
     }
     
     .heart2{
         rotate: -120deg;
-        margin-bottom: -10px;
+        left: 22vw;
         animation: MovingHearts 5s 2s infinite ease-in-out alternate;
     }
     
     .heart3{
-     margin-bottom: 250px;
+     right: 26vw;
      rotate: 180deg;
      animation: MovingHearts 5s 3s infinite ease-in-out alternate;
     }
 
     .heart4{
-      margin-top: -75px;
+      right: 0;
+      top: 0;
       rotate: 10deg;
       animation: MovingHearts 5s 4s infinite ease-in-out alternate;
      }
@@ -120,7 +134,8 @@
   .shadow{
     height: auto;
     width: 25%;
-    z-index: 0;
+    z-index: 2;
+    position: absolute;
   }
 
   .shadow1{
@@ -150,128 +165,146 @@
     animation: ShadowAnimation 5s 4s infinite ease-in-out alternate;
    }
 
-   //add horisontal landskape design
 
-   @media  screen and (orientation:landscape) and (max-width: 900px) {
-
-    .textContent{
-      height: clamp(50vh, 60vh, 70vh);
+   // Ipad style
+@media screen and (orientation:portrait) and (max-width: 1024px) {
+    
+  .textContent{
+      height: clamp(40vh, 110vw, 75vh);
+      padding: 0px 10px;
 
       h1{
-        font-size: clamp(3rem, 9vw, 10rem);
-        line-height: clamp(50px, 100px, 100px);
+        font-size: clamp(50px, 17vw, 166px);
+        line-height: clamp(60px, 20vw, 170px);
+        margin: 0;
+        width: 9ch;
       }
 
       p{
-      font-size: clamp(1rem, 2vw, 6rem);
-      width: clamp(50vw, 60vw, 80vw);
-      line-height: clamp(25px, 30px, 40px);
+      font-size: clamp(20px, 4vw, 38px);
+      line-height: clamp(30px, 7vw, 52px);
+      align-self:center;
+      max-width: 39ch; //Max 50 characters
+      text-align: center;
     }
   }
 
+.circle{
+height: clamp(600px, 60vw, 800px);
+width: clamp(600px, 60vw, 800px);
+}
+
+.hearts{
+height: clamp(35vh, 115vw, 95vh);
+}
+
+.heart{
+position: absolute;
+width: 40vw;
+}
+
 .heart1{
-  margin-top: 220px;
+left: -100px;
+bottom: 0;
+rotate: -17deg;
 }
 
 .heart2{
-   margin-bottom: 0px;
+left: 8vw;
+bottom: 35%;
 }
 
 .heart3{
-margin-bottom: 220px;
+right: 0vw;
+bottom: 18%;
+rotate: 165deg;
 }
 
 .heart4{
- margin-top: 0px;
+right: -100px;
+} 
 }
+ 
+
+// Mobile style
+@media screen and (orientation:portrait) and (max-width: 767px) {
     
-   }
-
-   @media screen and (orientation:portrait) and (max-width: 1150px) {
-
     .textContent{
-      height:  60vh;
-      padding: 0px 20px;
+        height: clamp(40vh, 120vw, 70vh);
+        padding: 0px 10px;
 
-      h1{
-        font-size: clamp(24px, 70px, 140px);
-        line-height: clamp(50px, 100px, 150px);
+        h1{
+          font-size: clamp(50px, 17vw, 126px);
+          line-height: clamp(60px, 17vw, 130px);
+          margin: 0;
+          width: 9ch;
+        }
+
+        p{
+        font-size: clamp(14px, 5vw, 30px);
+        line-height: clamp(30px, 7vw, 45px);
+        align-self:center;
+        max-width: 39ch; //Max 50 characters
+        text-align: center;
       }
-
-      p{
-      font-size: clamp(14px, 18px, 24px);
-      width: clamp(50vw, 75vw, 80vw);
-      line-height: clamp(25px,30px,50px);
     }
-  }
 
-  .hearts{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    height: 50vh;
-    width: 95vw;
-    box-sizing: border-box;
-    margin: 0px;
-    position: absolute;
+.circle{
+  height: clamp(300px, 60vw, 600px);
+  width: clamp(300px, 60vw, 600px);
 }
 
-  .heart1{
-    margin-top: 120px;
+.hearts{
+  justify-content: center;
+  height: clamp(35vh, 110vw, 70vh);
+  width: 100vw;
+  padding: 5px;
+}
+
+.heart{
+position: absolute;
+width: 39vw;
+}
+
+.heart1{
+  left: -100px;
+  rotate: -17deg;
  }
  
  .heart2{
-     margin-bottom: 0px;
+  left: 10vw;
+  bottom: 25%;
  }
  
  .heart3{
-  margin-bottom: -80px;
-  padding-right: 20px ;
+  right: 0vw;
+  bottom: 27%;
+  rotate: 165deg;
  }
 
  .heart4{
-   margin-top: -190px;
-   margin-left: -20px;
-  }
-
-  .heartShadows{
-    padding: 20px;
+  right: -100px;
+  } 
 }
 
-  .shadow1{
-   margin-top: 170px;
-   margin-left: 0;
+@media screen and (orientation:portrait) and (max-width: 500px) {
+
+.heart1{
+  left: -80px;
+  rotate: -17deg;
  }
  
- .shadow2{
-margin: 0;
-margin-top: 50px;
+ .heart2{
+  left: 4vw;
+  bottom: 30%;
  }
  
- .shadow3{
-margin: 0;
-margin-top: 40px;
+ .heart3{
+  bottom: 23%;
  }
 
- .shadow4{
-margin: 0;
-margin-bottom: 140px;
-  }
-    
-   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ .heart4{
+  right: -60px;
+  } 
+}
 

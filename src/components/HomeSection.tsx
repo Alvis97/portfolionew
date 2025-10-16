@@ -29,12 +29,12 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
             <img className={`${homeStyle.heart4} ${homeStyle.heart} `} src={LargeHeart6} alt="heart A" />
         </div>
          
-        <div  className={homeStyle.heartShadows}>
+        {/* <div  className={homeStyle.heartShadows}>
             <img src={HeartShadow} className={`${homeStyle.shadow1} ${homeStyle.shadow}`} alt="Shadow A" />
             <img src={HeartShadow} className={`${homeStyle.shadow2} ${homeStyle.shadow}`} alt="Shadow A" />
             <img src={HeartShadow} className={`${homeStyle.shadow3} ${homeStyle.shadow}`} alt="Shadow A" />
             <img src={HeartShadow} className={`${homeStyle.shadow4} ${homeStyle.shadow}`} alt="Shadow A" />
-        </div>
+        </div> */}
       
     </section>
   )
