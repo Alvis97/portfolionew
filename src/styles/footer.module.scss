@@ -49,20 +49,15 @@
     }
   }
 
-
-
-.icon{
-  @include footerIcon();
-}
-
 @media screen and (max-width: 500px){
   .footer{
     display: flex;
     flex-direction:column-reverse;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 8px 10px;
     box-sizing: border-box;
+    height: 85px;
   }
 
   .IconLink{
@@ -70,9 +65,8 @@
     margin: 10px 7px;
   }
 
-
 .icon{
-  color: var(--color-accent);
+  color: white;
   font-size: 10px;
 }
 }

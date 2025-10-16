@@ -128,7 +128,7 @@
   }
 
   @mixin iconLink{
-    background-color: var(--color-accent);
+   color: white;
     padding: 7px;
     margin: 0px 7px;
     border-radius: 100%;
@@ -138,9 +138,7 @@
     transition: transform 0.5s ease;
   }
 
-  @mixin footerIcon{
-    color: var(--color-accent2);
-  }
+
 
   @mixin iconMenu {
     stroke: var(--color-dark);
