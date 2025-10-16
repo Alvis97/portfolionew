@@ -138,6 +138,10 @@ align-items: center;
 
 @media  screen and (max-width: 768px) {
 
+  .parent{
+     padding: 10px 10px;
+ }
+
   .menuButton{
       display:block;
   }
