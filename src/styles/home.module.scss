@@ -11,6 +11,8 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-bottom: 100px;
+    //background-color: rgba(255, 192, 203, 0.701);
     }
     
     .textContent{
@@ -20,26 +22,28 @@
         justify-content: space-between;
         align-items: flex-start;
         width: 100vw;
-        height: clamp(35vh, 45vw, 75vh);
+        height: clamp(50vh, 45vw, 75vh);
+        letter-spacing: 3px;
         padding: 0px 20px;
         box-sizing: border-box;
         z-index: 5;
 
         h1{
           font-size: 136px;
-          font-size: clamp(44px, 10vw, 136px);
+          font-size: clamp(44px, 10vw, 128px);
           font-family: var(--font-onest);
-          line-height: clamp(60px, 12vw, 150px);
+          line-height: clamp(60px, 14vw, 153px);
           margin: 0;
         }
 
         p{
         font-size: clamp(14px, 2vw, 30px);
         font-family: var(--font-questrial);
-        line-height: clamp(25px, 5vw, 40px);
+        line-height: clamp(25px, 3vw, 40px);
         align-self: flex-end;
         margin: 0;
-        max-width: 50ch; //Max 50 characters
+        letter-spacing: 3px;
+        width: 51ch; //Max 50 characters
       }
 
       span{
@@ -62,7 +66,7 @@
         align-items: center;
         justify-content: space-between;
         margin: auto;
-        height: clamp(35vh, 45vw, 80vh);
+        height: clamp(35vh, 60vw, 100vh);
         width: 100vw;
         padding: 5px;
         box-sizing: border-box;
@@ -75,11 +79,11 @@
 
     .heart{
       height: auto;
-      width: 23%;
+      width: 22%;
       position: absolute;
       z-index: 3;
       margin: 20px;
-      opacity: 0.75;
+      opacity: 0.65;
     }
 
     @keyframes MovingHearts{
@@ -97,12 +101,13 @@
     .heart1{
        rotate: -10deg;
        bottom: 0px;
+       left: 0vw;
        animation: MovingHearts 5s 1s infinite ease-in-out alternate;
     }
     
     .heart2{
         rotate: -120deg;
-        left: 22vw;
+        left: 19vw;
         animation: MovingHearts 5s 2s infinite ease-in-out alternate;
     }
     
@@ -170,22 +175,26 @@
 @media screen and (orientation:portrait) and (max-width: 1024px) {
     
   .textContent{
-      height: clamp(40vh, 110vw, 75vh);
-      padding: 0px 10px;
+      height: clamp(55vh, 108vw, 77vh);
+      padding: 0px 20px;
+      margin-top: 0;
 
       h1{
-        font-size: clamp(50px, 17vw, 166px);
-        line-height: clamp(60px, 20vw, 170px);
-        margin: 0;
-        width: 9ch;
+        font-size: clamp(50px, 9vw, 86px);
+        line-height: clamp(60px, 11vw, 110px);
+        margin: auto;
+        margin-top: 0;
+        width: 17ch;
+        text-align: left;
+        letter-spacing: 7px;
       }
 
       p{
-      font-size: clamp(20px, 4vw, 38px);
-      line-height: clamp(30px, 7vw, 52px);
-      align-self:center;
-      max-width: 39ch; //Max 50 characters
-      text-align: center;
+      font-size: clamp(14px, 2.5vw, 24px);
+      line-height: clamp(30px, 5vw, 50px);
+      align-self:flex-end;
+      width: 44ch; //Max 50 characters
+      text-align: left;
     }
   }
 
@@ -195,33 +204,34 @@ width: clamp(600px, 60vw, 800px);
 }
 
 .hearts{
-height: clamp(35vh, 115vw, 95vh);
+height: clamp(35vh, 80vw, 60vh);
 }
 
 .heart{
 position: absolute;
-width: 40vw;
+width: 33vw;
 }
 
 .heart1{
-left: -100px;
-bottom: 0;
+left: -7vw;
+bottom: 0%;
 rotate: -17deg;
 }
 
 .heart2{
-left: 8vw;
-bottom: 35%;
+left: 14vw;
+bottom: 31%;
 }
 
 .heart3{
-right: 0vw;
-bottom: 18%;
-rotate: 165deg;
+right: 11vw;
+bottom: 17%;
+rotate: 185deg;
 }
 
 .heart4{
-right: -100px;
+right: -7vw;
+top: 2%;
 } 
 }
  
@@ -230,21 +240,22 @@ right: -100px;
 @media screen and (orientation:portrait) and (max-width: 767px) {
     
     .textContent{
-        height: clamp(40vh, 120vw, 70vh);
+        height: clamp(60vh, 120vw, 70vh);
         padding: 0px 10px;
 
         h1{
-          font-size: clamp(50px, 17vw, 126px);
-          line-height: clamp(60px, 17vw, 130px);
-          margin: 0;
-          width: 9ch;
+          font-size: clamp(20px, 9vw, 70px);
+          line-height: clamp(65px, 13vw, 90px);
+          margin: 0 auto;
+          width: 16ch;
+          text-align: center;
         }
 
         p{
-        font-size: clamp(14px, 5vw, 30px);
-        line-height: clamp(30px, 7vw, 45px);
+        font-size: clamp(14px, 3.5vw, 24px);
+        line-height: clamp(30px, 7vw, 42px);
         align-self:center;
-        max-width: 39ch; //Max 50 characters
+        max-width: 45ch; //Max 50 characters
         text-align: center;
       }
     }
@@ -256,55 +267,99 @@ right: -100px;
 
 .hearts{
   justify-content: center;
-  height: clamp(35vh, 110vw, 70vh);
+  height: clamp(20vh, 67vw, 40vh);
   width: 100vw;
   padding: 5px;
 }
 
 .heart{
-position: absolute;
-width: 39vw;
+width: 33vw;
 }
 
 .heart1{
-  left: -100px;
+  left: -12vw;
   rotate: -17deg;
+  bottom: 3vh;
  }
  
  .heart2{
-  left: 10vw;
-  bottom: 25%;
+  left: 12vw;
+  bottom: 40%;
  }
  
  .heart3{
-  right: 0vw;
-  bottom: 27%;
+  right: 14vw;
+  bottom: 2vh;
   rotate: 165deg;
  }
 
  .heart4{
-  right: -100px;
+  right: -12vw;
+  top: -1.5vh;
   } 
 }
 
-@media screen and (orientation:portrait) and (max-width: 500px) {
+@media screen and (orientation:portrait) and (max-width: 550px) {
 
-.heart1{
-  left: -80px;
-  rotate: -17deg;
- }
- 
- .heart2{
-  left: 4vw;
-  bottom: 30%;
- }
- 
- .heart3{
-  bottom: 23%;
- }
+  .textContent{
+    height: 50vh;
+    padding: 0px 10px;
 
- .heart4{
-  right: -60px;
-  } 
+    h1{
+      font-size: clamp(20px, 9vw, 52px);
+      line-height: clamp(30px, 13vw, 70px);
+      margin: 0px auto 0 auto;
+      width: 90vw;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    p{
+    font-size: clamp(11px, 3vw, 24px);
+    line-height: clamp(22px, 5vw, 42px);
+    align-self:center;
+    width: 90vw; 
+    max-width: none;
+    text-align: center;
+    margin: 0 0 0px 0;
+    letter-spacing: 1px;
+  }
 }
+
+.hearts{
+  justify-content: center;
+  height: 32vh;
+  width: 100vw;
+  padding: 5px;
+  //background-color: rgba(255, 192, 203, 0.428);
+}
+
+.heart{
+  width: 30vw;
+  opacity: 0.65;
+  }
+  
+  .heart1{
+    left: -8vw;
+    rotate: -17deg;
+    bottom: 0%;
+   }
+   
+   .heart2{
+    left: 16vw;
+    top: 5vh;
+   }
+   
+   .heart3{
+    right: 17vw;
+    bottom: 3vh;
+    rotate: 165deg;
+   }
+  
+   .heart4{
+    right: -8vw;
+    top: 0%;
+    } 
+  }
+
 

@@ -15,8 +15,8 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
         <div   className={homeStyle.circle}></div>
 
         <div  className={homeStyle.textContent}>
-            <h1>Web-developer / graphics</h1>
-              <p>Curious at heart. I design, develop and dive deep into creative technologies - from web2 layouts to web3 experiments. <br>
+            <h1>Web developer & Visual designer</h1>
+              <p>Curious at heart. I build immersive web experiences that blend design, code, and creative tech – from playful interfaces to web3 interactions. <br>
               </br> 
               <span>/* Just exploring what the web can be */</span>
               </p>
