@@ -16,11 +16,11 @@ a{
     }
  
     p{
+        @include iconLink();
         position: absolute;
         margin: auto;
         margin-left: 2px;
-        margin-top: 2px;
-        color: white;
+        margin-top: 0px;
         z-index: 2;
         opacity: 0.75;
     }

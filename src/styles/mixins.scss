@@ -58,8 +58,16 @@
   }
 }
 
+@mixin textColor {
+  color: var(--color-red);
 
-@mixin cities{
+  :global(.dark) & {
+    color: var(--color-white);
+  }
+}
+
+
+@mixin buttons{
   border: 1px solid var(--color-dark);
   color: var(--color-dark);
 
@@ -68,31 +76,6 @@
     color: var(--color-light);
   }
 }
-
-@mixin categoryText{
-    font-family: var(--font-questrial);
-    margin: 10px 0px 40px 0;
-    font-weight: 400;
-    font-size: 24px;
-    color:rgb(163, 93, 67);
-
-    :global(.dark) & {
-        color: rgb(254, 215, 201);
-    }
-  }
-
-  @mixin name{
-    font-family: var(--font-kapakana);
-    font-size: 64px;
-    margin: -10px 0;
-    font-weight: 300;
-    width: 100vw;
-    color: var(--color-accent);
-
-    :global(.dark) & {
-        color: var(--color-accent2);
-    }
-  }
 
   @mixin link-styles {
     text-decoration: none;
@@ -140,8 +123,8 @@
   }
 
   @mixin icons{
-    fill: var(--color-dark);
-    stroke: var(--color-dark);
+    fill: var(--color-red);
+    stroke: var(--color-red);
     height: 30px;
     width: 30px;
     margin-right: 30px;
@@ -153,7 +136,7 @@
   }
 
   @mixin iconLink{
-   color: white;
+   color: var(--color-red);
     padding: 7px;
     margin: 0px 7px;
     border-radius: 100%;
@@ -161,6 +144,10 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease;
+
+    :global(.dark) & {
+      color: var(--color-white);
+    }
   }
 
 
@@ -174,7 +161,7 @@
   }
   
   @mixin textColor{
-    color: var(--color-dark);
+    color: var(--color-red);
 
     :global(.dark) & {
       color: var(--color-light);
@@ -213,7 +200,6 @@
     margin: 10px;
     -webkit-box-shadow: 0px 10px 13px -4px rgba(87, 87, 87, 0.457); 
     box-shadow: 0px 10px 13px -4px rgba(87, 87, 87, 0.457);
-    //border: 2px solid rgb(161, 166, 161);
 
     h4{
       font-family: var( --font-onest);
@@ -252,7 +238,6 @@
     margin: 10px;
     -webkit-box-shadow: 0px 10px 13px -4px rgba(87, 87, 87, 0.457); 
     box-shadow: 0px 10px 13px -3px rgba(87, 87, 87, 0.457);
-    //border: 2px solid rgb(161, 166, 161);
 
     .visibleContainer{
       position: absolute;

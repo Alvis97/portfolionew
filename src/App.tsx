@@ -40,7 +40,9 @@ function App() {
         <About/>
         <Projects/>
       </main>
-     <Footer/> 
+     <Footer
+     isDarkmodeSelected={isDarkmodeSelected}
+     /> 
     </div>
   );
 }

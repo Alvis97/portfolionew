@@ -73,7 +73,6 @@
         position: absolute;
         overflow: hidden;
         z-index: 2;
-        //background-color: rgba(255, 166, 0, 0.614);
     }
 
     .heart{
@@ -83,7 +82,7 @@
       position: absolute;
       z-index: 3;
       margin: 20px;
-      //opacity: 0.65;
+      opacity: 0.65;
     }
 
     @keyframes MovingHearts{
@@ -129,44 +128,49 @@
       align-items: center;
       justify-content: space-between;
       margin: auto;
-      height: 100vh;
+      height: clamp(35vh, 60vw, 100vh);
       width: 100vw;
+      padding: 5px;
       box-sizing: border-box;
-      padding: 20px;
+      margin: 0px;
       position: absolute;
+      overflow: hidden;
+      z-index: 1;
   }
 
   .shadow{
+    @include hearts();
     height: auto;
-    width: 25%;
-    z-index: 2;
+    width: 22%;
     position: absolute;
+    z-index: 2;
+    margin: 20px;
+    opacity: 0.50;
   }
 
   .shadow1{
-     rotate: -10deg;
-     margin-top: 350px;
-     margin-left: 0px;
+    rotate: -10deg;
+    bottom: -10px;
+    left: 2vw;
      animation: ShadowAnimation 5s 1s infinite ease-in-out alternate;
   }
   
   .shadow2{
-      rotate: -120deg;
-      margin-right: -0px;
-      margin-bottom: -70px;
+    rotate: -120deg;
+    left: 21vw;
       animation: ShadowAnimation 5s 2s infinite ease-in-out alternate;
   }
   
   .shadow3{
-   margin-bottom: 180px;
-   margin-left: -10px;
-   rotate: 180deg;
+    right: 24vw;
+    rotate: 180deg;
    animation: ShadowAnimation 5s 3s infinite ease-in-out alternate;
   }
 
   .shadow4{
-    margin-top: -5px;
-    rotate: 10deg;
+    right: 0;
+      top: 20px;
+      rotate: 10deg;
     animation: ShadowAnimation 5s 4s infinite ease-in-out alternate;
    }
 
@@ -233,6 +237,38 @@ rotate: 185deg;
 right: -7vw;
 top: 2%;
 } 
+
+.heartShadows{
+  height: clamp(35vh, 80vw, 60vh);
+}
+
+.shadow{
+  width: 30%;
+  opacity: 0.50;
+}
+
+.shadow1{
+left: -7vw;
+bottom: 50px;
+rotate: -17deg;
+}
+
+.shadow2{
+left: 14vw;
+bottom: 38%;
+rotate: -120deg;
+}
+
+.shadow3{
+right: 11vw;
+bottom: 23%;
+rotate: 185deg;
+}
+
+.shadow4{
+  right: -7vw;
+top: -10px;
+}
 }
  
 
@@ -297,6 +333,40 @@ width: 33vw;
   right: -12vw;
   top: -1.5vh;
   } 
+
+  .heartShadows{
+    justify-content: center;
+    height: clamp(20vh, 67vw, 40vh);
+    width: 100vw;
+    padding: 5px;
+  }
+  
+  .shadow{
+    width: 30%;
+    opacity: 0.30;
+  }
+  
+  .shadow1{
+    left: -12vw;
+    rotate: -17deg;
+    bottom: 1vh;
+  }
+  
+  .shadow2{
+    left: 14vw;
+    bottom: 39%;
+  }
+  
+  .shadow3{
+    right: 14vw;
+    bottom: 4vh;
+    rotate: 165deg;
+  }
+  
+  .shadow4{
+    right: -12vw;
+    top: -1.5vh;
+  }
 }
 
 @media screen and (orientation:portrait) and (max-width: 550px) {
@@ -360,6 +430,16 @@ width: 33vw;
     right: -8vw;
     top: 0%;
     } 
+
+    .shadow2{
+      left: 14vw;
+      bottom: 30%;
+    }
+    
+    .shadow4{
+      right: -12vw;
+      top: 0;
+    }
   }
 
 

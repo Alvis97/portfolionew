@@ -4,6 +4,7 @@ import LogoSmall from "../components/LogoSmall"
 import DarkMode from '../components/Darkmode';
 import LogoLarge from './LogoLarge';
 import { Menu } from './Icons';
+import PinkHeart from '../assets/PinkHearts.svg';
 
 interface NavbarProps {
     isDarkmodeSelected: boolean;
@@ -20,7 +21,12 @@ function NavBar({ isDarkmodeSelected, handleThemeClick }: NavbarProps ) {
   return (
     <div className={navStyle.parent}> 
 
-            <LogoSmall/>
+    { isDarkmodeSelected ? (
+ <LogoSmall/>
+    ):(
+        <img src={PinkHeart} className={navStyle.pinkHeartLogo} alt="pink little heart logo" />
+    )}
+           
 
             <span className={navStyle.links}>
             <div className={navStyle.linkWrapper}>
