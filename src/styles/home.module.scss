@@ -29,6 +29,7 @@
         z-index: 5;
 
         h1{
+          @include red();
           font-size: 136px;
           font-size: clamp(44px, 10vw, 128px);
           font-family: var(--font-onest);
@@ -47,16 +48,14 @@
       }
 
       span{
-        color: var(--color-orange);
+        @include orange();
       }
     }
 
     .circle{
       @include circle();
-      max-height: 600px;
-      max-width: 600px;
-      min-height: 300px;
-      min-width: 300px;
+      height: clamp(400px, 50vw, 600px);
+      width: clamp(400px, 50vw, 600px);
       position: absolute;
       z-index: 1;
     }
@@ -78,12 +77,13 @@
     }
 
     .heart{
+      @include hearts();
       height: auto;
       width: 22%;
       position: absolute;
       z-index: 3;
       margin: 20px;
-      opacity: 0.65;
+      //opacity: 0.65;
     }
 
     @keyframes MovingHearts{

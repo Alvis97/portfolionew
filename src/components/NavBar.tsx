@@ -5,7 +5,12 @@ import DarkMode from '../components/Darkmode';
 import LogoLarge from './LogoLarge';
 import { Menu } from './Icons';
 
-function NavBar() {
+interface NavbarProps {
+    isDarkmodeSelected: boolean;
+    handleThemeClick: () => void;
+}
+
+function NavBar({ isDarkmodeSelected, handleThemeClick }: NavbarProps ) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleMenuClick = () => {
@@ -32,7 +37,10 @@ function NavBar() {
             </div>
             </span>
 
-            <DarkMode/>
+            <DarkMode 
+            isDarkmodeSelected={isDarkmodeSelected} 
+            handleThemeClick={handleThemeClick}
+            />
 
             <button 
             onClick={handleMenuClick} 

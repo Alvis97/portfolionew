@@ -1,3 +1,4 @@
+//Homepage
 @mixin themeBtn {
     padding: 10px 15px;
     color: var(--color-dark);
@@ -31,6 +32,30 @@
     :global(.dark) & {
       background-color: var(--color-pink27);
     }
+}
+
+@mixin hearts {
+  opacity: 0.80;
+
+  :global(.dark) & {
+    opacity: 0.65;
+  }
+}
+
+@mixin orange {
+  color: var(--color-orange2);
+
+  :global(.dark) & {
+    color: var(--color-orange);
+  }
+}
+
+@mixin red {
+  color: var(--color-red);
+
+  :global(.dark) & {
+    color: var(--color-white);
+  }
 }
 
 
