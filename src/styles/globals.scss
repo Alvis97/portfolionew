@@ -2,30 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Kapakana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 :root {
-    --color-accent2: #e1e3cb;
-    --color-accent: #b2af98;
     --color-dark: #1B1511;
     --color-light: #fbfffa;
-    --color-pink27: rgba(188, 152, 152, 0.27);
-    --color-pink50: rgba(115, 75, 75, 0.275);
+    --color-pink27: rgba(193, 145, 171, 0.20);
+    --color-yellow: rgba(255, 153, 0, 0.15);
     --color-orange: #feba6d;
-    --color-orange2: #e26b6b;
+    --color-pink: #e26b6b;
     --color-red: #5e1515;
 
-    //From 880px minimize fonts
-
     /*Fonts*/
-    --font-questrial: 'Questrial', sans-serif;
-    --font-serif: 'Playfair Display', serif;
     --font-kapakana: 'Kapakana', cursive;
     --font-onest: "Onest", sans-serif;
   }
 
-  .questrial-regular {
-    font-family: "Questrial", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+  // .questrial-regular {
+  //   font-family: "Questrial", sans-serif;
+  //   font-weight: 400;
+  //   font-style: normal;
+  // }
 
   .onest {
     font-family: "Onest", sans-serif;
@@ -62,6 +56,7 @@
     margin: 0;
     margin-top: 0;
     z-index: 0;
+    color: var(--color-red);
   }
   
   body.dark .App-body{
@@ -71,16 +66,56 @@
 
   h2{
     font-family: var(--font-onest);
-    font-weight: 400;
+    font-weight: bold;
     font-size: 42px;
     margin: 0;
+    color: var(--color-red);
+  }
+
+  body.dark h2{
+      color: var(--color-light);
   }
 
   p{
     font-family: var(--font-onest);
-    font-weight: 400;
+    font-weight: medium;
+    font-size: 20px;
+    line-height: 42px;
+    letter-spacing: 2px;
+    color: var(--color-red);
+  }
+
+  body.dark p{
+    color: var(--color-light);
+  }
+
+  a{
+    font-family: var(--font-onest);
+    color: var(--color-red);
+  }
+
+  body.dark a{
+    color: var(--color-light);
+  }
+
+  button{
+    border-radius: 50px;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    font-family: var(--font-onest);
+    letter-spacing: 2px;
     font-size: 20px;
   }
+
+  body.dark button{
+    border-radius: 50px;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    font-family: var(--font-onest);
+    font-size: 20px;
+  }
+
+
 
   @media screen and (max-width: 1000px){
     h2{

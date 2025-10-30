@@ -18,8 +18,14 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
         <div   className={homeStyle.circle}></div>
 
         <div  className={homeStyle.textContent}>
-            <h1>Web developer & Visual designer</h1>
-              <p>Curious at heart. I build immersive web experiences that blend design, code, and creative tech – from playful interfaces to web3 interactions. <br>
+          <div className={homeStyle.heading}>
+          <span className={homeStyle.name}>Alva Jonsson</span>
+          <h1>Web-developer <br/> & Graphics</h1>
+          </div>
+              <p>Curious at heart. I build immersive web <br />
+               experiences that blend design, code, <br />
+               and creative tech – from playful interfaces <br/> 
+               to web3 interactions. <br>
               </br> 
               <span>/* Just exploring what the web can be */</span>
               </p>

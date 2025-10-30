@@ -1,0 +1,17 @@
+@import './mixins';
+
+/* buttonBubble.module.scss */
+.buttonBubble {
+    @include themeBtn;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 20px;
+  
+    &:hover {
+      background-color: rgba(193, 145, 171, 0.20);
+    }
+  }
+  
+  .selected {
+    background-color: rgba(193, 145, 171, 0.35);
+  }
+  

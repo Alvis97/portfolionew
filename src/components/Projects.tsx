@@ -25,11 +25,11 @@ function Projects() {
       onClose={() => setModalContent(null)}>
         {modalContent}
       </Modal>
+
         <div className={style.menu}> 
          <ButtonBubble
           isSelected={selected === "Web2"}
           onClick={() => {
-            console.log("Web2 button clicked");
             setSelected("Web2");
           }}
         >
@@ -52,9 +52,11 @@ function Projects() {
         </div>
 
         <div className={style.projectContainer}>
-            {selected === "Web2" && <div><Web2 setModalContent={setModalContent}/></div>}
+          <div className={style.projects}>
+            {selected === "Web2" && <Web2 setModalContent={setModalContent}/>}
             {selected === "Graphics" && <Graphics setModalContent={setModalContent}/>}
-            {selected === "Web3" && <div><Web3 setModalContent={setModalContent}/></div>}
+            {selected === "Web3" && <Web3 setModalContent={setModalContent}/>}
+          </div>
         </div>
       
     </section>

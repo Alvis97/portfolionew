@@ -58,16 +58,28 @@ function NavBar({ isDarkmodeSelected, handleThemeClick }: NavbarProps ) {
            <div className={navStyle.hamburgerLinks}>
             
             <span className={navStyle.hoverIcon}>
-                <LogoSmall className={navStyle.selector}/>
+                { isDarkmodeSelected ? (
+                    <LogoSmall className={navStyle.selector}/>
+                ):(
+                    <img src={PinkHeart} className={navStyle.selectorPink} alt="pink heart" />
+                )}
                  <a href="">Home</a>
             </span> 
             <span className={navStyle.hoverIcon}>
-                <LogoSmall className={navStyle.selector}/> 
+            { isDarkmodeSelected ? (
+                    <LogoSmall className={navStyle.selector}/>
+                ):(
+                    <img src={PinkHeart} className={navStyle.selectorPink} alt="pink heart" />
+                )}
                 <a href="">About</a>
             </span> 
 
             <span className={navStyle.hoverIcon}>
-                <LogoSmall className={navStyle.selector}/>
+            { isDarkmodeSelected ? (
+                    <LogoSmall className={navStyle.selector}/>
+                ):(
+                    <img src={PinkHeart} className={navStyle.selectorPink} alt="pink heart" />
+                )}
                 <a href="">Projects</a>
             </span> 
            

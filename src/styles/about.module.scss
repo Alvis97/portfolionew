@@ -1,19 +1,20 @@
 @import './mixins';
 
 .aboutSection{
+    @include gradiant2;
     width: 100vw;
-    height: 100vh;
+    margin: auto;
+    height: 110vh;
     display: flex;
     flex-direction: row-reverse;
     justify-content:space-evenly;
     align-items: center;
     box-sizing: border-box;
-    background: linear-gradient(to bottom, #1B1511 0%, #ae8ea05b 50%, #1B1511 100%);
-    padding: 0px;
+    padding: 0px 10vw;
 }
 
 .image{
-    width: 25vw;
+    width: 20vw;
     height: auto;
 }
 
@@ -35,10 +36,8 @@
 
     p{
         text-align: left;
-        font-size: clamp(18px, 2vw, 24px);
-        line-height: clamp(30px, 34px, 38px);
-        letter-spacing: 2px;
-        width: 90%;
+        font-size: 20px;
+        width: 80%;
     }
 }
 
@@ -63,7 +62,7 @@
 
 .Icon{
     @include icons();
-    margin: 0  15px;
+    margin: 0  25px;
     width: clamp(25px, 2vw, 50px);
     height: auto;
 

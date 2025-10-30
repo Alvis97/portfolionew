@@ -1,16 +1,15 @@
 //Homepage
 @mixin themeBtn {
-    padding: 10px 15px;
-    color: var(--color-dark);
+    padding: 12px 15px;
+    color: var(--color-red);
     background-color: transparent;
-    font-family: var(--font-questrial);
-    font-size: clamp(14px, 2vw, 24px);
+    font-family: var(--font-onest);
+    font-size: 20px;
     position: relative;
-
+    border: 1px solid var(--color-red);
     cursor: pointer;
     margin-top: 30px;
-    border-radius: 20px;
-    border: 1px solid var(--color-dark);
+    border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +19,7 @@
     :global(.dark) & {
         color: var(--color-light);
         border: 1px solid var(--color-light);
-        background-color: var(--color-pink27);
+        font-size: 20px;
     }
 }
 
@@ -67,21 +66,12 @@
 }
 
 
-@mixin buttons{
-  border: 1px solid var(--color-dark);
-  color: var(--color-dark);
-
-  :global(.dark) & {
-    border: 1px solid var(--color-light);
-    color: var(--color-light);
-  }
-}
-
+//Links
   @mixin link-styles {
     text-decoration: none;
-    font-family: var(--font-questrial);
+    font-family: var(--font-onest);
     letter-spacing: 2px;
-    color: var(--color-dark);
+    color: var(--color-red);
     position: relative;
     padding-bottom: 1px;
   
@@ -93,7 +83,7 @@
   @mixin underline-effect {
     height: 1px;
     width: 0%;
-    background-color: var(--color-dark);
+    background-color: var(--color-red);
     transition: width 0.3s ease;
     transform-origin: center;
   
@@ -122,6 +112,10 @@
     }
   }
 
+
+
+
+
   @mixin icons{
     fill: var(--color-red);
     stroke: var(--color-red);
@@ -136,7 +130,6 @@
   }
 
   @mixin iconLink{
-   color: var(--color-red);
     padding: 7px;
     margin: 0px 7px;
     border-radius: 100%;
@@ -150,15 +143,44 @@
     }
   }
 
-
-
   @mixin iconMenu {
-    stroke: var(--color-dark);
+    stroke: var(--color-red);
 
     :global(.dark) & {
    stroke: var(--color-light);
     }
   }
+
+  @mixin gradiant{
+    background: linear-gradient(to bottom, #ffffff00 0%,  #ff990031 50%, #ffffff00 100%);
+
+    :global(.dark) & {
+      background: linear-gradient(to bottom, #1B1511 0%, #ae8ea05b 50%, #1B1511 100%);
+    }
+  }
+
+@mixin gradiant2 {
+  // Ljust läge
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 153, 0, 0) 0%,        // helt transparent i toppen
+    var(--color-pink50) 15%,         // börjar tona in
+    var(--color-pink50) 85%,         // håller färgen i mitten
+    rgba(255, 153, 0, 0) 100%        // tonar ut i botten
+  );
+
+  // Mörkt läge
+  :global(.dark) & {
+    background: linear-gradient(
+      to bottom,
+      rgba(188, 152, 152, 0) 0%,     // transparent topp
+      var(--color-pink27) 15%,       // tonar in
+      var(--color-pink27) 85%,       // mitt
+      rgba(188, 152, 152, 0) 100%    // transparent botten
+    );
+  }
+}
+
   
   @mixin textColor{
     color: var(--color-red);
@@ -273,7 +295,6 @@
         text-align: left;
         width: 90%;
         margin: auto;
-        color: black;
     }
     }
   }

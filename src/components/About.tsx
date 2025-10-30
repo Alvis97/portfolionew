@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../styles/about.module.scss';
 import profileImg from '../assets/profile.jpg'; 
 import selfie from '../assets/Selfie.jpg';
+import { Download, ArrowRight  } from 'lucide-react';
 import { NodeIcon, ReIcon, Sass, Solana, TScript } from './Icons';
 
 function About() {
@@ -11,7 +12,7 @@ function About() {
       <img className={styles.image} src={selfie} alt="Portrait of Alva" />
 
       <div className={styles.textWrapper}>
-        <h2>Hi! I’m Alva </h2>
+        <h2>Hi! I’m <span>Alva</span>  </h2>
         <p>
           I’m a front-end developer blending art and tech. 
           Based in London with a background in design,
@@ -27,8 +28,8 @@ function About() {
            <NodeIcon className={styles.Icon}/>
         </div>
         <div className={styles.btnDiv}>
-          <button className={styles.projectBtn}>DownloadCV</button>
-          <button className={styles.projectBtn}>Check out my projects</button>
+          <button className={styles.projectBtn}>Download CV <Download/></button>
+          <button className={styles.projectBtn}>Check out my projects <ArrowRight /></button>
         </div>
       </div>
     </section>
