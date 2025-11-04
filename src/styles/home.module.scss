@@ -228,6 +228,46 @@
   }
 }
 
+/*  larger then mobiles/between ipads */
+@media screen and (min-width: 431px)  {
+  .textContent{
+    height: clamp(65vh, 60vw, 75vh);
+
+    p{
+      width: 70%;
+    }
+  }
+
+  .hearts{
+    height: 100vh;
+    width: 90vw;
+  }
+
+  .heart{
+    width: 28%;
+  }
+
+  .heart1{
+    bottom: auto;
+    left: 0vw;
+  }
+
+  .heart2{
+  left: 21vw;
+  bottom: auto;
+  }
+
+  .heart3{
+  right: 22vw;
+  bottom: auto;
+  }
+
+  .heart4{
+  right: 0px;
+  bottom: auto;
+  }
+}
+
 
 
  
@@ -390,6 +430,7 @@
     align-items:flex-start;
     width: 100vw;
     height: 70vh;
+    margin-top: 5vh;
     padding: 0px 4vw;
 
     .heading{
@@ -409,8 +450,8 @@
     }
 
     p{
-    font-size: clamp(1.5rem, 1.5vw, 2.5rem);
-    line-height: clamp(2.8rem, 4vw, 5.7rem);
+    font-size: clamp(1.4rem, 1.5vw, 2.5rem);
+    line-height: clamp(2.8rem, 3vw, 4rem);
     align-self:flex-end;
     text-align: left;
     width: clamp(570px, 44vw, 1100px);
@@ -428,7 +469,7 @@
 }
 
 .heart{
-  width: 25%;
+  width: 23%;
 }
 
 .heart1{
