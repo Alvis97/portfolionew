@@ -5,16 +5,18 @@ type GraphicsCardProps = {
     img: string;
     title: string;
     desc: string;
+    tool: string;
     onClick: () => void;
 }
 
-function GraphicsCard({img, title, desc, onClick }: GraphicsCardProps) {
+function GraphicsCard({img, title, desc, tool, onClick }: GraphicsCardProps) {
 
   return (
     <div className={styles.card} onClick={onClick} style={{ cursor: 'pointer' }}>
         <div className={styles.visibleContainer}>
         <img className={styles.image} src={img} alt={title} />
         <h4>{title}</h4>
+        <p>{tool}</p>
         </div>
         <div className={styles.hiddenContainer}>
         <p>{desc}</p>

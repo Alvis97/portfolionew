@@ -32,7 +32,7 @@ export const webModalContent: WebPostItem[] = [
         title: "Stick to it",
         desc: "Stick To It is a simple, collaborative space to create digital post-it notes, set tasks, share memos, and stay organized—solo or with your team.",
         role: "Role: Graphic design, illustration, layout, typography",
-        tool: "Tools: Figma",
+        tool: "Figma",
         text1: `Stick to It is a productivity app that helps users stay on track with their design goals. Built for designers who want structure but creative freedom.`,
         heading2: "Color Palet:",
         text2: "Inspired by spring and fire – warmth, light, and renewal.",

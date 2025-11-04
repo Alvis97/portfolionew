@@ -24,7 +24,7 @@
 }
 
 @mixin circle{
-    background-color: var(--color-pink50);
+    background-color: var(--color-yellow);
     border-radius: 100%;
     filter: blur(50px);
 
@@ -163,20 +163,20 @@
   // Ljust läge
   background: linear-gradient(
     to bottom,
-    rgba(255, 153, 0, 0) 0%,        // helt transparent i toppen
-    var(--color-pink50) 15%,         // börjar tona in
-    var(--color-pink50) 85%,         // håller färgen i mitten
-    rgba(255, 153, 0, 0) 100%        // tonar ut i botten
+    rgba(255, 153, 0, 0) 0%,       
+    var(--color-yellow) 10%,         
+    var(--color-yellow) 90%,         
+    rgba(255, 153, 0, 0) 100%        
   );
 
   // Mörkt läge
   :global(.dark) & {
     background: linear-gradient(
       to bottom,
-      rgba(188, 152, 152, 0) 0%,     // transparent topp
-      var(--color-pink27) 15%,       // tonar in
-      var(--color-pink27) 85%,       // mitt
-      rgba(188, 152, 152, 0) 100%    // transparent botten
+      rgba(188, 152, 152, 0) 0%,    
+      var(--color-pink27) 10%,       
+      var(--color-pink27) 90%,       
+      rgba(188, 152, 152, 0) 100%    
     );
   }
 }
@@ -210,7 +210,7 @@
 
   @mixin graphicCard{
     cursor: pointer;
-    background-color: var(--color-light);
+    background-color: var(--color-yellow);
     height: 370px;
     width: 280px;
     padding: 15px 10px;
@@ -227,10 +227,11 @@
       font-family: var( --font-onest);
       font-weight: 900;
       font-size: 24px;
-      color: rgb(98, 101, 98);
       text-align: left;
       margin: 15px 0 10px 0;
       width: 100%;
+      letter-spacing: 19px;
+      background-color: pink;
   }
 
   p{
@@ -248,18 +249,18 @@
     position: relative; //Needed for the animations
     overflow: hidden; //Needed for the animations
     cursor: pointer;
-    background-color: var(--color-light);
+    background-color: var(--color-yellow);
     width: 350px;
-    height: 190px;
+    height: 210px;
     padding: 20px 10px;
     border-radius: 7px;
-    color: var(--color-dark);
+    border: 0.5px solid var(--color-red);
+    color: var(--color-red);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    -webkit-box-shadow: 0px 10px 13px -4px rgba(87, 87, 87, 0.457); 
-    box-shadow: 0px 10px 13px -3px rgba(87, 87, 87, 0.457);
+    box-shadow: 0px 10px 10px -3px rgba(87, 87, 87, 0.27);
 
     .visibleContainer{
       position: absolute;
@@ -275,27 +276,25 @@
       h4{
         font-family: var( --font-onest);
         font-weight: 900;
-        font-size: 24px;
+        font-size: 20px;
         text-align: left;
         width: 90%;
-        margin: 5px auto 0 auto;
+        margin: 10px auto 0 auto;
+        letter-spacing: 2px;
     }
-    } 
 
-    .hiddenContainer{
-      position: absolute;
-      height: fit-content;
-
-      p{
-        display: block;
-        top: 20px;
-        font-family: var(--font-onest);
-        font-weight: 100;
-        font-size: 16px;
-        text-align: left;
-        width: 90%;
-        margin: auto;
+    p{
+      width: 90%;
+      margin:  0px auto;
+      line-height: 20px;
     }
+    }
+    :global(.dark) & {
+      background-color: var(--color-light);
+      background-color: #6c455187;
+      color: var(--color-orange);
+      border: 0;
+      box-shadow: 0px 10px 10px -3px rgb(0, 0, 0);
     }
   }
 

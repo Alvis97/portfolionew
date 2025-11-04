@@ -14,7 +14,7 @@
     align-items:end;
     justify-content: center;
     width: 100vw;
-    height: 20vh;
+    height: 25vh;
     padding-bottom: 20px;
     box-sizing: border-box;
     margin: 20px auto 0 auto;
@@ -25,17 +25,16 @@
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 80vh;
+    height: 75vh;
     padding: 5px;
     box-sizing: border-box;
     margin-top: 0px;
-    //@include gradiant2;
 }  
 
 .projects{
     position: absolute;
     width: 80vw;
-    height: 70vh;
+    height: 60vh;
     margin: auto;
     display: flex;
     flex-wrap: wrap;

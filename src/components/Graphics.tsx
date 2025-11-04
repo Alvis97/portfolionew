@@ -19,6 +19,7 @@ function Graphics({setModalContent }: GraphicProps) {
                 img={item.imgMain}
                 title={item.title}
                 desc={item.desc}
+                tool={item.tool}
                 onClick={() => setModalContent(
                 <>
                 <div className={style.moduleContainer}>

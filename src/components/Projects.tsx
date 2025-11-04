@@ -16,7 +16,6 @@ function Projects() {
 
     useEffect( () => {
         console.log(`Selected category ${selected}`);
-
     }, [selected])
   return (
     <section className={style.projectSection}>

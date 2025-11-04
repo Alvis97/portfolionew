@@ -1,6 +1,6 @@
 @import './mixins';
   
-// Dsctop default styles
+// 
   //Home Page
   .homeSection{
     width: 100vw;
@@ -20,41 +20,40 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         width: 100vw;
-        height: clamp(50vh, 45vw, 75vh);
+        height: clamp(59vh, 116vw, 65vh);
         letter-spacing: 3px;
-        padding: 0px 90px;
+        padding: 0px 5px;
         box-sizing: border-box;
         z-index: 5;
 
         .heading{
-          text-align: left;
+          text-align: center;
           height: fit-content;
-          margin-top: 50px;
+          margin-top: 0px;
 
           h1{
-            font-size: 136px;
-            font-size: clamp(44px, 10vw, 50px);
+            font-size: 2rem;
             font-family: var(--font-onest);
-            line-height: clamp(60px, 14vw, 60px);
+            line-height: 2.7rem;
             margin: 0;
-            letter-spacing: 3px;
+            letter-spacing: 2.5px;
           }
   
           .name{
-            font-size: clamp(44px, 10vw, 45px);
-            line-height: 25px;
-            margin-left: 6px;
+            font-size: 2rem;
+            line-height: 1rem;
+            margin-left: 0px;
             font-family: var( --font-kapakana);
           }
         }
 
         p{
-        font-size: 20px;
-        align-self: flex-end;
-        margin-right: 20px;
-        margin-top: 0px;
+        font-size: 1rem;
+        line-height: 1.8rem;
+        align-self: center;
+        text-align: center
       }
 
       span{
@@ -64,8 +63,8 @@
 
     .circle{
       @include circle();
-      height: clamp(400px, 50vw, 600px);
-      width: clamp(400px, 50vw, 600px);
+      height: 300px;
+      width: 300px;
       position: absolute;
       z-index: 1;
     }
@@ -75,9 +74,9 @@
         align-items: center;
         justify-content: space-between;
         margin: auto;
-        height: clamp(35vh, 60vw, 100vh);
-        width: 100vw;
-        padding: 5px;
+        height: 40vh;
+        width: 85vw;
+        padding: 0px;
         box-sizing: border-box;
         margin: 0px;
         position: absolute;
@@ -88,7 +87,7 @@
     .heart{
       @include hearts();
       height: auto;
-      width: 25%;
+      width: 31%;
       position: absolute;
       z-index: 3;
       margin: 0px;
@@ -109,350 +108,354 @@
 
     .heart1{
        rotate: -10deg;
-       bottom: 60px;
+       bottom: 110px;
        left: 0vw;
        animation: MovingHearts 5s 1s infinite ease-in-out alternate;
     }
     
     .heart2{
-        rotate: -120deg;
-        left: 26vw;
-        bottom: 20vh;
-        animation: MovingHearts 5s 2s infinite ease-in-out alternate;
+      rotate: -110deg;
+      left: 17vw;
+      bottom: 150px;
+      animation: MovingHearts 5s 2s infinite ease-in-out alternate;
     }
     
     .heart3{
-     right: 26vw;
-     top: 60px;
+     right: 21vw;
+     bottom: 90px;
      rotate: 170deg;
      animation: MovingHearts 5s 3s infinite ease-in-out alternate;
     }
 
     .heart4{
-      right: -15px;
-      top: 15vh;
-      rotate: 10deg;
+      right: 0px;
+      bottom: 140px;
+      rotate: 15deg;
       animation: MovingHearts 5s 4s infinite ease-in-out alternate;
      }
 
-     .heartShadows{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: auto;
-      height: clamp(35vh, 60vw, 100vh);
-      width: 100vw;
-      padding: 5px;
-      box-sizing: border-box;
-      margin: 0px;
-      position: absolute;
-      overflow: hidden;
-      z-index: 1;
-  }
+  //    .heartShadows{
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     margin: auto;
+  //     height: 40vh;
+  //     width: 100vw;
+  //     padding: 0px;
+  //     box-sizing: border-box;
+  //     margin: 0px;
+  //     position: absolute;
+  //     overflow: hidden;
+  //     z-index: 1;
+  // }
 
-  .shadow{
-    @include hearts();
-    height: auto;
-    width: 22%;
-    position: absolute;
-    z-index: 2;
-    margin: 0px;
-    opacity: 0.2;
-  }
+  // .shadow{
+  //   @include hearts();
+  //   height: auto;
+  //   width: 27%;
+  //   position: absolute;
+  //   z-index: 2;
+  //   margin: 0px;
+  //   opacity: 0.2;
+  // }
 
-  .shadow1{
-    rotate: -10deg;
-    bottom: -10px;
-    left: 2vw;
-     animation: ShadowAnimation 5s 1s infinite ease-in-out alternate;
-  }
+  // .shadow1{
+  //   rotate: -10deg;
+  //   bottom: 105px;
+  //   left: 15px;
+  //    //animation: ShadowAnimation 5s 1s infinite ease-in-out alternate;
+  // }
   
-  .shadow2{
-    rotate: -120deg;
-    left: 21vw;
-      animation: ShadowAnimation 5s 2s infinite ease-in-out alternate;
-  }
+  // .shadow2{
+  //   rotate: -110deg;
+  //   left: 21vw;
+  //   bottom: 145px;
+  //     animation: ShadowAnimation 5s 2s infinite ease-in-out alternate;
+  // }
   
-  .shadow3{
-    right: 22vw;
-    top: 20px;
-    rotate: 170deg;
-   animation: ShadowAnimation 5s 3s infinite ease-in-out alternate;
-  }
+  // .shadow3{
+  //   right: 25vw;
+  //   bottom: 80px;
+  //   rotate: 170deg;
+  //  //animation: ShadowAnimation 5s 3s infinite ease-in-out alternate;
+  // }
 
-  .shadow4{
-    right: -30px;
-      top: 30vh;
-      rotate: 10deg;
-    animation: ShadowAnimation 5s 4s infinite ease-in-out alternate;
-   }
+  // .shadow4{
+  //   right: 22px;
+  //   bottom: 130px;
+  //   rotate: 10deg;
+  //  //animation: ShadowAnimation 5s 4s infinite ease-in-out alternate;
+  //  }
 
 
-   // Ipad style
-@media screen and (orientation:portrait) and (max-width: 1024px) {
-    
+/*  larger mobiles */
+@media screen and (min-width: 390px) and (max-width: 430px) and (orientation: portrait) {
   .textContent{
-      height: clamp(55vh, 108vw, 77vh);
-      padding: 0px 20px;
-      margin-top: 0;
-
-      h1{
-        font-size: clamp(50px, 9vw, 86px);
-        line-height: clamp(60px, 11vw, 110px);
-        margin: auto;
-        margin-top: 0;
-        width: 17ch;
-        text-align: left;
-        letter-spacing: 7px;
-      }
-
-      p{
-      font-size: clamp(14px, 2.5vw, 24px);
-      line-height: clamp(30px, 5vw, 50px);
-      align-self:flex-end;
-      width: 44ch; //Max 50 characters
-      text-align: left;
-    }
+    height: 53vh;
   }
 
-.circle{
-height: clamp(600px, 60vw, 800px);
-width: clamp(600px, 60vw, 800px);
+  .hearts{
+    height: 30vh;
+    width: 90vw;
+  }
+
+  .heart{
+    width: 32%;
+  }
+
+  .heart1{
+    bottom: 100px;
+    left: 0vw;
+  }
+
+  .heart2{
+  left: 19vw;
+  bottom: 140px;
+  }
+
+  .heart3{
+  right: 23vw;
+  bottom: 65px;
+  }
+
+  .heart4{
+  right: 0px;
+  bottom: 125px;
+  }
+
+  .heartShadows{
+    height: 30vh;
+  }
 }
 
-.hearts{
-height: clamp(35vh, 80vw, 60vh);
-}
 
-.heart{
-position: absolute;
-width: 33vw;
-}
 
-.heart1{
-left: -7vw;
-bottom: 0%;
-rotate: -17deg;
-}
-
-.heart2{
-left: 14vw;
-bottom: 31%;
-}
-
-.heart3{
-right: 11vw;
-bottom: 17%;
-rotate: 185deg;
-}
-
-.heart4{
-right: -7vw;
-top: 2%;
-} 
-
-.heartShadows{
-  height: clamp(35vh, 80vw, 60vh);
-}
-
-.shadow{
-  width: 30%;
-  opacity: 0.50;
-}
-
-.shadow1{
-left: -7vw;
-bottom: 50px;
-rotate: -17deg;
-}
-
-.shadow2{
-left: 14vw;
-bottom: 38%;
-rotate: -120deg;
-}
-
-.shadow3{
-right: 11vw;
-bottom: 23%;
-rotate: 185deg;
-}
-
-.shadow4{
-  right: -7vw;
-top: -10px;
-}
-}
  
 
-// Mobile style
-@media screen and (orientation:portrait) and (max-width: 767px) {
+// ipad
+@media screen and (orientation:portrait) and (min-width: 767px) {
     
     .textContent{
-        height: clamp(60vh, 120vw, 70vh);
-        padding: 0px 10px;
+        justify-content: space-between;
+        align-items:flex-start;
+        width: 100vw;
+        height: 70vh;
+        padding: 0px 50px;
 
-        h1{
-          font-size: clamp(20px, 9vw, 70px);
-          line-height: clamp(65px, 13vw, 90px);
-          margin: 0 auto;
-          width: 16ch;
-          text-align: center;
+        .heading{
+          text-align: left;
+          height: fit-content;
+          margin-top: 0px;
+
+          h1{
+            font-size: clamp(2rem, 4vw, 2.4rem);
+            line-height: 2.8rem;
+            letter-spacing: 2.5px;
+          }
+  
+          .name{
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            line-height: 1.8rem;
+            margin-left: 0px;
+          }
         }
 
         p{
-        font-size: clamp(14px, 3.5vw, 24px);
-        line-height: clamp(30px, 7vw, 42px);
-        align-self:center;
-        max-width: 45ch; //Max 50 characters
-        text-align: center;
+          font-size: clamp(1rem, 2vw, 1.2rem);
+        line-height: 2.2rem;
+        align-self:flex-end;
+        text-align: left;
+        width: clamp(390px, 45vw, 450px);
       }
     }
 
-.circle{
-  height: clamp(300px, 60vw, 600px);
-  width: clamp(300px, 60vw, 600px);
+    .circle{
+      height: 600px;
+      width: 600px;
+    }
+    
+    .hearts{
+        height: 90vh;
+        width: 90vw;
+    }
+
+    .heart{
+      width: 38%;
+    }
+
+    .heart1{
+       rotate: -20deg;
+       bottom: 5%;
+       left: 0vw;
+    }
+    
+    .heart2{
+      rotate: -130deg;
+      left: 10vw;
+      bottom: 32%;
+    }
+    
+    .heart3{
+     right: 10vw;
+     top: 35%;
+     rotate: 160deg;
+    }
+
+    .heart4{
+      right: 0px;
+      top: 5%;
+      bottom: auto;
+      rotate: 15deg;
+     }
+ 
 }
 
-.hearts{
-  justify-content: center;
-  height: clamp(20vh, 67vw, 40vh);
-  width: 100vw;
-  padding: 5px;
-}
+   // small desctop
+   @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .textContent{
+      justify-content: space-between;
+      align-items:flex-start;
+      width: 100vw;
+      height: 70vh;
+      padding: 0px 50px;
 
-.heart{
-width: 33vw;
-}
+      .heading{
+        text-align: left;
+        height: fit-content;
 
-.heart1{
-  left: -12vw;
-  rotate: -17deg;
-  bottom: 3vh;
+        h1{
+          font-size: clamp(1.8rem, 3vw, 3rem);
+          line-height: clamp(2rem, 4vw, 4rem);
+          letter-spacing: 2.5px;
+        }
+
+        .name{
+          font-size: clamp(1.8rem, 3vw, 2.5rem);
+          line-height: 1rem;
+        }
+      }
+
+      p{
+      font-size: clamp(1rem, 1.5vw, 1.4rem);
+      line-height: clamp(2.3rem, 2vw, 2.8rem);
+      align-self:flex-end;
+      text-align: left;
+      width: clamp(420px, 42vw, 550px);
+    }
+  }
+
+  .circle{
+    height: 500px;
+    width: 500px;
+  }
+  
+  .hearts{
+      height: 100vh;
+      width: 100vw;
+  }
+
+  .heart{
+    width: 25%;
+  }
+
+  .heart1{
+    rotate: -20deg;
+    bottom: 5%;
+    left: 0vw;
  }
  
  .heart2{
-  left: 12vw;
-  bottom: 40%;
+   rotate: -130deg;
+   left: 22%;
+   bottom: 32%;
  }
  
  .heart3{
-  right: 14vw;
-  bottom: 2vh;
-  rotate: 165deg;
+  right: 29%;
+  top: 7%;
+  rotate: 170deg;
  }
 
  .heart4{
-  right: -12vw;
-  top: -1.5vh;
-  } 
+   right: 0px;
+   top: 10%;
+  }
+   }
 
-  .heartShadows{
-    justify-content: center;
-    height: clamp(20vh, 67vw, 40vh);
-    width: 100vw;
-    padding: 5px;
-  }
-  
-  .shadow{
-    width: 30%;
-    opacity: 0.30;
-  }
-  
-  .shadow1{
-    left: -12vw;
-    rotate: -17deg;
-    bottom: 1vh;
-  }
-  
-  .shadow2{
-    left: 14vw;
-    bottom: 39%;
-  }
-  
-  .shadow3{
-    right: 14vw;
-    bottom: 4vh;
-    rotate: 165deg;
-  }
-  
-  .shadow4{
-    right: -12vw;
-    top: -1.5vh;
-  }
-}
 
-@media screen and (orientation:portrait) and (max-width: 550px) {
-
+// Medium desktop
+@media (min-width: 1440px) { 
   .textContent{
-    height: 50vh;
-    padding: 0px 10px;
+    justify-content: space-between;
+    align-items:flex-start;
+    width: 100vw;
+    height: 70vh;
+    padding: 0px 4vw;
 
-    h1{
-      font-size: clamp(20px, 9vw, 52px);
-      line-height: clamp(30px, 13vw, 70px);
-      margin: 0px auto 0 auto;
-      width: 90vw;
-      text-align: center;
-      letter-spacing: 2px;
+    .heading{
+      text-align: left;
+      height: fit-content;
+
+      h1{
+        font-size: clamp(3rem, 3vw, 5.5rem);
+        line-height: clamp(4rem, 4vw, 7.8rem);
+        letter-spacing: 2.5px;
+      }
+
+      .name{
+        font-size: clamp(3rem, 3vw, 5.5rem);
+        line-height: 2rem;
+      }
     }
 
     p{
-    font-size: clamp(11px, 3vw, 24px);
-    line-height: clamp(22px, 5vw, 42px);
-    align-self:center;
-    width: 90vw; 
-    max-width: none;
-    text-align: center;
-    margin: 0 0 0px 0;
-    letter-spacing: 1px;
+    font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+    line-height: clamp(2.8rem, 4vw, 5.7rem);
+    align-self:flex-end;
+    text-align: left;
+    width: clamp(570px, 44vw, 1100px);
   }
+}
+
+.circle{
+  height: 700px;
+  width: 700px;
 }
 
 .hearts{
-  justify-content: center;
-  height: 32vh;
-  width: 100vw;
-  padding: 5px;
-  //background-color: rgba(255, 192, 203, 0.428);
+    height: 100vh;
+    width: 100vw;
 }
 
 .heart{
-  width: 30vw;
-  opacity: 0.65;
-  }
-  
-  .heart1{
-    left: -8vw;
-    rotate: -17deg;
-    bottom: 0%;
-   }
-   
-   .heart2{
-    left: 16vw;
-    top: 5vh;
-   }
-   
-   .heart3{
-    right: 17vw;
-    bottom: 3vh;
-    rotate: 165deg;
-   }
-  
-   .heart4{
-    right: -8vw;
-    top: 0%;
-    } 
+  width: 25%;
+}
 
-    .shadow2{
-      left: 14vw;
-      bottom: 30%;
-    }
-    
-    .shadow4{
-      right: -12vw;
-      top: 0;
-    }
-  }
+.heart1{
+  rotate: -20deg;
+  bottom: 5%;
+  left: 0vw;
+}
+
+.heart2{
+ rotate: -130deg;
+ left: 22%;
+ bottom: 32%;
+}
+
+.heart3{
+right: 29%;
+top: 7%;
+rotate: 170deg;
+}
+
+.heart4{
+ right: 0px;
+ top: 15%;
+}
+ }
+
+
+
 
 

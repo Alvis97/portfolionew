@@ -19,6 +19,7 @@ function Web2({setModalContent }: Web2Props) {
         img={item.imgMain}
         title={item.title}
         desc={item.desc}
+        tool={item.tool}
         onClick={() => setModalContent(
           <>
            <div className={style.moduleContainer}>
