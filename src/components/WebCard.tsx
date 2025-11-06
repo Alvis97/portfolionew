@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/graphicCard.module.scss';
+import styles from '../styles/card.module.scss';
 
 type WebCardProps = {
    img: string;

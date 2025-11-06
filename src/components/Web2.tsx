@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import WebCard from './WebCard';
 import ModalWeb from './ModalWeb';
 import { WebPostItem, webModalContent } from '../data/webModalContent';
-import style from '../styles/graphicCard.module.scss';
+import style from '../styles/card.module.scss';
 
 type Web2Props = {
   setModalContent: (content: React.ReactNode) => void;

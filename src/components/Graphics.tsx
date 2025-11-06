@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { graphicsModalContent, GraphicsPostItem } from '../data/graphicsModalContent';
 import GraphicsCard from './GraphicsCard';
 import Modal from './Modal';
-import style from "../styles/graphicCard.module.scss";
+import style from "../styles/card.module.scss";
 
 type GraphicProps = {
   setModalContent: (content: React.ReactNode) => void;

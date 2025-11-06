@@ -14,7 +14,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { disconnect } from 'process';
 
 //Style
-import style from '../styles/graphicCard.module.scss'
+import style from '../styles/card.module.scss'
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 
