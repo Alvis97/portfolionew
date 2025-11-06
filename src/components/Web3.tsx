@@ -52,10 +52,14 @@ function Web3Content( { setModalContent }: Web3Props) {
   if (!publicKey) {
     return (
       <div className={style.lockContainer}>
-      <h2>Please add your wallet to acces my web3 projects</h2>
-      <p>You wont be charged anything</p>
+      <h2>To access my Web3 projects, please connect your crypto wallet.</h2>
+      <p>(This is free — you won’t be charged anything.)</p>
     
     <WalletMultiButton/>
+
+    <p className={style.noWallet}>
+    No wallet? Have a peek <button>here!</button>
+  </p>
     </div>
     );
   }

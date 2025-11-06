@@ -3,6 +3,7 @@
 /*Navigation*/
 .parent{
    width: 100vw;
+   height: 50px;
     position:fixed;
     top: 0;
     display: flex;
@@ -35,6 +36,7 @@
   letter-spacing: 2px;
   position: relative;
   padding-bottom: 1px;
+  font-size: 1rem
 
   }
 
@@ -107,16 +109,12 @@ position: relative;
 a{
   text-decoration: none;
   letter-spacing: 2px;
-  font-size: 34px;
+  font-size: 1rem;
   position: relative;
   transition: transform 0.2s ease;
   filter: blur(0);
   color: var(--color-red);
   font-family: var(--font-onest);
-
-  &:hover {
-    transform: scale(1.1);
-  }
 }
 }
 
