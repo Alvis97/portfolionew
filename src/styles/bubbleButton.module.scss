@@ -23,6 +23,10 @@
       margin: 0 15px;
       font-size: clamp(1rem, 2vw, 1.2rem);
     }
+
+    .selected {
+      background-color: rgba(193, 145, 171, 0.35);
+    }
 }
 
    // small desctop
@@ -31,6 +35,10 @@
       @include themeBtn;
       margin: 0 15px;
       font-size: clamp(1rem, 1.5vw, 1.4rem);
+    }
+
+    .selected {
+      background-color: rgba(193, 145, 171, 0.35);
     }
    }
 
