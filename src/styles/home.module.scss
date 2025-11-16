@@ -4,25 +4,24 @@
   //Home Page
   .homeSection{
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
+    padding-top: 50px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    margin-bottom: 100px;
-    //background-color: rgba(255, 192, 203, 0.701);
     }
     
     .textContent{
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         width: 100vw;
-        height: clamp(59vh, 116vw, 65vh);
+        height: 80vh;
         letter-spacing: 3px;
         padding: 0px 5px;
         box-sizing: border-box;
@@ -68,30 +67,40 @@
       position: absolute;
       z-index: 1;
     }
-    
+
     .hearts{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         margin: auto;
-        height: 40vh;
-        width: 85vw;
+        height: 100vh;
+        width: 100vw;
         padding: 0px;
         box-sizing: border-box;
-        margin: 0px;
+        margin-bottom: 50px;
         position: absolute;
         overflow: hidden;
         z-index: 2;
     }
 
-    .heart{
-      @include hearts();
+    .heartWrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       height: auto;
-      width: 31%;
-      position: absolute;
+      position: relative;
       z-index: 3;
+      width: 20vw;
+      height: 15vh;
+    }
+
+    .heart{
+      position: relative;
       margin: 0px;
-      opacity: 0.65;
+      opacity: 0.8 !important;
+      height: auto;
+      width: 23vw !important;
     }
 
     @keyframes MovingHearts{
@@ -108,124 +117,71 @@
 
     .heart1{
        rotate: -10deg;
-       bottom: 110px;
-       left: 0vw;
        animation: MovingHearts 5s 1s infinite ease-in-out alternate;
     }
     
     .heart2{
       rotate: -110deg;
-      left: 17vw;
-      bottom: 150px;
       animation: MovingHearts 5s 2s infinite ease-in-out alternate;
     }
     
     .heart3{
-     right: 21vw;
-     bottom: 90px;
      rotate: 170deg;
      animation: MovingHearts 5s 3s infinite ease-in-out alternate;
     }
 
     .heart4{
-      right: 0px;
-      bottom: 140px;
       rotate: 15deg;
       animation: MovingHearts 5s 4s infinite ease-in-out alternate;
      }
 
-  //    .heartShadows{
-  //     display: flex;
-  //     align-items: center;
-  //     justify-content: space-between;
-  //     margin: auto;
-  //     height: 40vh;
-  //     width: 100vw;
-  //     padding: 0px;
-  //     box-sizing: border-box;
-  //     margin: 0px;
-  //     position: absolute;
-  //     overflow: hidden;
-  //     z-index: 1;
-  // }
+  .shadow{
+    height: auto;
+    width: 20vw !important;
+    position: absolute;
+    z-index: 2;
+    margin: 0px;
+    opacity: 0.15;
+    top: 35px;
+  }
 
-  // .shadow{
-  //   @include hearts();
-  //   height: auto;
-  //   width: 27%;
-  //   position: absolute;
-  //   z-index: 2;
-  //   margin: 0px;
-  //   opacity: 0.2;
-  // }
-
-  // .shadow1{
-  //   rotate: -10deg;
-  //   bottom: 105px;
-  //   left: 15px;
-  //    //animation: ShadowAnimation 5s 1s infinite ease-in-out alternate;
-  // }
+  .shadow1{
+    rotate: -10deg;
+    animation: ShadowAnimation 5s 1s infinite ease-in-out alternate;
+  }
   
-  // .shadow2{
-  //   rotate: -110deg;
-  //   left: 21vw;
-  //   bottom: 145px;
-  //     animation: ShadowAnimation 5s 2s infinite ease-in-out alternate;
-  // }
+  .shadow2{
+    rotate: -110deg;
+    animation: ShadowAnimation 5s 2s infinite ease-in-out alternate;
+  }
   
-  // .shadow3{
-  //   right: 25vw;
-  //   bottom: 80px;
-  //   rotate: 170deg;
-  //  //animation: ShadowAnimation 5s 3s infinite ease-in-out alternate;
-  // }
+  .shadow3{
+    rotate: 170deg;
+    animation: ShadowAnimation 5s 3s infinite ease-in-out alternate;
+  }
 
-  // .shadow4{
-  //   right: 22px;
-  //   bottom: 130px;
-  //   rotate: 10deg;
-  //  //animation: ShadowAnimation 5s 4s infinite ease-in-out alternate;
-  //  }
+  .shadow4{
+    rotate: 10deg;
+    animation: ShadowAnimation 5s 4s infinite ease-in-out alternate;
+   }
 
 
 /*  larger mobiles */
 @media screen and (min-width: 390px) and (max-width: 430px) and (orientation: portrait) {
-  .textContent{
-    height: 53vh;
-  }
 
-  .hearts{
-    height: 30vh;
-    width: 90vw;
-  }
+  .homeSection{
+    height: 100vh;
+    padding: 10vh 0;
+    box-sizing: border-box;
+    }
+    
+    .textContent{
+        height: 70vh;
+    }
 
-  .heart{
-    width: 32%;
-  }
-
-  .heart1{
-    bottom: 100px;
-    left: 0vw;
-  }
-
-  .heart2{
-  left: 19vw;
-  bottom: 140px;
-  }
-
-  .heart3{
-  right: 23vw;
-  bottom: 65px;
-  }
-
-  .heart4{
-  right: 0px;
-  bottom: 125px;
-  }
-
-  .heartShadows{
-    height: 30vh;
-  }
+    .heart{
+      width: 24vw !important;
+    }
 }
 
 /*  larger then mobiles/between ipads */
@@ -238,34 +194,6 @@
     }
   }
 
-  .hearts{
-    height: 100vh;
-    width: 90vw;
-  }
-
-  .heart{
-    width: 28%;
-  }
-
-  .heart1{
-    bottom: auto;
-    left: 0vw;
-  }
-
-  .heart2{
-  left: 21vw;
-  bottom: auto;
-  }
-
-  .heart3{
-  right: 22vw;
-  bottom: auto;
-  }
-
-  .heart4{
-  right: 0px;
-  bottom: auto;
-  }
 }
 
 
@@ -274,7 +202,12 @@
 
 // ipad
 @media screen and (orientation:portrait) and (min-width: 767px) {
-    
+  
+  .homeSection{
+    height: 100vh;
+    padding-top: 0px;
+    }   
+
     .textContent{
         justify-content: space-between;
         align-items:flex-start;
@@ -288,14 +221,14 @@
           margin-top: 0px;
 
           h1{
-            font-size: clamp(2rem, 4vw, 2.4rem);
-            line-height: 2.8rem;
+            font-size: clamp(2.5rem, 4vw, 2.4rem);
+            line-height: 3.5rem;
             letter-spacing: 2.5px;
           }
   
           .name{
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            line-height: 1.8rem;
+            font-size: clamp(2.5rem, 4vw, 2.5rem);
+            line-height: 2.5rem;
             margin-left: 0px;
           }
         }
@@ -305,7 +238,7 @@
         line-height: 2.2rem;
         align-self:flex-end;
         text-align: left;
-        width: clamp(390px, 45vw, 450px);
+        width: 37ch;
       }
     }
 
@@ -315,37 +248,77 @@
     }
     
     .hearts{
+      margin-bottom: 50px;
+      padding: 0px;
+      width: 90vw;
+      justify-content: space-between;
+  }
+
+  .heartWrapper{
+    width: 24vw;
+    height: 100vh;
+  }
+
+    .hearts{
         height: 90vh;
         width: 90vw;
     }
 
     .heart{
-      width: 38%;
+      width: 33vw !important;
+      position: absolute;
     }
 
     .heart1{
        rotate: -20deg;
-       bottom: 5%;
+       bottom: 10vh;
        left: 0vw;
     }
     
     .heart2{
       rotate: -130deg;
-      left: 10vw;
-      bottom: 32%;
+      right: 3vw;
+      bottom: 35vh;
     }
     
     .heart3{
-     right: 10vw;
-     top: 35%;
+     left: 5vw;
+     top: 37vh;
      rotate: 160deg;
     }
 
     .heart4{
       right: 0px;
-      top: 5%;
-      bottom: auto;
+      top: 10vh;
       rotate: 15deg;
+     }
+
+     .shadow{
+      width: 30vw !important;
+    }
+  
+    .shadow1{
+      left: 2vw;
+      top: 75vh;
+      rotate: -20deg;
+    }
+    
+    .shadow2{
+      rotate: -130deg;
+      left: -9vw;
+      top: 50vh;
+    }
+    
+    .shadow3{
+      top: 44vh;
+      left: 9vw;
+      rotate: 160deg;
+    }
+  
+    .shadow4{
+      rotate: 15deg;
+      top: 16vh;
+      right: 2vw;
      }
  
 }
@@ -388,6 +361,22 @@
     height: 500px;
     width: 500px;
   }
+
+  .hearts{
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 50px;
+}
+
+.heartWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  width: 25vw;
+  height: 100vh;
+}
   
   .hearts{
       height: 100vh;
@@ -395,31 +384,55 @@
   }
 
   .heart{
-    width: 25%;
+    width: 24%;
   }
 
   .heart1{
     rotate: -20deg;
-    bottom: 5%;
+    bottom: -23vh;
     left: 0vw;
  }
  
  .heart2{
    rotate: -130deg;
-   left: 22%;
-   bottom: 32%;
+   right: 1vw;
+   bottom: -5vh;
  }
  
  .heart3{
-  right: 29%;
-  top: 7%;
+  right: 3vw;
+  top: -18vh;
   rotate: 170deg;
  }
 
  .heart4{
    right: 0px;
-   top: 10%;
+   top: -13vh;
   }
+
+  .shadow1{
+    left: 2vw;
+    top: 67vh;
+    rotate: -20deg;
+  }
+  
+  .shadow2{
+    rotate: -130deg;
+    left: 2vw;
+    top: 50vh;
+  }
+  
+  .shadow3{
+    top: 26vh;
+    left: 0vw;
+    rotate: 160deg;
+  }
+
+  .shadow4{
+    rotate: 15deg;
+    top: 30vh;
+    right: 2vw;
+   }
    }
 
 
@@ -464,36 +477,77 @@
 }
 
 .hearts{
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 50px;
+}
+
+.heartWrapper{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+z-index: 3;
+width: 25vw;
+height: 100vh;
+}
+
+.hearts{
     height: 100vh;
     width: 100vw;
 }
 
 .heart{
-  width: 23%;
+  width: 24%;
 }
 
 .heart1{
   rotate: -20deg;
-  bottom: 5%;
+  bottom: -23vh;
   left: 0vw;
 }
 
 .heart2{
  rotate: -130deg;
- left: 22%;
- bottom: 32%;
+ right: 1vw;
+ bottom: -5vh;
 }
 
 .heart3{
-right: 29%;
-top: 7%;
+right: 3vw;
+top: -18vh;
 rotate: 170deg;
 }
 
 .heart4{
  right: 0px;
- top: 15%;
+ top: -13vh;
 }
+
+.shadow1{
+  left: 2vw;
+  top: 67vh;
+  rotate: -20deg;
+}
+
+.shadow2{
+  rotate: -130deg;
+  left: 2vw;
+  top: 50vh;
+}
+
+.shadow3{
+  top: 26vh;
+  left: 0vw;
+  rotate: 160deg;
+}
+
+.shadow4{
+  rotate: 15deg;
+  top: 30vh;
+  right: 2vw;
+ }
+
  }
 
 

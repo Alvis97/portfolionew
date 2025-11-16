@@ -12,8 +12,8 @@
 .card{
     @include card();
     transition: transform 0.3s ease;
-    height: 170px;
-    width: 350px;
+    height: 160px;
+    width: 240px;
     
 
     .visibleContainer,
@@ -143,7 +143,7 @@ p{
     z-index: 5;
     width: 100%;
     height: 100%;
-    padding: 0px;
+    padding: 10px;
     box-sizing: border-box;
     margin: auto;
     left: 0;

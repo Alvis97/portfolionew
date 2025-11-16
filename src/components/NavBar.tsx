@@ -4,7 +4,7 @@ import LogoSmall from "../components/LogoSmall"
 import DarkMode from '../components/Darkmode';
 import LogoLarge from './LogoLarge';
 import { Menu } from './Icons';
-import PinkHeart from '../assets/PinkHearts.svg';
+import PinkHeart from '../assets/PinkGlassHeart.svg';
 
 interface NavbarProps {
     isDarkmodeSelected: boolean;

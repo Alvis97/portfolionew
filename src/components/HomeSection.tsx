@@ -1,10 +1,10 @@
 import React from 'react'
-import homeStyle from "../styles/home.module.scss";
-import LogoLarge from './LogoLarge';
-import LargeHeart from "../assets/LargeHeart.svg";
-import LargeHeart6 from "../assets/LargeHeart6.svg";
+import GreenHeart from "../assets/GreenGlassHeart.svg";
 import HeartShadow from '../assets/shadow.svg';
-import PinkHearts from "../assets/PinkHearts.svg";
+import PinkHearts from "../assets/PinkGlassHeart.svg";
+
+//Styles
+import homeStyle from "../styles/home.module.scss";
 
 interface HomeSectionProps {
     isDarkmodeSelected: boolean;
@@ -33,27 +33,49 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
 
       { isDarkmodeSelected ? ( 
         <div  className={homeStyle.hearts}>
-            <img className={` ${homeStyle.heart1} ${homeStyle.heart} `} src={LargeHeart6} alt="heart A" />
-            <img className={` ${homeStyle.heart2} ${homeStyle.heart} `} src={LargeHeart6} alt="heart L" />
-            <img className={` ${homeStyle.heart3} ${homeStyle.heart} `} src={LargeHeart6} alt="heart V" />
-            <img className={`${homeStyle.heart4} ${homeStyle.heart} `} src={LargeHeart6} alt="heart A" />
+          <div className={homeStyle.heartWrapper}>
+            <img className={` ${homeStyle.heart1} ${homeStyle.heart} `} src={GreenHeart} alt="heart A" />
+            <img src={HeartShadow} className={`${homeStyle.shadow1} ${homeStyle.shadow}`} alt="Shadow A" />
+          </div>
+
+          <div className={homeStyle.heartWrapper}>
+            <img className={` ${homeStyle.heart2} ${homeStyle.heart} `} src={GreenHeart} alt="heart L" />
+            <img src={HeartShadow} className={`${homeStyle.shadow2} ${homeStyle.shadow}`} alt="Shadow L" />
+          </div>
+
+          <div className={homeStyle.heartWrapper}>
+            <img className={` ${homeStyle.heart3} ${homeStyle.heart} `} src={GreenHeart} alt="heart V" />
+            <img src={HeartShadow} className={`${homeStyle.shadow3} ${homeStyle.shadow}`} alt="Shadow V" />
+          </div>
+
+          <div className={homeStyle.heartWrapper}>
+            <img className={`${homeStyle.heart4} ${homeStyle.heart} `} src={GreenHeart} alt="heart A" />
+            <img src={HeartShadow} className={`${homeStyle.shadow4} ${homeStyle.shadow}`} alt="Shadow A" />
+          </div>
         </div>
 ) : ( 
         <div  className={homeStyle.hearts}>
+          <div className={homeStyle.heartWrapper}>
             <img className={` ${homeStyle.heart1} ${homeStyle.heart} `} src={PinkHearts} alt="heart A" />
+            <img src={HeartShadow} className={`${homeStyle.shadow1} ${homeStyle.shadow}`} alt="Shadow A" />
+          </div>
+
+          <div className={homeStyle.heartWrapper}>
             <img className={` ${homeStyle.heart2} ${homeStyle.heart} `} src={PinkHearts} alt="heart L" />
+            <img src={HeartShadow} className={`${homeStyle.shadow2} ${homeStyle.shadow}`} alt="Shadow A" />
+          </div>
+
+          <div className={homeStyle.heartWrapper}>
             <img className={` ${homeStyle.heart3} ${homeStyle.heart} `} src={PinkHearts} alt="heart V" />
+            <img src={HeartShadow} className={`${homeStyle.shadow3} ${homeStyle.shadow}`} alt="Shadow A" />
+          </div>
+
+          <div className={homeStyle.heartWrapper}>
             <img className={`${homeStyle.heart4} ${homeStyle.heart} `} src={PinkHearts} alt="heart A" />
+            <img src={HeartShadow} className={`${homeStyle.shadow4} ${homeStyle.shadow}`} alt="Shadow A" />
+          </div>
         </div>
         )  }
-         
-        {/* <div  className={homeStyle.heartShadows}>
-            <img src={HeartShadow} className={`${homeStyle.shadow1} ${homeStyle.shadow}`} alt="Shadow A" />
-            <img src={HeartShadow} className={`${homeStyle.shadow2} ${homeStyle.shadow}`} alt="Shadow A" />
-            <img src={HeartShadow} className={`${homeStyle.shadow3} ${homeStyle.shadow}`} alt="Shadow A" />
-            <img src={HeartShadow} className={`${homeStyle.shadow4} ${homeStyle.shadow}`} alt="Shadow A" />
-        </div> */}
-      
     </section>
   )
 }
