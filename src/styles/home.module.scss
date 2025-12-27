@@ -4,7 +4,7 @@
   //Home Page
   .homeSection{
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     padding-top: 50px;
     box-sizing: border-box;
     display: flex;
@@ -22,8 +22,8 @@
         align-items: center;
         width: 100vw;
         height: 80vh;
-        letter-spacing: 3px;
-        padding: 0px 5px;
+        letter-spacing: 10px;
+        padding: 0px 20px;
         box-sizing: border-box;
         z-index: 5;
 
@@ -33,26 +33,28 @@
           margin-top: 0px;
 
           h1{
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-family: var(--font-onest);
             line-height: 2.7rem;
             margin: 0;
-            letter-spacing: 2.5px;
+            letter-spacing: 7px;
           }
   
           .name{
-            font-size: 2rem;
+            font-size: 0.8rem;
+            letter-spacing: 8px;
             line-height: 1rem;
             margin-left: 0px;
-            font-family: var( --font-kapakana);
+            font-family: var( --font-onest);
           }
         }
 
         p{
         font-size: 1rem;
-        line-height: 1.8rem;
+        line-height: 1.7rem;
         align-self: center;
-        text-align: center
+        text-align: center;
+        letter-spacing: 4px
       }
 
       span{
@@ -73,7 +75,7 @@
         align-items: center;
         justify-content: center;
         margin: auto;
-        height: 100vh;
+        height: 30vh;
         width: 100vw;
         padding: 0px;
         box-sizing: border-box;
@@ -171,34 +173,102 @@
 
   .homeSection{
     height: 100vh;
-    padding: 10vh 0;
+    padding: 10vh 15px;
     box-sizing: border-box;
     }
     
     .textContent{
-        height: 70vh;
+        width: 100%;
+        height: 80vh;
+        padding: 0px 0px;
+        box-sizing: border-box;
+        z-index: 5;
+
+        p{
+          line-height: 2rem;
+        }
     }
 
+    .hearts{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: auto;
+      height: 30vh;
+      width: 100vw;
+      padding: 0 15px;
+      margin-bottom: 30px;
+  }
+
     .heart{
-      width: 24vw !important;
+      width: 29vw !important;
     }
+
+    .heart1{
+      rotate: -20deg;
+      top: 20px;
+   }
+   
+   .heart2{
+     rotate: -130deg;
+     bottom: 20px;
+     right: 6px;
+   }
+   
+   .heart3{
+    rotate: 165deg;
+    top: 40px;
+    right: 8px;
+   }
+
+   .heart4{
+     rotate: 20deg;
+     bottom: 20px;
+    }
+
+ .shadow{
+   height: auto;
+   width: 29vw !important;
+   position: absolute;
+   top: 0px;
+ }
+
+ .shadow1{
+   rotate: -20deg;
+   top: 70px;
+ }
+ 
+ .shadow2{
+   rotate: -110deg;
+   top: 0px;
+ }
+ 
+ .shadow3{
+   rotate: 170deg;
+   top: 90px;
+ }
+
+ .shadow4{
+   rotate: 20deg;
+   top: 15px;
+  }
 }
 
 /*  larger then mobiles/between ipads */
 @media screen and (min-width: 431px)  {
+
   .textContent{
-    height: clamp(65vh, 60vw, 75vh);
+    height: clamp(58vh, 75vw, 75vh);
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
 
     p{
       width: 70%;
     }
   }
-
 }
 
-
-
- 
 
 // ipad
 @media screen and (orientation:portrait) and (min-width: 767px) {
@@ -206,13 +276,21 @@
   .homeSection{
     height: 100vh;
     padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     }   
 
     .textContent{
-        justify-content: space-between;
-        align-items:flex-start;
+      position: absolute;
+      top: 12vh;
+      display: flex;
+        align-items:baseline;
+        justify-content:baseline;
         width: 100vw;
-        height: 70vh;
+        height: fit-content;
         padding: 0px 50px;
 
         .heading{
@@ -221,34 +299,36 @@
           margin-top: 0px;
 
           h1{
-            font-size: clamp(2.5rem, 4vw, 2.4rem);
-            line-height: 3.5rem;
+            font-size: 2rem;
+            line-height: 3rem;
             letter-spacing: 2.5px;
           }
   
           .name{
-            font-size: clamp(2.5rem, 4vw, 2.5rem);
+            font-size: 1rem;
             line-height: 2.5rem;
             margin-left: 0px;
           }
         }
 
         p{
-          font-size: clamp(1rem, 2vw, 1.2rem);
+        font-size: 1rem;
         line-height: 2.2rem;
-        align-self:flex-end;
+        align-self:baseline;
         text-align: left;
-        width: 37ch;
+        width: 55vw;
       }
     }
 
     .circle{
       height: 600px;
       width: 600px;
+      margin: auto;
+      background-color: rgba(255, 192, 203, 0.83);
     }
     
     .hearts{
-      margin-bottom: 50px;
+      margin-bottom: 0px;
       padding: 0px;
       width: 90vw;
       justify-content: space-between;
@@ -261,7 +341,7 @@
 
     .hearts{
         height: 90vh;
-        width: 90vw;
+        width: 95vw;
     }
 
     .heart{
@@ -324,36 +404,40 @@
 }
 
    // small desctop
-   @media screen and (min-width: 1024px) and (max-width: 1439px) {
+   @media screen and (min-width: 1024px) {
+   
     .textContent{
-      justify-content: space-between;
-      align-items:flex-start;
+      position: absolute;
       width: 100vw;
-      height: 70vh;
-      padding: 0px 50px;
-
-      .heading{
-        text-align: left;
-        height: fit-content;
+      height: fit-content;
+      padding: 0px 40px;
+      text-align: left;
+      display: flex;
+      justify-content: baseline;
+      align-items: baseline;
+      bottom: 12vh;
 
         h1{
-          font-size: clamp(1.8rem, 3vw, 3rem);
-          line-height: clamp(2rem, 4vw, 4rem);
-          letter-spacing: 2.5px;
+          font-size: 1.6rem;
+          line-height: 2.5rem;
+          letter-spacing: 10px;
+          text-align: left;
         }
 
         .name{
-          font-size: clamp(1.8rem, 3vw, 2.5rem);
-          line-height: 1rem;
+          font-size: 1rem;
+          letter-spacing: 10px;
+          text-align: left;
+          align-self:baseline;
         }
-      }
 
       p{
-      font-size: clamp(1rem, 1.5vw, 1.4rem);
-      line-height: clamp(2.3rem, 2vw, 2.8rem);
-      align-self:flex-end;
+      font-size: 1rem;
+      line-height: 2rem;
+      align-self:baseline;
       text-align: left;
-      width: clamp(420px, 42vw, 550px);
+      margin-right: 0px;
+      width: 50vw;
     }
   }
 
@@ -379,178 +463,56 @@
 }
   
   .hearts{
-      height: 100vh;
-      width: 100vw;
-  }
-
-  .heart{
-    width: 24%;
+    height: 100vh;
+    width: 90vw;
   }
 
   .heart1{
     rotate: -20deg;
-    bottom: -23vh;
-    left: 0vw;
+    bottom: 0vh;
+    bottom: 14vw;
  }
  
  .heart2{
-   rotate: -130deg;
-   right: 1vw;
-   bottom: -5vh;
+   rotate: -135deg;
+   left: 5vw;
+   bottom: 10vh;
  }
  
  .heart3{
-  right: 3vw;
-  top: -18vh;
-  rotate: 170deg;
+  left: 12vw;
+  bottom: 20vh;
+  rotate: 160deg;
  }
 
  .heart4{
-   right: 0px;
-   top: -13vh;
+   right: 2vw;
+   top: 20vh;
   }
 
   .shadow1{
     left: 2vw;
-    top: 67vh;
+    top: 20vh;
     rotate: -20deg;
   }
   
   .shadow2{
-    rotate: -130deg;
+    rotate: -140deg;
     left: 2vw;
-    top: 50vh;
+    top: 30vh;
   }
   
   .shadow3{
     top: 26vh;
-    left: 0vw;
+    left: 10vw;
     rotate: 160deg;
   }
 
   .shadow4{
     rotate: 15deg;
-    top: 30vh;
+    top: 65vh;
     right: 2vw;
    }
    }
-
-
-// Medium desktop
-@media (min-width: 1440px) { 
-  .textContent{
-    justify-content: space-between;
-    align-items:flex-start;
-    width: 100vw;
-    height: 70vh;
-    margin-top: 5vh;
-    padding: 0px 4vw;
-
-    .heading{
-      text-align: left;
-      height: fit-content;
-
-      h1{
-        font-size: clamp(3rem, 3vw, 5.5rem);
-        line-height: clamp(4rem, 4vw, 7.8rem);
-        letter-spacing: 2.5px;
-      }
-
-      .name{
-        font-size: clamp(3rem, 3vw, 5.5rem);
-        line-height: 2rem;
-      }
-    }
-
-    p{
-    font-size: clamp(1.4rem, 1.5vw, 2.5rem);
-    line-height: clamp(2.8rem, 3vw, 4rem);
-    align-self:flex-end;
-    text-align: left;
-    width: clamp(570px, 44vw, 1100px);
-  }
-}
-
-.circle{
-  height: 700px;
-  width: 700px;
-}
-
-.hearts{
-  height: 100vh;
-  width: 100vw;
-  margin-bottom: 50px;
-}
-
-.heartWrapper{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-z-index: 3;
-width: 25vw;
-height: 100vh;
-}
-
-.hearts{
-    height: 100vh;
-    width: 100vw;
-}
-
-.heart{
-  width: 24%;
-}
-
-.heart1{
-  rotate: -20deg;
-  bottom: -23vh;
-  left: 0vw;
-}
-
-.heart2{
- rotate: -130deg;
- right: 1vw;
- bottom: -5vh;
-}
-
-.heart3{
-right: 3vw;
-top: -18vh;
-rotate: 170deg;
-}
-
-.heart4{
- right: 0px;
- top: -13vh;
-}
-
-.shadow1{
-  left: 2vw;
-  top: 67vh;
-  rotate: -20deg;
-}
-
-.shadow2{
-  rotate: -130deg;
-  left: 2vw;
-  top: 50vh;
-}
-
-.shadow3{
-  top: 26vh;
-  left: 0vw;
-  rotate: 160deg;
-}
-
-.shadow4{
-  rotate: 15deg;
-  top: 30vh;
-  right: 2vw;
- }
-
- }
-
-
-
 
 

@@ -10,10 +10,7 @@ interface FooterProps{
 function Footer({ isDarkmodeSelected }: FooterProps ) {
   return (
     <div className={style.footer}>
-           <div className={style.linkWrapper}>
-                <a href="" className={style.link}>alva@business.com</a>
-                <span className={style.underline}></span>
-            </div>
+          
         <span className={style.socials}>
           { isDarkmodeSelected ? (
             <>

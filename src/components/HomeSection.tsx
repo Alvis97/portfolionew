@@ -19,15 +19,13 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
 
         <div  className={homeStyle.textContent}>
           <div className={homeStyle.heading}>
-          <span className={homeStyle.name}>Alva Jonsson</span>
-          <h1>Web-developer <br/> & Graphics</h1>
+          <span className={homeStyle.name}>ALVA JONSSON</span>
+          <h1>WEB-DEVELOPER <br/> & GRAPHICS</h1>
           </div>
-              <p>Curious at heart. I build immersive web 
-               experiences that blend design, code, 
-               and creative tech – from playful interfaces 
-               to web3 interactions. 
-               <br />
-              <span>/* Just exploring what the web can be */</span>
+              <p>Curious at heart. I design, develop and dive deep
+                 into creative technologies - from web2 layouts to
+                  web3 experiments.  
+           
               </p>
         </div>
 
