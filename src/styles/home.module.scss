@@ -1,7 +1,6 @@
 @import './mixins';
   
-// 
-  //Home Page
+////Home Page
   .homeSection{
     width: 100vw;
     height: 100vh;
@@ -168,21 +167,18 @@
    }
 
 
-/*  larger mobiles */
+// /*  larger mobiles */
 @media screen and (min-width: 390px) and (max-width: 430px) and (orientation: portrait) {
 
   .homeSection{
     height: 100vh;
     padding: 10vh 15px;
-    box-sizing: border-box;
     }
     
     .textContent{
         width: 100%;
         height: 80vh;
         padding: 0px 0px;
-        box-sizing: border-box;
-        z-index: 5;
 
         p{
           line-height: 2rem;
@@ -190,12 +186,7 @@
     }
 
     .hearts{
-      display: flex;
-      align-items: center;
       justify-content: space-evenly;
-      margin: auto;
-      height: 30vh;
-      width: 100vw;
       padding: 0 15px;
       margin-bottom: 30px;
   }
@@ -227,9 +218,7 @@
     }
 
  .shadow{
-   height: auto;
    width: 29vw !important;
-   position: absolute;
    top: 0px;
  }
 
@@ -254,95 +243,81 @@
   }
 }
 
-/*  larger then mobiles/between ipads */
-@media screen and (min-width: 431px)  {
+// /*  larger then mobiles/between ipads */
+// @media screen and (min-width: 431px)  {
 
-  .textContent{
-    height: clamp(58vh, 75vw, 75vh);
-    padding: 0;
-    margin: 0;
-    justify-content: space-between;
+//   .textContent{
+//     height: clamp(58vh, 75vw, 75vh);
+//     padding: 0;
+//     margin: 0;
+//     justify-content: space-between;
 
-    p{
-      width: 70%;
-    }
-  }
-}
+//     p{
+//       width: 70%;
+//     }
+//   }
+// }
 
 
-// ipad
+// // ipad
 @media screen and (orientation:portrait) and (min-width: 767px) {
   
   .homeSection{
-    height: 100vh;
     padding-top: 0px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    }   
+    } 
 
     .textContent{
       position: absolute;
       top: 12vh;
-      display: flex;
-        align-items:baseline;
-        justify-content:baseline;
-        width: 100vw;
-        height: fit-content;
-        padding: 0px 50px;
+      align-items:baseline;
+      justify-content:baseline;
+      height: fit-content;
+      padding: 0px 50px;
 
         .heading{
           text-align: left;
           height: fit-content;
-          margin-top: 0px;
 
           h1{
-            font-size: 2rem;
-            line-height: 3rem;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
             letter-spacing: 2.5px;
           }
   
           .name{
-            font-size: 1rem;
-            line-height: 2.5rem;
+            font-size: 0.8rem;
+            line-height: 2rem;
             margin-left: 0px;
           }
         }
 
         p{
         font-size: 1rem;
-        line-height: 2.2rem;
+        line-height: 2.1rem;
         align-self:baseline;
         text-align: left;
-        width: 55vw;
+        width: 52vw;
+        margin-top: 10px;
       }
     }
 
     .circle{
       height: 600px;
       width: 600px;
-      margin: auto;
-      background-color: rgba(255, 192, 203, 0.83);
     }
     
-    .hearts{
-      margin-bottom: 0px;
-      padding: 0px;
-      width: 90vw;
-      justify-content: space-between;
-  }
+
+  .hearts{
+    height: 100vh;
+    width: 95vw;
+}
 
   .heartWrapper{
     width: 24vw;
     height: 100vh;
+    flex-direction: row;
   }
-
-    .hearts{
-        height: 90vh;
-        width: 95vw;
-    }
 
     .heart{
       width: 33vw !important;
@@ -351,14 +326,14 @@
 
     .heart1{
        rotate: -20deg;
-       bottom: 10vh;
+       bottom: 5vh;
        left: 0vw;
     }
     
     .heart2{
       rotate: -130deg;
       right: 3vw;
-      bottom: 35vh;
+      bottom: 31vh;
     }
     
     .heart3{
@@ -369,76 +344,81 @@
 
     .heart4{
       right: 0px;
-      top: 10vh;
+      top: 6vh;
       rotate: 15deg;
      }
 
-     .shadow{
-      width: 30vw !important;
+    .shadow{
+      height: 100vh;
+      width: 35vw !important;
+      position: absolute;
+      opacity: 0.15;
     }
-  
+    
     .shadow1{
       left: 2vw;
-      top: 75vh;
+      top: 30vh;
       rotate: -20deg;
     }
     
     .shadow2{
       rotate: -130deg;
       left: -9vw;
-      top: 50vh;
+      top: 5vh;
     }
     
     .shadow3{
-      top: 44vh;
-      left: 9vw;
+      top: 3vh;
+      left: 5vw;
       rotate: 160deg;
     }
   
     .shadow4{
       rotate: 15deg;
-      top: 16vh;
+      top: -30vh;
       right: 2vw;
      }
  
 }
 
-   // small desctop
+//// desctop
    @media screen and (min-width: 1024px) {
-   
+
     .textContent{
       position: absolute;
       width: 100vw;
       height: fit-content;
       padding: 0px 40px;
-      text-align: left;
       display: flex;
       justify-content: baseline;
       align-items: baseline;
-      bottom: 12vh;
+      bottom: 10.5vh;
+
+        .heading{
+          text-align: left;
 
         h1{
-          font-size: 1.6rem;
-          line-height: 2.5rem;
-          letter-spacing: 10px;
-          text-align: left;
+          font-size:clamp(1.5rem, 2.4vw, 2.5rem);
+          line-height: clamp(2.2rem, 3.5vw, 3rem);
+          letter-spacing: clamp(8px, 2.4vw, 10px);
+          margin-top: 8px;
         }
 
         .name{
-          font-size: 1rem;
-          letter-spacing: 10px;
-          text-align: left;
-          align-self:baseline;
+          font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+          letter-spacing: clamp(5px, 1.5vw, 7px);
         }
+      }
 
-      p{
-      font-size: 1rem;
-      line-height: 2rem;
-      align-self:baseline;
-      text-align: left;
-      margin-right: 0px;
-      width: 50vw;
-    }
+        p{
+        font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+        line-height: clamp(1.8rem, 2.7vw, 3rem);
+        align-self:baseline;
+        text-align: left;
+        width: 50vw;
+        letter-spacing: 3px;
+        margin-top: 10px;
+      }
   }
 
   .circle{
@@ -457,16 +437,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  z-index: 3;
   width: 25vw;
   height: 100vh;
 }
   
-  .hearts{
-    height: 100vh;
-    width: 90vw;
-  }
-
   .heart1{
     rotate: -20deg;
     bottom: 0vh;
@@ -486,8 +460,8 @@
  }
 
  .heart4{
-   right: 2vw;
-   top: 20vh;
+   right: 0vw;
+   top: 22vh;
   }
 
   .shadow1{
@@ -515,4 +489,31 @@
    }
    }
 
+   //// extra large desctop
+   @media screen and (min-width: 3200px) {
+    .textContent{
+      padding: 0px 100px;
+
+        .heading{
+          text-align: left;
+
+        h1{
+          font-size: 3.4rem;
+          line-height: 4rem;
+          letter-spacing: clamp(8px, 2.4vw, 10px);
+          margin-top: 20px;
+        }
+
+        .name{
+          font-size: 2rem;
+        }
+      }
+
+        p{
+        font-size: 2rem;
+        line-height: 3.8rem;
+        width: 30vw;
+      }
+  }
+   }
 

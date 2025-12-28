@@ -29,8 +29,6 @@
     font-style: normal;
   }
 
-
-
   main{
     margin: 0;
   }
@@ -54,6 +52,15 @@
     font-size: 16px;
   }
 }
+
+  /* ipads */
+  @media (min-width: 1024px) {
+    html {
+      font-size: 20px;
+    }
+  }
+
+
 
   .App{
     margin: 0;

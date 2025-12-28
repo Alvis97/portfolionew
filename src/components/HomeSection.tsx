@@ -23,13 +23,11 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
           <h1>WEB-DEVELOPER <br/> & GRAPHICS</h1>
           </div>
               <p>Curious at heart. I design, develop and dive deep
-                 into creative technologies - from web2 layouts to
-                  web3 experiments.  
+                 into creative technologies - from web2 layouts to web3 experiments.  
            
               </p>
         </div>
 
-      { isDarkmodeSelected ? ( 
         <div  className={homeStyle.hearts}>
           <div className={homeStyle.heartWrapper}>
             <img className={` ${homeStyle.heart1} ${homeStyle.heart} `} src={GreenHeart} alt="heart A" />
@@ -51,29 +49,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
             <img src={HeartShadow} className={`${homeStyle.shadow4} ${homeStyle.shadow}`} alt="Shadow A" />
           </div>
         </div>
-) : ( 
-        <div  className={homeStyle.hearts}>
-          <div className={homeStyle.heartWrapper}>
-            <img className={` ${homeStyle.heart1} ${homeStyle.heart} `} src={PinkHearts} alt="heart A" />
-            <img src={HeartShadow} className={`${homeStyle.shadow1} ${homeStyle.shadow}`} alt="Shadow A" />
-          </div>
 
-          <div className={homeStyle.heartWrapper}>
-            <img className={` ${homeStyle.heart2} ${homeStyle.heart} `} src={PinkHearts} alt="heart L" />
-            <img src={HeartShadow} className={`${homeStyle.shadow2} ${homeStyle.shadow}`} alt="Shadow A" />
-          </div>
-
-          <div className={homeStyle.heartWrapper}>
-            <img className={` ${homeStyle.heart3} ${homeStyle.heart} `} src={PinkHearts} alt="heart V" />
-            <img src={HeartShadow} className={`${homeStyle.shadow3} ${homeStyle.shadow}`} alt="Shadow A" />
-          </div>
-
-          <div className={homeStyle.heartWrapper}>
-            <img className={`${homeStyle.heart4} ${homeStyle.heart} `} src={PinkHearts} alt="heart A" />
-            <img src={HeartShadow} className={`${homeStyle.shadow4} ${homeStyle.shadow}`} alt="Shadow A" />
-          </div>
-        </div>
-        )  }
     </section>
   )
 }
