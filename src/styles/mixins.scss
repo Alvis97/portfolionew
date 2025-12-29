@@ -1,4 +1,82 @@
 //Homepage
+
+@mixin btnRing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 220px;
+  border-radius: 999px;
+  border: 2px solid var(--color-dark);
+
+  :global(.dark) & {
+    border: 2px solid var(--color-light);
+  }
+}
+
+@mixin button{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 210px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: none;
+  color: var(--color-dark);
+  cursor: pointer;
+  background-size: 100% 200%;  // dubbelt så hög
+  background-position: 0 0;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #c4b9b0 50%,
+      #b1b1b1 100%
+    );
+    transition: background-position 1s ease;
+
+  :global(.dark) & {
+    color: var(--color-light);
+    background: linear-gradient(
+      180deg,
+      #746569 0%,
+      #141010 100%
+    );
+  }
+}
+
+@mixin btnText{
+  position: relative;
+  z-index: 1;
+  margin: 3px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+@mixin btnBefore{
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  z-index: 0;  
+  backdrop-filter: blur(1px); 
+}
+
+@mixin btnHover{
+
+  background-position: 0 100%;
+
+  background: linear-gradient(
+    180deg,
+    #b1b1b1 0%,
+    #ffffff 100%
+  );
+
+}
+
+
+
 @mixin themeBtn {
     padding: 12px 15px;
     color: var(--color-red);

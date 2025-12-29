@@ -20,72 +20,54 @@ function NavBar({ isDarkmodeSelected, handleThemeClick }: NavbarProps ) {
 
   return (
     <div className={navStyle.parent}> 
+     <LogoSmall/>
 
-    { isDarkmodeSelected ? (
- <LogoSmall/>
-    ):(
-        <img src={PinkHeart} className={navStyle.pinkHeartLogo} alt="pink little heart logo" />
-    )}
-           
+    <span className={navStyle.links}>
+    <div className={navStyle.linkWrapper}>
+        <a href="" className={navStyle.link}>Home</a>
+        <span className={navStyle.underline}></span>
+    </div>
+    <div className={navStyle.linkWrapper}>
+        <a href="" className={navStyle.link}>About</a>
+        <span className={navStyle.underline}></span>
+    </div>
+    <div className={navStyle.linkWrapper}>
+        <a className={navStyle.link} href="">Projects</a>
+        <span className={navStyle.underline}></span>
+    </div>
+    </span>
 
-            <span className={navStyle.links}>
-            <div className={navStyle.linkWrapper}>
-                <a href="" className={navStyle.link}>Home</a>
-                <span className={navStyle.underline}></span>
-            </div>
-            <div className={navStyle.linkWrapper}>
-                <a href="" className={navStyle.link}>About</a>
-                <span className={navStyle.underline}></span>
-            </div>
-            <div className={navStyle.linkWrapper}>
-                <a className={navStyle.link} href="">Projects</a>
-                <span className={navStyle.underline}></span>
-            </div>
-            </span>
+    <DarkMode 
+    isDarkmodeSelected={isDarkmodeSelected} 
+    handleThemeClick={handleThemeClick}
+    />
 
-            <DarkMode 
-            isDarkmodeSelected={isDarkmodeSelected} 
-            handleThemeClick={handleThemeClick}
-            />
+    <button 
+    onClick={handleMenuClick} 
+    className={`${navStyle.menuButton} ${isMenuOpen ? navStyle.open : ''}`}>
+    <Menu className={navStyle.menuIcon}/>
+    </button>
 
-            <button 
-            onClick={handleMenuClick} 
-            className={`${navStyle.menuButton} ${isMenuOpen ? navStyle.open : ''}`}>
-             <Menu className={navStyle.menuIcon}/>
-            </button>
-        
-            <div className={`${navStyle.hamburger} ${isMenuOpen ? navStyle.open : ''}`}>
-           <div className={navStyle.hamburgerLinks}>
-            
-            <span className={navStyle.hoverIcon}>
-                { isDarkmodeSelected ? (
-                    <LogoSmall className={navStyle.selector}/>
-                ):(
-                    <img src={PinkHeart} className={navStyle.selectorPink} alt="pink heart" />
-                )}
-                 <a href="">Home</a>
-            </span> 
-            <span className={navStyle.hoverIcon}>
-            { isDarkmodeSelected ? (
-                    <LogoSmall className={navStyle.selector}/>
-                ):(
-                    <img src={PinkHeart} className={navStyle.selectorPink} alt="pink heart" />
-                )}
-                <a href="">About</a>
-            </span> 
+    <div className={`${navStyle.hamburger} ${isMenuOpen ? navStyle.open : ''}`}>
+<div className={navStyle.hamburgerLinks}>
+    
+    <span className={navStyle.hoverIcon}>
+            <LogoSmall className={navStyle.selector}/>
+        <a href="">Home</a>
+    </span> 
+    <span className={navStyle.hoverIcon}>
+            <LogoSmall className={navStyle.selector}/>
+        <a href="">About</a>
+    </span> 
 
-            <span className={navStyle.hoverIcon}>
-            { isDarkmodeSelected ? (
-                    <LogoSmall className={navStyle.selector}/>
-                ):(
-                    <img src={PinkHeart} className={navStyle.selectorPink} alt="pink heart" />
-                )}
-                <a href="">Projects</a>
-            </span> 
-           
-            </div>
+    <span className={navStyle.hoverIcon}>
+            <LogoSmall className={navStyle.selector}/>
+        <a href="">Projects</a>
+    </span> 
 
-            </div>
+    </div>
+
+    </div>
          
 
     </div>

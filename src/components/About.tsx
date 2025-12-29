@@ -12,7 +12,7 @@ function About() {
       <img className={styles.image} src={selfie} alt="Portrait of Alva" />
 
       <div className={styles.textWrapper}>
-        <h2>Hi! I’m <span>Alva</span>  </h2>
+        <h2>HI! I’M <span>ALVA</span>  </h2>
         <p>
           I’m a front-end developer blending art and tech. 
           Based in London with a background in design,
@@ -28,8 +28,14 @@ function About() {
            <NodeIcon className={styles.Icon}/>
         </div>
         <div className={styles.btnDiv}>
+        <div className={styles.downloadRing}>
+  <button className={styles.downloadBtn}>
+    <span>Download CV</span>
+    <Download />
+  </button>
+</div>
           <button className={styles.projectBtn}>Download CV <Download/></button>
-          <button className={styles.projectBtn}>Check out my projects <ArrowRight /></button>
+          <button className={styles.projectBtn}>View projects <ArrowRight /></button>
         </div>
       </div>
     </section>

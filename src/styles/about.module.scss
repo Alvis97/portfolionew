@@ -1,10 +1,31 @@
 @import './mixins';
 
+.downloadRing {
+  @include btnRing();
+  }
+
+.downloadBtn {
+  @include button();
+  }
+
+  //Text & Icon
+  .downloadBtn > * {
+  @include btnText;
+  }
+
+  .downloadBtn::before{
+   @include btnBefore();
+  }
+
+  .downloadBtn:hover {
+    @include btnHover();
+  }
+
 .aboutSection{
     @include gradiant2;
     width: 100vw;
     margin: auto;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +53,7 @@
         letter-spacing: 2px;
         margin-bottom: 5px;
         margin-top: 32px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     p{
