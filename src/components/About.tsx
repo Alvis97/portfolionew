@@ -9,7 +9,10 @@ function About() {
   return (
     <section className={styles.aboutSection}>
 
-      <img className={styles.image} src={selfie} alt="Portrait of Alva" />
+<div className={styles.imageContainer}>
+<img className={styles.image} src={selfie} alt="Portrait of Alva" />
+
+</div>
 
       <div className={styles.textWrapper}>
         <h2>HI! I’M <span>ALVA</span>  </h2>
@@ -29,15 +32,20 @@ function About() {
         </div>
         <div className={styles.btnDiv}>
         <div className={styles.downloadRing}>
-  <button className={styles.downloadBtn}>
-    <span>Download CV</span>
-    <Download />
-  </button>
-</div>
-          <button className={styles.projectBtn}>Download CV <Download/></button>
-          <button className={styles.projectBtn}>View projects <ArrowRight /></button>
-        </div>
+        <button className={styles.downloadBtn}>
+          <span>Download CV</span>
+          <Download />
+        </button>
       </div>
+      <div className={styles.downloadRing}>
+      <button className={styles.downloadBtn}>
+          <span>View Projects</span>
+          <ArrowRight />
+        </button>
+      </div>
+  
+      </div>
+        </div>
     </section>
   );
 }

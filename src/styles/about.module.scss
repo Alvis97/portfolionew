@@ -19,6 +19,7 @@
 
   .downloadBtn:hover {
     @include btnHover();
+    font-size: 0.8rem;
   }
 
 .aboutSection{
@@ -204,13 +205,18 @@
         @include gradiant2;
         width: 100vw;
         margin: auto;
-        height: 110vh;
+        height: 100vh;
         display: flex;
         flex-direction:row-reverse;
-        justify-content:space-around;
+        justify-content:space-between;
         align-items: center;
         box-sizing: border-box;
-        padding: 10vh 0vw;
+        padding: 10vh 40px;
+    }
+
+    .imageContainer{
+        width: 40vw;
+        text-align: center;
     }
     
     .image{
@@ -224,11 +230,13 @@
         flex-direction: column;
         align-items:baseline;
         justify-content: left;
-        width: clamp(600px, 50vw, 1000px);
+        width: clamp(500px, 50vw, 1000px);
         height: fit-content;
     
         h2{
-            font-size: clamp(1.4rem, 3vw, 3rem);
+            font-size:clamp(1rem, 2.4vw, 2.5rem);
+            line-height: clamp(1.8rem, 3.5vw, 3rem);
+            letter-spacing: clamp(8px, 2.4vw, 10px);
             margin-bottom: 15px;
             margin-top: 32px;
             
@@ -236,24 +244,32 @@
     
         p{
             text-align: left;
-            font-size: clamp(1rem, 1.5vw, 1.8rem); 
-            line-height: clamp(2.6rem, 2vw, 5rem);
+            font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+            line-height: clamp(1.6rem, 2.7vw, 3rem);
             margin-bottom: 10px;
             width: 100%;
+            letter-spacing: 3px;
         }
     }
     
     .iconRow{
         margin: 7px 0 ;
+        width: 30vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .btnDiv{
         display: flex
     }
     
-    .projectBtn{
-        margin: 15px 0px;
-        @include themeBtn();
+    .btnDiv{
+        width: clamp(420px, 35vw, 480px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 35px 0px;
         margin-right: 20px;
         font-size: 1.2rem;
     }

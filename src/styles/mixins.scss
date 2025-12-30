@@ -5,12 +5,20 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  width: 220px;
+  width: 250px;
   border-radius: 999px;
-  border: 2px solid var(--color-dark);
+  border: 1px solid var(--color-dark);
+
+  @media (min-width: 1024px) {
+    width: 200px;
+  }  
+
+  @media (min-width: 1300px) {
+    width: 220px;
+  } 
 
   :global(.dark) & {
-    border: 2px solid var(--color-light);
+    border: 1px solid var(--color-light);
   }
 }
 
@@ -20,7 +28,7 @@
   align-items: center;
   justify-content: center;
   height: 50px;
-  width: 210px;
+  width: 240px;
   padding: 0 20px;
   border-radius: 999px;
   border: none;
@@ -31,16 +39,25 @@
     background: linear-gradient(
       180deg,
       #ffffff 0%,
-      #c4b9b0 50%,
-      #b1b1b1 100%
+      #eaeaea 50%,
+      #c3c3c3 100%
     );
     transition: background-position 1s ease;
+
+    @media (min-width: 1024px) {
+      width: 190px;
+    } 
+    
+    @media (min-width: 1300px) {
+      width: 210px;
+    } 
 
   :global(.dark) & {
     color: var(--color-light);
     background: linear-gradient(
       180deg,
       #746569 0%,
+      #3a3335 50%,
       #141010 100%
     );
   }
@@ -50,8 +67,17 @@
   position: relative;
   z-index: 1;
   margin: 3px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 2px;
+
+  @media (min-width: 1024px) {
+    font-size: 0.6rem;
+  }
+
+  @media (min-width: 1300px) {
+    font-size: 0.8rem;
+  } 
+
 }
 
 @mixin btnBefore{
@@ -69,9 +95,18 @@
 
   background: linear-gradient(
     180deg,
-    #b1b1b1 0%,
+    #c6c6c6 0%,
     #ffffff 100%
   );
+
+  :global(.dark) & {
+    background: linear-gradient(
+      180deg,
+      #141010 0%,
+      #3a3335 50%,
+      #746569 100%
+    );
+  }
 
 }
 
@@ -246,8 +281,8 @@
   background: linear-gradient(
     to bottom,
     rgba(255, 153, 0, 0) 0%,       
-    var(--color-yellow) 10%,         
-    var(--color-yellow) 90%,         
+    var(--color-yellow) 40%,         
+    var(--color-yellow) 50%,         
     rgba(255, 153, 0, 0) 100%        
   );
 
@@ -256,8 +291,8 @@
     background: linear-gradient(
       to bottom,
       rgba(188, 152, 152, 0) 0%,    
-      var(--color-pink27) 10%,       
-      var(--color-pink27) 90%,       
+      var(--color-pink27) 40%,       
+      var(--color-pink27) 50%,       
       rgba(188, 152, 152, 0) 100%    
     );
   }
