@@ -19,7 +19,6 @@
 
   .downloadBtn:hover {
     @include btnHover();
-    font-size: 0.8rem;
   }
 
 .aboutSection{
@@ -32,11 +31,17 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 10vh 0vw;
+    padding: 50px 0vw;
+}
+
+.btnDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
 }
 
 .image{
-    width: 20vw;
+    width: 25vw;
     height: auto;
 }
 
@@ -53,21 +58,26 @@
         text-align: center;
         letter-spacing: 2px;
         margin-bottom: 5px;
-        margin-top: 32px;
-        font-size: 1.2rem;
+        margin-top: 20px;
+        font-size: 1.3rem;
     }
 
     p{
         text-align: center;
         font-size: 1rem;
         width: 100%;
-        line-height: 1.9rem;
+        line-height: 1.8rem;
         margin-bottom: 10px;
     }
 }
 
 .iconRow{
-    margin: 7px 0 ;
+    width: 70vw;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .btnDiv{
@@ -102,93 +112,44 @@
     
 }
 
-@media screen and (min-width: 390px) and (max-width: 430px) and (orientation: portrait) {
-    
-    .image{
-        width: 30vw;
-    }
-    
-    .textWrapper{
-    
-        h2{
-            margin-bottom: 8px;
-            margin-top: 50px;
-            font-size: 1.6rem;
-        }
-    
-        p{
-            line-height: 2.3rem;
-        }
-    }
-    
-    .projectBtn{
-        margin: 10px 10px;
-    }
-    
-    
-    .Icon{
-        margin: 5px  15px;
-        width: 25px;
-        }      
-}
-
-/*  larger then mobiles/between ipads */
-@media screen and (min-width: 431px)  {
-    .image{
-        width: 20vw;
-    }
-    
-    .textWrapper{
-    
-        h2{
-            margin-bottom: 10px;
-            margin-top: 50px;
-            font-size: 2rem;
-        }
-    
-        p{
-            font-size: 1rem;
-            line-height: 2.3rem;
-            width: 80vw;
-        }
-    }
-    
-    .projectBtn{
-        margin: 10px 10px;
-    }
-    
-    
-    .Icon{
-        margin: 5px  20px;
-        width: 25px;
-        }      
-}
 
 // ipad
-@media screen and (orientation:portrait) and (min-width: 767px) {
+@media screen and (min-width: 767px) {
 
     .image{
-        width: 25vw;
+        width: 23vw;
     }
     
     .textWrapper{
+        margin-top: 10px;
     
         h2{
-            margin-bottom: 25px;
-            margin-top: 80px;
-            font-size: 2.2rem;
+            font-size:clamp(1.5rem, 2.4vw, 2.5rem);
+            line-height: clamp(1.8rem, 3.5vw, 3rem);
         }
     
         p{
-            font-size: 1.2rem;
-            line-height: 2.3rem;
-            width: 80vw;
+            font-size: clamp(0.8rem, 1.8vw, 1.5rem);
+            letter-spacing: clamp(1px, 0.5vw, 7px);
+            width: 75vw;
         }
+    }
+
+    .btnDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+        width: 460px;
     }
     
     .projectBtn{
-        margin: 10px 10px;
+        margin: 15px 10px;
         font-size: 1rem;
+    }
+
+    .iconRow{
+        width: 45vw;
     }
     
     
@@ -237,9 +198,7 @@
             font-size:clamp(1rem, 2.4vw, 2.5rem);
             line-height: clamp(1.8rem, 3.5vw, 3rem);
             letter-spacing: clamp(8px, 2.4vw, 10px);
-            margin-bottom: 15px;
-            margin-top: 32px;
-            
+            margin-bottom: 5px;
         }
     
         p{
@@ -253,8 +212,8 @@
     }
     
     .iconRow{
-        margin: 7px 0 ;
-        width: 30vw;
+        margin: 5px 0 ;
+        width: 28vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -269,11 +228,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 35px 0px;
+        margin: 20px 0px;
         margin-right: 20px;
         font-size: 1.2rem;
     }
-    
     
     .Icon{
         margin: 10px 30px 10px 0px;
@@ -281,6 +239,58 @@
         }      
    }
 
+      //// extra large desctop
+      @media screen and (min-width: 3200px) {
+      
+        .aboutSection{
+            padding: 10vh 100px;
+        }
+    
+        .imageContainer{
+            width: 30vw;
+            text-align: center;
+        }
+        
+        .image{
+            width: 25vw;
+            height: auto;
+        }
+        
+        .textWrapper{
+            width: 40vw;
+        
+            h2{
+                font-size: 3.5rem;
+                margin-bottom: 50px;
+            }
+        
+            p{
+                font-size: 2rem;
+                line-height: 3.5rem;
+                margin-bottom: 50px;
+            }
 
+       }
+
+       .iconRow{
+        width: 20vw;
+       }
+
+       .Icon{
+        margin: 10px 30px 10px 0px;
+        width: 60px;
+        }  
+        
+        .btnDiv{
+            width: 850px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0px;
+            margin-right: 20px;
+            font-size: 1.2rem;
+        }
+
+    }
 
 
