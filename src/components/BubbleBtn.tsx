@@ -10,12 +10,15 @@ type BubbleButtonProps = {
 
 export default function ButtonBubble({ children, onClick, isSelected }: BubbleButtonProps) {
   return (
-    <button
+    <div className={style.downloadRing}>
+     <button
       onClick={onClick}
       className={`${style.buttonBubble} ${isSelected ? style.selected : ''}`}
 
     >
-      {children}
+      <span className={style.text}>{children}</span>
     </button>
+    </div>
+
   );
 }

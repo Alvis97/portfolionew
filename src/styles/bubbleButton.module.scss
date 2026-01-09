@@ -1,16 +1,32 @@
 @import './mixins';
 
 /* buttonBubble.module.scss */
-.buttonBubble {
-    @include themeBtn;
-    transition: background-color 0.3s, color 0.3s;
-    margin: 0 7px;
 
+.downloadRing{
+  @include btnRing();
+  width: 105px;
+}
+
+.buttonBubble {
+    @include button;
+    width: 95px;
   
     &:hover {
       background-color: rgba(193, 145, 171, 0.20);
     }
   }
+
+.buttonBubble > * {
+  @include btnText;
+}  
+
+.buttonBubble::before{
+  @include btnBefore();
+}  
+
+.buttonBubble:hover{
+  @include btnHover();
+}  
   
   .selected {
     background-color: rgba(193, 145, 171, 0.35);

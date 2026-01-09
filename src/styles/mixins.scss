@@ -353,16 +353,19 @@
     cursor: pointer;
     height: 170px;
     width: 350px;
-    background-color: var(--color-yellow);
+    background-color: white;
     padding: 20px 10px;
     border-radius: 7px;
-    border: 0.5px solid var(--color-red);
+    //border: 0.5px solid var(--color-red);
     color: var(--color-red);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    box-shadow: 0px 10px 10px -3px rgba(87, 87, 87, 0.27);
+    box-shadow: 
+    inset 2px 2px 6px rgba(0, 0, 0, 0.25),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.6);
+
 
     .visibleContainer{
       position: absolute;
@@ -395,11 +398,13 @@
     }
     }
     :global(.dark) & {
-      background-color: var(--color-light);
-      background-color: #6c455187;
+      background-color: #4d3d4287;
       color: var(--color-orange);
       border: 0;
-      box-shadow: 0px 10px 10px -3px rgb(0, 0, 0);
+      box-shadow: 
+      inset 2px 2px 6px rgba(0, 0, 0, 0.76),
+      inset -2px -2px 6px rgba(128, 113, 113, 0.6);
+   
     }
   }
 
