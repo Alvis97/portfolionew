@@ -4,27 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 52px;
-  width: 160px;
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  margin: 5px;
   border-radius: 999px;
   border: 1px solid var(--color-dark);
-
-  @media (min-width: 767px) {
-    width: 220px;
-  }
-
-  @media (min-width: 1024px) {
-    width: 200px;
-  }  
-
-  @media (min-width: 1300px) {
-    width: 220px;
-  } 
-
-  @media (min-width: 3200px) {
-    width: 400px;
-    height: 100px;
-  } 
 
   :global(.dark) & {
     border: 1px solid var(--color-light);
@@ -36,39 +21,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 44px;
-  width: 150px;
-  padding: 0 20px;
+  padding: 5px 15px;
   border-radius: 999px;
-  border: none;
   color: var(--color-dark);
   cursor: pointer;
-  background-size: 100% 200%;  // dubbelt så hög
+  background-size: 100% 200%; 
   background-position: 0 0;
-    background: linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #eaeaea 50%,
-      #c3c3c3 100%
-    );
-    transition: background-position 1s ease;
-
-    @media (min-width: 767px) {
-      width: 210px;
-    }
-
-    @media (min-width: 1024px) {
-      width: 190px;
-    } 
-    
-    @media (min-width: 1300px) {
-      width: 210px;
-    } 
-
-    @media (min-width: 3200px) {
-      width: 380px;
-      height: 80px;
-    } 
+  background: linear-gradient(
+  180deg,
+  #ffffff 0%,
+  #eaeaea 50%,
+  #c3c3c3 100%
+  );
+  border: 0px;
+  transition: background-position 1s ease;
 
   :global(.dark) & {
     color: var(--color-light);
@@ -85,27 +51,14 @@
   position: relative;
   z-index: 1;
   margin: 3px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 2px;
-
-  @media (min-width: 1024px) {
-    font-size: 0.6rem;
-  }
-
-  @media (min-width: 1300px) {
-    font-size: 0.8rem;
-  } 
-
-  @media (min-width: 3200px) {
-     font-size: 1.5rem;
-  } 
-
 }
 
 @mixin btnBefore{
   content: "";
   position: absolute;
-  inset: -4px;
+  inset: -5px;
   border-radius: inherit;
   z-index: 0;  
   backdrop-filter: blur(1px); 
@@ -351,12 +304,11 @@
     position: relative; 
     overflow: hidden; 
     cursor: pointer;
-    height: 170px;
-    width: 350px;
-    background-color: white;
-    padding: 20px 10px;
+    height: 200px;
+    width: 280px;
+    padding: 20px;
+    box-sizing: border-box;
     border-radius: 7px;
-    //border: 0.5px solid var(--color-red);
     color: var(--color-red);
     display: flex;
     flex-direction: column;
@@ -373,6 +325,9 @@
       display: flex;
       flex-direction: column;
       height: 100%;
+      width: 100%;
+      top: 0;
+      padding: 15px;
 
       img{
         width: 90%;
@@ -381,28 +336,49 @@
 
       h4{
         font-family: var( --font-onest);
-        font-weight: 900;
-        font-size: 1.4rem;
-        line-height: 1.8rem;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 2rem;
         text-align: left;
         width: 90%;
-        margin: 10px auto 0 auto;
+        margin: 5px auto 0 auto;
         letter-spacing: 2px;
+        color: var(--color-white);
+
+        @media  screen and (min-width: 1024px) {
+          font-size: 1rem;
+        }
+
+        @media  screen and (min-width: 1500px) {
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+        }
     }
 
     p{
       width: 90%;
       margin:  0px auto;
-      line-height: 1.2rem;
+      line-height: 0.8rem;
       font-size: 0.8rem;
+      font-weight: 200;
+
+      @media  screen and (min-width: 1024px) {
+        font-size: 0.6rem;
+        line-height: 0.4rem;
+      }
+
+      @media  screen and (min-width: 1500px) {
+        font-size: 1rem;
+        line-height: 1rem;
+      }
     }
     }
     :global(.dark) & {
-      background-color: #4d3d4287;
-      color: var(--color-orange);
+      background-color: #634d5487;
+      color: var(--color-light);
       border: 0;
       box-shadow: 
-      inset 2px 2px 6px rgba(0, 0, 0, 0.76),
+      inset 2px 2px 6px rgba(0, 0, 0, 0.862),
       inset -2px -2px 6px rgba(128, 113, 113, 0.6);
    
     }

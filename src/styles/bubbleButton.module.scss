@@ -4,16 +4,10 @@
 
 .downloadRing{
   @include btnRing();
-  width: 105px;
 }
 
 .buttonBubble {
     @include button;
-    width: 95px;
-  
-    &:hover {
-      background-color: rgba(193, 145, 171, 0.20);
-    }
   }
 
 .buttonBubble > * {
@@ -27,37 +21,6 @@
 .buttonBubble:hover{
   @include btnHover();
 }  
-  
-  .selected {
-    background-color: rgba(193, 145, 171, 0.35);
-  }
-
-  //Ipad
-  @media screen and (orientation:portrait) and (min-width: 767px) {
-    .buttonBubble {
-      @include themeBtn;
-      margin: 0 15px;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-    }
-
-    .selected {
-      background-color: rgba(193, 145, 171, 0.35);
-    }
-}
-
-   // small desctop
-   @media screen and (min-width: 1024px) and (max-width: 1439px) {
-    .buttonBubble {
-      @include themeBtn;
-      margin: 0 15px;
-      font-size: clamp(1rem, 1.5vw, 1.4rem);
-    }
-
-    .selected {
-      background-color: rgba(193, 145, 171, 0.35);
-    }
-   }
-
 
 
 

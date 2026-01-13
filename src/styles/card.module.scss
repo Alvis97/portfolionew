@@ -12,8 +12,6 @@
 .card{
     @include card();
     transition: transform 0.3s ease;
-    height: 160px;
-    width: 240px;
     
 
     .visibleContainer,
@@ -53,32 +51,27 @@
     }
 }
 
- //Ipad
- @media screen and (orientation:portrait) and (min-width: 767px) {
-    .card{
-        transition: transform 0.3s ease;
-        height: 210px;
-        width: 350px;
-    }
-}
 
    // small desctop
-   @media screen and (min-width: 1024px) and (max-width: 1439px) {
+   @media screen and (min-width: 1024px) {
     .card{
-        transition: transform 0.3s ease;
-        height: 200px;
-        width: 320px;
+      height: 220px;
+      width: 300px;
     }
    }
 
-      // small desctop
-      @media screen and (min-width: 1440px) {
+      // large desctop
+      @media screen and (min-width: 1504px) {
         .card{
-            transition: transform 0.3s ease;
-            height: 215px;
-            width: 360px;
+          height: 300px;
+          width: 450px;
         }
+
        }
+    
+       
+
+
 
 
 //modal styling
