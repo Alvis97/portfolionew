@@ -1,7 +1,8 @@
 import React from 'react'
 import Bubble from '../assets/Bubble.svg';
 import PinkBubble from '../assets/pinkBubble.svg';
-import { Github, Linkedin, Instagram, GithubIcon, Twitter} from "lucide-react";
+import OrangeBubble from '../assets/OrangeBubble.svg';
+import { Github, Linkedin, Instagram, GithubIcon, Twitter, Mail} from "lucide-react";
 import IconStyle from '../styles/iconStyle.module.scss';
 
 type Props = {
@@ -70,7 +71,18 @@ const BubbleBtnGithub: React.FC<Props> = ({ className }) => {
   )
 }
 
-const BubbleBtnInstagram: React.FC<Props> = ({ className }) => {
+const BubbleBtnMail: React.FC<Props> = ({ className }) => {
+  return (
+    <>
+    <a className={IconStyle.Link} href="">
+      <p><Mail/></p>
+      <img src={OrangeBubble} alt="Bubble" />
+    </a>
+    </>
+  )
+}
+
+const BubbleBtnMailDark: React.FC<Props> = ({ className }) => {
   return (
     <>
     <a className={IconStyle.Link} href="">
@@ -147,7 +159,8 @@ export {
    NodeIcon,
    BubbleBtnLinkedIn,
    BubbleBtnGithub,
-   BubbleBtnInstagram,
+   BubbleBtnMail,
+   BubbleBtnMailDark,
    BubbleBtnTwitter,
    PinkBubbleBtnLinkedIn,
    PinkBubbleBtnGithub,

@@ -27,12 +27,12 @@ a{
 }
 
 a:hover{
-   animation: linkAnimation 1s ease-in-out forwards;
+   animation: linkAnimation 0.6s ease-in-out forwards;
 }
 
 @keyframes linkAnimation {
     0% { transform: scale(1);}
-    100% { transform: scale(1.1);}
+    100% { transform: scale(1.05);}
 }
 
 @media screen and (max-width: 500px) {
