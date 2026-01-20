@@ -121,7 +121,7 @@
 }
 
 @mixin orange {
-  color: var(--color-pink);
+color: var(--color-pink);
 
   :global(.dark) & {
     color: var(--color-orange);
@@ -434,14 +434,14 @@
   }
 
   @mixin GlassWindow{
-    background-color: rgb(255, 244, 245);
-    backdrop-filter: blur(5px);
-    border: 2px solid rgb(244, 242, 242);
+    background-color: rgba(213, 213, 213, 0.475);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(244, 242, 242, 0.527);
 
     :global(.dark) & {
-      background-color: rgb(55, 51, 51);
-      backdrop-filter: blur(5px);
-      border: 2px solid rgb(45, 45, 45);
+      background-color: rgba(74, 67, 67, 0.603);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(45, 45, 45, 0.3);
 
     }
   }
