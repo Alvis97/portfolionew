@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Web3PostItem, web3ModalContent } from '../data/web3ModalContent';
 import WebCard from './WebCard';
 import {
@@ -40,6 +40,8 @@ function Web3({setModalContent }: Web3Props) {
 
 function Web3Content( { setModalContent }: Web3Props) {
   const { publicKey } = useWallet();
+
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   useEffect(() => {
     if (publicKey) {
@@ -97,7 +99,7 @@ function Web3Content( { setModalContent }: Web3Props) {
             ))}
       </div>
           
-            {!publicKey && (
+      {!publicKey && (
             <div className={style.lockContainer}>
             <h2>Connect your wallet to access my Web3 projects.</h2>
             <p>(This is free — no charges will be made.)</p>
@@ -106,10 +108,19 @@ function Web3Content( { setModalContent }: Web3Props) {
 
             <p className={style.noWallet}>
             Don’t have a wallet? <br></br>
-            You can still preview the projects <button>here!</button>
+            You can still preview the projects <button onClick={() => setIsPreviewOpen(true)}>here!</button>
             </p>
             </div>
-      )}        
+      )}  
+
+      { isPreviewOpen && (
+         <div className={style.background} onClick={()=> setIsPreviewOpen(false)}>
+         <div className={style.modal}>
+             <button onClick={()=> setIsPreviewOpen(false)}>X</button>
+             <video src="/video/preview.mp4" controls autoPlay muted />
+         </div>
+     </div>
+      )}      
   </div> 
   )
 }
