@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import navStyle from "../styles/navigation.module.scss"
 import LogoSmall from "../components/LogoSmall"
 import DarkMode from '../components/Darkmode';
@@ -20,56 +20,58 @@ function NavBar({ isDarkmodeSelected, handleThemeClick }: NavbarProps ) {
 
   return (
     <div className={navStyle.parent}> 
-     <LogoSmall/>
+    <div className={navStyle.mainMenu}>
+        <LogoSmall/>
+        <span className={navStyle.links}>
+        <div className={navStyle.linkWrapper}>
+            <a href="" className={navStyle.link}>Home</a>
+            <span className={navStyle.underline}></span>
+        </div>
+        <div className={navStyle.linkWrapper}>
+            <a href="" className={navStyle.link}>About</a>
+            <span className={navStyle.underline}></span>
+        </div>
+        <div className={navStyle.linkWrapper}>
+            <a className={navStyle.link} href="">Projects</a>
+            <span className={navStyle.underline}></span>
+        </div>
+        </span>
 
-    <span className={navStyle.links}>
-    <div className={navStyle.linkWrapper}>
-        <a href="" className={navStyle.link}>Home</a>
-        <span className={navStyle.underline}></span>
+        <DarkMode 
+        isDarkmodeSelected={isDarkmodeSelected} 
+        handleThemeClick={handleThemeClick}
+        />
     </div>
-    <div className={navStyle.linkWrapper}>
-        <a href="" className={navStyle.link}>About</a>
-        <span className={navStyle.underline}></span>
-    </div>
-    <div className={navStyle.linkWrapper}>
-        <a className={navStyle.link} href="">Projects</a>
-        <span className={navStyle.underline}></span>
-    </div>
-    </span>
 
+    <div className={navStyle.hamburgerMenu}>
+    <LogoSmall/>
     <DarkMode 
     isDarkmodeSelected={isDarkmodeSelected} 
     handleThemeClick={handleThemeClick}
     />
-
-    <button 
-    onClick={handleMenuClick} 
-    className={`${navStyle.menuButton} ${isMenuOpen ? navStyle.open : ''}`}>
-    <Menu className={navStyle.menuIcon}/>
-    </button>
-
-    <div className={`${navStyle.hamburger} ${isMenuOpen ? navStyle.open : ''}`}>
-<div className={navStyle.hamburgerLinks}>
-    
-    <span className={navStyle.hoverIcon}>
-            <LogoSmall className={navStyle.selector}/>
-        <a href="">Home</a>
-    </span> 
-    <span className={navStyle.hoverIcon}>
-            <LogoSmall className={navStyle.selector}/>
-        <a href="">About</a>
-    </span> 
-
-    <span className={navStyle.hoverIcon}>
-            <LogoSmall className={navStyle.selector}/>
-        <a href="">Projects</a>
-    </span> 
-
+        <button 
+        onClick={handleMenuClick} 
+        className={`${navStyle.menuButton} ${isMenuOpen ? navStyle.open : ''}`}>
+        <Menu className={navStyle.menuIcon}/>
+        </button>
+        <div className={`${navStyle.hamburger} ${isMenuOpen ? navStyle.open : ''}`}>
+        <div className={navStyle.hamburgerLinks}>
+        <span className={navStyle.hoverIcon}>
+                <LogoSmall className={navStyle.selector}/>
+            <a href="">Home</a>
+        </span> 
+        <span className={navStyle.hoverIcon}>
+                <LogoSmall className={navStyle.selector}/>
+            <a href="">About</a>
+        </span> 
+        <span className={navStyle.hoverIcon}>
+                <LogoSmall className={navStyle.selector}/>
+            <a href="">Projects</a>
+        </span> 
+        </div>
+        </div>
     </div>
-
-    </div>
-         
-
+  
     </div>
   )
 }
