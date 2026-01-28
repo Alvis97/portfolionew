@@ -1,6 +1,5 @@
 import React from 'react'
 import Bubble from '../assets/Bubble.svg';
-import PinkBubble from '../assets/pinkBubble.svg';
 import OrangeBubble from '../assets/OrangeBubble.svg';
 import { Github, Linkedin, Instagram, GithubIcon, Twitter, Mail} from "lucide-react";
 import IconStyle from '../styles/iconStyle.module.scss';
@@ -104,50 +103,6 @@ const BubbleBtnTwitter: React.FC<Props> = ({ className }) => {
   )
 }
 
-const PinkBubbleBtnLinkedIn: React.FC<Props> = ({ className }) => {
-  return (
-    <>
-    <a className={IconStyle.Link} href="">
-      <p><Linkedin/></p>
-      <img src={PinkBubble} alt="Bubble" />
-    </a>
-    </>
-  )
-}
-
-const PinkBubbleBtnGithub: React.FC<Props> = ({ className }) => {
-  return (
-    <>
-    <a className={IconStyle.Link} href="">
-      <p><Github/></p>
-      <img src={PinkBubble} alt="Bubble" />
-    </a>
-    </>
-  )
-}
-
-const PinkBubbleBtnInstagram: React.FC<Props> = ({ className }) => {
-  return (
-    <>
-    <a className={IconStyle.Link} href="">
-      <p><Instagram/></p>
-      <img src={PinkBubble} alt="Bubble" />
-    </a>
-    </>
-  )
-}
-
-const PinkBubbleBtnTwitter: React.FC<Props> = ({ className }) => {
-  return (
-    <>
-    <a className={IconStyle.Link} href="">
-      <p><Twitter/></p>
-      <img src={PinkBubble} alt="Bubble" />
-    </a>
-    </>
-  )
-}
-
 
 
 export {
@@ -161,9 +116,5 @@ export {
    BubbleBtnGithub,
    BubbleBtnMail,
    BubbleBtnMailDark,
-   BubbleBtnTwitter,
-   PinkBubbleBtnLinkedIn,
-   PinkBubbleBtnGithub,
-   PinkBubbleBtnInstagram,
-   PinkBubbleBtnTwitter
+   BubbleBtnTwitter
 } 

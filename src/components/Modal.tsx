@@ -1,28 +1,31 @@
 import React from 'react'
-import modalStyle from '../styles/modal.module.scss';
-import { CircleX } from 'lucide-react';
-import ReactDOM from 'react-dom';
+import { Cards } from '../data/types';
 
-type ModalProps = {
-    isOpen: boolean;
-    onClose: () => void;
-    children: React.ReactNode;
-};
+type modalProps = {
+  post: Cards;
+  onClose: () => void;
+}
 
-const Modal = ({ isOpen, onClose, children }: ModalProps) => {
-  if (!isOpen) return null;
+function Modal({ post, onClose}: modalProps) {
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-content" onClick={e => e.stopPropagation()}>
+      <button onClick={onClose}>Close</button>
+      <h2>{post.title}</h2>
+      <img src={post.mainImage} alt={post.title} />
+      <p>{post.desc}</p>
 
-    return ReactDOM.createPortal (
-    <div className={modalStyle.modalBackground} onClick={onClose}>
-    <div className={modalStyle.modalContent} onClick={(e) => e.stopPropagation()}>
-    <button className={modalStyle.exitBtn} onClick={onClose}><CircleX/></button>
-    <div className={modalStyle.scrollDiv}>
-    {children}
+      {post.sections?.map((section, i) => (
+        <div key={i}>
+          <h3>{section.heading}</h3>
+          <p>{section.text}</p>
+          {section.img && <img src={section.img} alt={section.heading} />}
+        </div>
+      ))}
     </div>
-    </div>
-    </div>,
-    document.body
+  </div>
   )
 }
 
 export default Modal
+

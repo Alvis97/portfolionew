@@ -53,8 +53,9 @@
 }
 
 .imgContainer{
-    width: 50%;
+    width: 25%;
     padding-left: 35px;
+    background-color: green;
 }
 
 .image{
@@ -66,21 +67,26 @@
 
 .textContainer{
     width: 50%;
-}
+    background-color: green;
+    color: var(--color-dark);
 
-h1{
-   font-size: 30px;
-   margin-bottom: 5px;
-   font-family: var(--font-onest);
+    h1{
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-family: var(--font-onest);
+        color: blue;
+     }
+
 }
 
 .roleContainer{
-
+    color: var(--color-dark);
     margin-bottom: 20px;
 
     p{
         margin: 0;
         font-size: 16px;
+        color: var(--color-dark);
     }
 }
 

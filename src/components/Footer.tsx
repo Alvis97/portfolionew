@@ -1,7 +1,7 @@
 import React from 'react'
 import { Github, Linkedin, Instagram, GithubIcon, Twitter} from "lucide-react";
 import style from '../styles/footer.module.scss';
-import { BubbleBtnGithub, BubbleBtnLinkedIn, BubbleBtnTwitter, BubbleBtnMail, BubbleBtnMailDark, PinkBubbleBtnGithub, PinkBubbleBtnInstagram, PinkBubbleBtnLinkedIn, PinkBubbleBtnTwitter } from './Icons';
+import { BubbleBtnGithub, BubbleBtnLinkedIn, BubbleBtnTwitter, BubbleBtnMail, BubbleBtnMailDark } from './Icons';
 
 interface FooterProps{
   isDarkmodeSelected : boolean;
