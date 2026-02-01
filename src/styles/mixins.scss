@@ -120,6 +120,50 @@
     }
 }
 
+@mixin modalContent{
+   background-color: var(--color-light);
+
+   :global(.dark) & {
+    background-color: var(--color-dark);
+   }
+}
+
+@mixin modalBackground{
+  background-color: #39333397;
+
+  :global(.dark) & {
+   background-color: #ffffff2a;
+  }
+}
+
+@mixin modalExitBtn{
+  border: 2px solid var(--color-dark);
+  stroke: var(--color-dark);
+  color: var(--color-dark);
+  border-radius: 100px;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: transform 2s ease;
+
+  &:hover{
+   transform: scale(1.1);
+
+  }
+
+  :global(.dark) & {
+    border: 2px solid var(--color-light);
+    stroke: var(--color-light);
+    color: var(--color-light);
+   }
+}
+
+
+
 @mixin orange {
 color: var(--color-pink);
 
@@ -328,6 +372,11 @@ color: var(--color-pink);
         height: 215px;
         width: 310px;
       }
+
+      @media screen and (min-width: 1500px) {
+        height: 230px;
+        width: 310px;
+    }
   
     .visibleContainer {
       position: absolute;

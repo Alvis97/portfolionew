@@ -19,22 +19,30 @@ function Projects() {
 
           <div className={style.downloadRing}>
             <button
-              onClick={() => setSelectedCategory("web2")}         >
-              Web2
+              onClick={() => setSelectedCategory("web2")}    
+             >
+              <span> Web2</span>
             </button>
           </div>
 
           <div className={style.downloadRing}>
             <button
-              onClick={() => setSelectedCategory("graphics")}        >
-              Graphics
+              onClick={() => setSelectedCategory("graphics")}        
+              >
+                <span>
+                Graphics
+                </span>
+         
             </button>
           </div>
 
           <div className={style.downloadRing}>
             <button
-              onClick={() => setSelectedCategory("web3")}        >
-              Web3
+              onClick={() => setSelectedCategory("web3")}        
+              >
+              <span>
+                Web3
+              </span>
             </button>
           </div>
 

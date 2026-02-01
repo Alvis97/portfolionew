@@ -1,7 +1,7 @@
 @import './mixins';
 
 .modalBackground{
-    background-color: #1b151158;
+    @include modalBackground;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,39 +16,145 @@
 }
 
 .modalContent{
-    width: 80vw;
-    height: 80vh;
+    @include modalContent;
+    width: 90vw;
+    height: 90vh;
     margin: auto;
     z-index: 8000;
     border-radius: 10px;
-    background-color: var(--color-light);
     padding: 20px;
-    background-color: pink;
+
+}
+
+.exitBtn{
+  @include modalExitBtn;
 }
 
 .scrollDiv{
     border-radius: 10px;
     width: 100%;
-    height: 90%;
+    height: 93%;
     overflow: scroll;  
-    background-color: var(--color-light);
     color: var(--color-dark);
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    padding: 0px 50px;
 }
 
-.textContent{
-    width: 50%;
+.topSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    color: var(--color-dark);
+
+    @media (min-width: 900px) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .textContainer{
+        width: 100%;
+        color: var(--color-dark);
+
+        @media (min-width: 900px) {
+            width: 50%;
+        }
+
+        h2{
+            @include textColor;
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+
+        h3{
+            @include textColor;
+            font-family: var(--font-onest);
+            line-height: 30px;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        p{
+            @include textColor;
+            margin-top: 20px;
+            line-height: 28px;
+        }
+
+        span{
+            @include textColor;
+            font-family: var(--font-onest);
+            line-height: 3rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+     
+    }
+
+    .imgContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 900px) {
+            width: 40%;
+        }
+
+        img{
+            max-width: 80%;
+            height: auto;
+
+            @media (min-width: 900px) {
+                width: 70%;
+            }
+        }
+    }
+}
+
+.repeatedSection{
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: left;
-    padding-top: 20px;
-    font-family: var(--font-onest);
-    background-color: green;
-    color: black;
+    width: 100%;
 
-    h1{
-        color: pink;
-    }  
+    @media (min-width: 900px) {
+        width: 80%;
+    }
+
+    h3{
+        @include textColor;
+        width: 100%;
+        font-family: var(--font-onest);
+        font-size: 1.5rem;
+    }
+
+    p{
+        @include textColor;
+        margin-top: 20px;
+        line-height: 28px;
+        margin-bottom: 100px;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        
+        @media (min-width: 900px) {
+            width: 80%;
+        }
+
+    }
 }
+
+
+
+
 

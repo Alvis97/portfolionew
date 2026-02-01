@@ -3,10 +3,33 @@
 //For Cards
 .cardContainer{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
+    flex-direction: column;
+    justify-content: space-around ;
+    align-items: center;
+    width: 80vw;
+    height: fit-content;
+    margin-top: 2vh;
     border-radius: 20px;
+
+    @media (min-width: 760px) {
+        height: fit-content;
+        flex-direction: row;
+    }
+
+    @media (min-width: 1250px) {
+        background-color: pink;
+        width: 60vw;
+    }
+
+    @media (min-width: 1500px) {
+        background-color: pink;
+        width: 50vw;
+    }
+
+    @media (min-width: 1900px) {
+        background-color: pink;
+        width: 40vw;
+    }
 }
 
 .card{
