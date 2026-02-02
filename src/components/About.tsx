@@ -17,11 +17,12 @@ function About() {
       <div className={styles.textWrapper}>
         <h2>HI! I’M <span>ALVA</span>  </h2>
         <p>
-          I’m a front-end developer blending art and tech. 
-          Based in London with a background in design,
-          I build modern web apps using React, 
-          TypeScript & Next.js — and love exploring what the web can be, 
-          from Web2 layouts to Web3 experiments.
+        I’m a front-end developer blending design and technology.
+        Based in London, I build modern web applications using React,
+        TypeScript, and Next.js, with a focus on creating interactive,
+        user-centered experiences. I also explore Web3 development on Solana, 
+        integrating wallets like Phantom to craft projects that combine
+         creative design with blockchain functionality.
         </p>
         <div className={styles.iconRow}>
            <ReIcon className={styles.Icon}/>
