@@ -25,7 +25,7 @@ function Projects() {
             <button
               onClick={() => setSelectedCategory("web2")}    
              >
-              <span> Web2</span>
+              <span>Web Apps </span>
             </button>
           </div>
 
@@ -45,7 +45,7 @@ function Projects() {
               onClick={() => setSelectedCategory("web3")}        
               >
               <span>
-                Web3
+                Blockchain/ Solana
               </span>
             </button>
           </div>
