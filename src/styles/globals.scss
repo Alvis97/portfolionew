@@ -28,8 +28,8 @@
   html, body {
     margin: 0;
     padding: 0;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 18px;
     background-color: var(--color-light);
   }
 
@@ -38,19 +38,37 @@
     color: var(--color-light);
   } 
 
-  /* ipads */
-@media (min-width: 768px) {
+    /* larger phones */
+@media (min-width: 390px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 
-  /* ipads */
+      /* ipads */
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+  /* desktop */
   @media (min-width: 1024px) {
     html {
-      font-size: 20px;
+      font-size: 18px;
+      line-height: 34px;
     }
   }
+
+    /* desktop larger */
+    @media (min-width: 1200px) {
+      html {
+        font-size: 20px;
+        line-height: 40px;
+      }
+    }
 
 
 

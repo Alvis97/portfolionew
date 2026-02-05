@@ -8,11 +8,13 @@ import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 //Style
 import style from "../styles/project.module.scss"
+import { X } from 'lucide-react';
 //import style from "../styles/bubbleButton.module.scss";
 
 function Projects() {
   //UseState för att tracka vilket knapp/Pjorekt typ som har valts för att visa
   const [selectedCategory, setSelectedCategory] = useState<"web2" | "graphics" | "web3">("web2");
+  const [modalOpen, setModalOpen] = useState(false);
 
   const { connected } = useWallet();
 
@@ -67,7 +69,7 @@ function Projects() {
                     Don't have a wallet? <br />
                       You can preview my projects 
                       <span>
-                      <button>here</button>
+                      <button onClick={() => setModalOpen(true)}>here</button>
                       </span>
                     </p>
 
@@ -80,8 +82,16 @@ function Projects() {
             )}
           </div>
         </div>
+
+        { modalOpen && (
+         <div className={style.modalBackground} onClick={() => setModalOpen(false)}>
+         <div className={style.modal}>
+           <button onClick={() => setModalOpen(false)}><X/></button>
+           <video src="/path/to/video.mp4" controls ></video>
+         </div>
+       </div>
+        )}
         
-      
     </section>
   )
 }

@@ -1,26 +1,5 @@
 @import './mixins';
 
-.downloadRing {
-  @include btnRing();
-  }
-
-.downloadBtn {
-  @include button();
-  }
-
-  //Text & Icon
-  .downloadBtn > * {
-  @include btnText;
-  }
-
-  .downloadBtn::before{
-   @include btnBefore();
-  }
-
-  .downloadBtn:hover {
-    @include btnHover();
-  }
-
 .aboutSection{
     @include gradiant2;
     width: 100vw;
@@ -32,68 +11,197 @@
     align-items: center;
     box-sizing: border-box;
     padding: 50px 0vw;
+
+    @media screen and (min-width: 1024px) {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 50px 10vw;
+    }
+
+
 }
 
-.btnDiv{
+.imageContainer{
+    width: 90vw;
+    height: 40vh;
     display: flex;
-    justify-content: space-between;
-    width: 330px;
+    align-items: end;
+    justify-content: right;
+    margin-bottom: 3vh;
+
+    @media screen and (min-width: 390px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 700px) {
+        margin-bottom: 5vh;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 30vw;
+        height: auto;
+        display: flex;
+        justify-content: left;
+        margin-bottom: 0vh;
+    }
 }
 
 .image{
-    width: 25vw;
+    width: 35vw;
     height: auto;
+    margin-right: 10vw;
+
+    @media screen and (min-width: 390px) {
+        width: 40vw;
+        height: auto;
+        margin-right: 10vw;
+    }
+
+    @media screen and (min-width: 700px) {
+        width: 28vw;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 70%;
+        height: auto;
+        display: flex;
+        justify-content: left;
+        margin-bottom: 0vh;
+        background-color: pink;
+    }
 }
 
 .textWrapper{
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items:baseline;
     justify-content: left;
     width: 90vw;
+    height: 60vh;
     height: fit-content;
+    margin-top: 0;
+
+    h1{
+      @include orange();
+      font-family: var(--font-onest);
+      font-weight: 300;
+      letter-spacing: 3px;
+      font-size: 1rem;
+      line-height: 2rem;
+      text-align: left;
+      margin-bottom: 0;
+
+      @media screen and (min-width: 1024px) {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+    }
 
     h2{
-        text-align: center;
-        letter-spacing: 2px;
-        margin-bottom: 5px;
-        margin-top: 20px;
-        font-size: 1.3rem;
+        text-align: left;
+        letter-spacing: 5px;
+        margin-bottom: 0px;
+        font-size: 1.5rem;
+        line-height: 2.0rem;
+        width: 100%;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
     }
 
     p{
-        text-align: center;
+        text-align: left;
         font-size: 1rem;
         width: 100%;
-        line-height: 1.8rem;
+        line-height: 2rem;
         margin-bottom: 10px;
+        margin-top: 5px;
+        letter-spacing: 2px;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 0.8rem;
+            line-height: 1.6rem;
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        width: 75vw;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 45vw;
+        height: auto;
     }
 }
 
 .iconRow{
-    width: 70vw;
+    width: 90vw;
     height: fit-content;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 10px 0;
 }
 
-.btnDiv{
+.toggleBtn{
+    border: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: var(--font-onest);
     display: flex;
-    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    @include textColor();
+    height: 44px;
+    background-color: transparent;
+    letter-spacing: 2px;
+
+    span{
+        height: 24px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
 }
 
-.projectBtn{
-    margin: 5px 10px;
-    @include themeBtn();
-
-    &:hover {
-        transform: scale(1.02);
-      }
+.show{
+   animation: slideIn 0.3s ease-in;
 }
 
+@keyframes slideIn {
+    0% { transform: translateY(-3px);
+         opacity: 0.5;
+
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    } 
+}
+
+.hidden{
+    animation: slideOut 0.3s ease-in;
+}
+
+@keyframes slideOut {
+    0% { transform: translateY(0px);
+         opacity: 0.5;
+
+    }
+    100% {
+        transform: translateY(-3px);
+        opacity: 1;
+    }
+}
 
 .Icon{
     @include iconsOrange();
@@ -113,187 +221,8 @@
     
 }
 
-// larger phone
-@media screen and (min-width: 500px) {
-    .btnDiv{
-        width: 400px;
-    }
-}
 
 
-// ipad
-@media screen and (min-width: 767px) {
-
-    .image{
-        width: 26vw;
-    }
+  
     
-    .textWrapper{
-        margin-top: 10px;
-    
-        h2{
-            font-size:clamp(1.5rem, 2.4vw, 2.5rem);
-            line-height: clamp(1.8rem, 3.5vw, 3rem);
-        }
-    
-        p{
-            font-size: clamp(0.8rem, 1.8vw, 1.5rem);
-            letter-spacing: clamp(1px, 0.5vw, 7px);
-            width: 75vw;
-        }
-    }
-
-    .btnDiv{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 10px;
-        width: 420px;
-    }
-    
-    .projectBtn{
-        margin: 15px 10px;
-    }
-
-    .iconRow{
-        width: 45vw;
-    }
-    
-    
-    .Icon{
-        margin: 5px  20px;
-        width: 30px;
-        }      
-}
-
-   // small desctop
-   @media screen and (min-width: 1024px) {
-
-    .aboutSection{
-        @include gradiant2;
-        width: 100vw;
-        margin: auto;
-        height: 100vh;
-        display: flex;
-        flex-direction:row;
-        justify-content:space-between;
-        align-items: center;
-        box-sizing: border-box;
-        padding: 10vh 70px;
-    }
-
-    .imageContainer{
-        width: 30vw;
-        text-align: center;
-    }
-    
-    .image{
-        width: 20vw;
-        height: auto;
-    }
-    
-    .textWrapper{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items:baseline;
-        justify-content: left;
-        width: clamp(500px, 50vw, 1000px);
-        height: fit-content;
-        margin-right: 50px;
-    
-        h2{
-            font-size:clamp(1rem, 2.4vw, 2.5rem);
-            line-height: clamp(1.8rem, 3.5vw, 3rem);
-            letter-spacing: clamp(8px, 2.4vw, 10px);
-            margin-bottom: 5px;
-        }
-    
-        p{
-            text-align: left;
-            font-size: clamp(0.8rem, 1.3vw, 1.5rem);
-            line-height: clamp(1.6rem, 2.7vw, 3rem);
-            margin-bottom: 10px;
-            width: 100%;
-            letter-spacing: 3px;
-        }
-    }
-    
-    .iconRow{
-        margin: 5px 0 ;
-        width: 28vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .btnDiv{
-        width: clamp(480px, 35vw, 480px);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 20px 0px;
-        margin-right: 20px;
-    }
-    
-    .Icon{
-        margin: 10px 30px 10px 0px;
-        width: 30px;
-        }      
-   }
-
-      //// extra large desctop
-      @media screen and (min-width: 3200px) {
-      
-        .aboutSection{
-            padding: 10vh 100px;
-        }
-    
-        .imageContainer{
-            width: 30vw;
-            text-align: center;
-        }
-        
-        .image{
-            width: 25vw;
-            height: auto;
-        }
-        
-        .textWrapper{
-            width: 40vw;
-        
-            h2{
-                font-size: 3.5rem;
-                margin-bottom: 50px;
-            }
-        
-            p{
-                font-size: 2rem;
-                line-height: 3.5rem;
-                margin-bottom: 50px;
-            }
-
-       }
-
-       .iconRow{
-        width: 20vw;
-       }
-
-       .Icon{
-        margin: 10px 30px 10px 0px;
-        width: 60px;
-        }  
-        
-        .btnDiv{
-            width: 850px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 20px 0px;
-            margin-right: 20px;
-            font-size: 1.2rem;
-        }
-
-    }
-
-
+  
