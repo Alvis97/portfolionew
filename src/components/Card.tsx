@@ -26,6 +26,7 @@ function Card({category}: CardProps) {
             <div
             key={posts.index}
             className={cardStyle.card}
+            tabIndex={0}
             onClick={()=> setSelectedCard(posts)}
             >
 

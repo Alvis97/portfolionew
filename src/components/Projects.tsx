@@ -55,7 +55,7 @@ function Projects() {
         </div>
 
         <div className={style.projectContainer}>
-          <div className={style.projects}>
+         
             <Card category={selectedCategory}/>
             { selectedCategory === "web3" && !connected && (
         
@@ -81,7 +81,7 @@ function Projects() {
      
             )}
           </div>
-        </div>
+       
 
         { modalOpen && (
          <div className={style.modalBackground} onClick={() => setModalOpen(false)}>

@@ -16,7 +16,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
 
   return (
     <section className={`${homeStyle.homeSection} ${isDarkmodeSelected ? homeStyle.dark : ''}`}>
-        <div   className={homeStyle.circle}></div>
+      
         <div  className={homeStyle.textContent}>
           <div className={homeStyle.heading}>
           <span className={homeStyle.name}>ALVA JONSSON</span>
