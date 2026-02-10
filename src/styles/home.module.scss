@@ -26,9 +26,6 @@
         padding: 0px 20px 30px 20px;
         box-sizing: border-box;
         z-index: 5;
-        opacity: 0;
-        transform: translateX(-15px);
-        transition:  opacity 1.5s ease-out, transform 1.5s ease-out;
 
         .heading{
           text-align: center;
@@ -65,38 +62,7 @@
       }
 
     }
-
-    .textContent.visible{
-      opacity: 1;
-      transform: translateX(0);
-    }
-    .textContent p,
-    .textContent .name,
-    .textContent h1 {
-      opacity: 0;
-      transform: translateX(-15px);
-      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-    }
-
-    .textContent.visible p {
-      opacity: 1;
-      transform: translateX(0);
-      transition-delay: 0.7s;
-    }
     
-    .textContent.visible .name {
-      opacity: 1;
-      transform: translateX(0);
-      transition-delay: 0.7s;
-    }
-    
-    .textContent.visible h1 {
-      opacity: 1;
-      transform: translateX(0);
-      transition-delay: 0.5s;
-    }
-    
-
     .hearts{
         display: flex;
         align-items: center;

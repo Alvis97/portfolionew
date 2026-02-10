@@ -5,6 +5,7 @@ import PinkHearts from "../assets/PinkGlassHeart.svg";
 
 //Styles
 import homeStyle from "../styles/home.module.scss";
+import FadeUp from './FadeIn';
 
 
 interface HomeSectionProps {
@@ -12,18 +13,13 @@ interface HomeSectionProps {
 };
 
 const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
-  console.log("HomeSection isDarkmodeSelected:", isDarkmodeSelected);
-
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   return (
-    <section id="home" className={`${homeStyle.homeSection} ${isDarkmodeSelected ? homeStyle.dark : ''}`}>
+    <section id="home" className={homeStyle.homeSection}>
       
-        <div  className={ `${homeStyle.textContent} ${isVisible ? homeStyle.visible : "" }`}>
+     
+        <div  className={homeStyle.textContent}>
+        <FadeUp>
           <div className={homeStyle.heading}>
           <span className={homeStyle.name}>ALVA JONSSON</span>
           <h1>WEB-DEVELOPER <br/> & GRAPHICS</h1>
@@ -32,8 +28,12 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
                  into creative technologies - from web2 layouts to web3 experiments.  
            
               </p>
+        </FadeUp>
         </div>
+      
 
+
+       
         <div  className={homeStyle.hearts}>
           <div className={homeStyle.heartWrapper}>
             <img className={` ${homeStyle.heart1} ${homeStyle.heart} `} src={GreenHeart} alt="heart A" />
@@ -55,6 +55,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
             <img src={HeartShadow} className={`${homeStyle.shadow4} ${homeStyle.shadow}`} alt="Shadow A" />
           </div>
         </div>
+    
 
     </section>
   )

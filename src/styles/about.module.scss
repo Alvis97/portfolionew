@@ -90,8 +90,6 @@
     width: 90vw;
     height: fit-content;
     margin-top: 0;
-    transform: translateX(-15px);
-    transition:  opacity 1.5s ease-out, transform 1.5s ease-out;
 
     h1{
       @include orange();
@@ -234,44 +232,6 @@
 .moreText.open .iconRow{
     opacity: 1;
     transform: translateY(0);
-}
-
-.textWrapper.visibleText{
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.textWrapper p,
-.textWrapper h1,
-.textWrapper h2,
-.textWrapper .toggleBtn {
-    opacity: 0;
-    transform: translateX(-15px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-}
-
-.textWrapper.visibleText p{
-    opacity: 1;
-    transform: translateX(0);
-    transition-delay: 0.7s;
-}
-
-.textWrapper.visibleText h1{
-    opacity: 1;
-    transform: translateX(0);
-    transition-delay: 0.7s;
-}
-
-.textWrapper.visibleText h2{
-    opacity: 1;
-    transform: translateX(0);
-    transition-delay: 0.7s;
-}
-
-.textWrapper.visibleText .toggleBtn{
-    opacity: 1;
-    transform: translateX(0);
-    transition-delay: 0.7s;
 }
 
 

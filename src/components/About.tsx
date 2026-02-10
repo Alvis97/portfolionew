@@ -4,6 +4,7 @@ import profileImg from '../assets/profile.jpg';
 import selfie from '../assets/Selfie.jpg';
 import { Download, ArrowRight, ChevronsDown, ChevronsDownUp, ChevronDown  } from 'lucide-react';
 import { NodeIcon, ReIcon, Sass, Solana, TScript } from './Icons';
+import FadeUp from './FadeIn';
 
 function About() {
  const [viewMore, setViewMore] = useState(false);
@@ -17,12 +18,16 @@ useEffect(() => {
   return (
     <section id="about" className={styles.aboutSection}>
 
-<div className={`${styles.imageContainer} ${isVisible ? styles.visibleImage : ""}`}>
-<img className={styles.image} src={selfie} alt="Portrait of Alva" />
+<div className={styles.imageContainer}>
+  <FadeUp>
+  <img className={styles.image} src={selfie} alt="Portrait of Alva" />
+  </FadeUp>
+
 
 </div>
 
-      <div className={`${styles.textWrapper} ${isVisible ? styles.visibleText : ""} `}>
+      <FadeUp>
+      <div className={styles.textWrapper}>
         <h1>ABOUT</h1>
         <h2>DRAWN TO THE SPACE WHERE DESIGN MEETS CODE.</h2>
         <p>
@@ -31,6 +36,7 @@ useEffect(() => {
          shaping interfaces that feel intuitive, human and slightly
          playful — where visuals and functionality move together.
         </p>
+        
           <p className={ `${styles.moreText} ${viewMore ? styles.open : ""}`}>
             I work mainly with React, TypeScript and Next.js, and I’m
              especially interested in creative technologies and Web3.
@@ -63,9 +69,9 @@ useEffect(() => {
             { viewMore ? ( <ChevronsDownUp/> ) : ( <ChevronDown/> )}
           </span>
         </button>
-      
     
       </div>
+      </FadeUp>
     </section>
   );
 }

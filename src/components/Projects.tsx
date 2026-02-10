@@ -9,6 +9,7 @@ import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 //Style
 import style from "../styles/project.module.scss"
 import { X } from 'lucide-react';
+import FadeUp from './FadeIn';
 //import style from "../styles/bubbleButton.module.scss";
 
 function Projects() {
@@ -21,6 +22,7 @@ function Projects() {
   return (
     <section id="projects" className={style.projectSection}>
 
+      <FadeUp>
         <div className={style.menu}> 
 
           <div className={style.downloadRing}>
@@ -53,8 +55,10 @@ function Projects() {
           </div>
 
         </div>
+        </FadeUp>
 
         <div className={style.projectContainer}>
+        <FadeUp>
          
             <Card category={selectedCategory}/>
             { selectedCategory === "web3" && !connected && (
@@ -75,11 +79,13 @@ function Projects() {
 
                   </div>
               </div>
+             
 
              </div>
-            
+        
      
             )}
+                 </FadeUp>
           </div>
        
 
