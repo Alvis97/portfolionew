@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import GreenHeart from "../assets/GreenGlassHeart.svg";
 import HeartShadow from '../assets/shadow.svg';
 import PinkHearts from "../assets/PinkGlassHeart.svg";
@@ -14,10 +14,16 @@ interface HomeSectionProps {
 const HomeSection: React.FC<HomeSectionProps> = ({ isDarkmodeSelected }) => {
   console.log("HomeSection isDarkmodeSelected:", isDarkmodeSelected);
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <section className={`${homeStyle.homeSection} ${isDarkmodeSelected ? homeStyle.dark : ''}`}>
+    <section id="home" className={`${homeStyle.homeSection} ${isDarkmodeSelected ? homeStyle.dark : ''}`}>
       
-        <div  className={homeStyle.textContent}>
+        <div  className={ `${homeStyle.textContent} ${isVisible ? homeStyle.visible : "" }`}>
           <div className={homeStyle.heading}>
           <span className={homeStyle.name}>ALVA JONSSON</span>
           <h1>WEB-DEVELOPER <br/> & GRAPHICS</h1>

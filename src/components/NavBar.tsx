@@ -24,15 +24,15 @@ function NavBar({ isDarkmodeSelected, handleThemeClick }: NavbarProps ) {
         <LogoSmall/>
         <span className={navStyle.links}>
         <div className={navStyle.linkWrapper}>
-            <a href="" className={navStyle.link}>Home</a>
+            <a href="#home" className={navStyle.link}>Home</a>
             <span className={navStyle.underline}></span>
         </div>
         <div className={navStyle.linkWrapper}>
-            <a href="" className={navStyle.link}>About</a>
+            <a href="#about" className={navStyle.link}>About</a>
             <span className={navStyle.underline}></span>
         </div>
         <div className={navStyle.linkWrapper}>
-            <a className={navStyle.link} href="">Projects</a>
+            <a href="#projects" className={navStyle.link} >Projects</a>
             <span className={navStyle.underline}></span>
         </div>
         </span>
@@ -58,15 +58,15 @@ function NavBar({ isDarkmodeSelected, handleThemeClick }: NavbarProps ) {
         <div className={navStyle.hamburgerLinks}>
         <span className={navStyle.hoverIcon}>
                 <LogoSmall className={navStyle.selector}/>
-            <a href="">Home</a>
+            <a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a>
         </span> 
         <span className={navStyle.hoverIcon}>
                 <LogoSmall className={navStyle.selector}/>
-            <a href="">About</a>
+            <a href="#about" onClick={() => setIsMenuOpen(false)}>About </a>
         </span> 
         <span className={navStyle.hoverIcon}>
                 <LogoSmall className={navStyle.selector}/>
-            <a href="">Projects</a>
+            <a href="#projects" onClick={ () => setIsMenuOpen(false)}>Projects</a>
         </span> 
         </div>
         </div>

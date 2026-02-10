@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/about.module.scss';
 import profileImg from '../assets/profile.jpg'; 
 import selfie from '../assets/Selfie.jpg';
@@ -7,27 +7,31 @@ import { NodeIcon, ReIcon, Sass, Solana, TScript } from './Icons';
 
 function About() {
  const [viewMore, setViewMore] = useState(false);
+ const [isVisible, setIsVisible] = useState(false);
+
+useEffect(() => {
+    setIsVisible(true);
+ }, [])
 
 
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
 
-<div className={styles.imageContainer}>
+<div className={`${styles.imageContainer} ${isVisible ? styles.visibleImage : ""}`}>
 <img className={styles.image} src={selfie} alt="Portrait of Alva" />
 
 </div>
 
-      <div className={styles.textWrapper}>
+      <div className={`${styles.textWrapper} ${isVisible ? styles.visibleText : ""} `}>
         <h1>ABOUT</h1>
         <h2>DRAWN TO THE SPACE WHERE DESIGN MEETS CODE.</h2>
         <p>
-        I’m a front-end developer with a strong eye for design
+         I’m a front-end developer with a strong eye for design
          building thoughtful, interactive web experiences. I enjoy
          shaping interfaces that feel intuitive, human and slightly
-          playful — where visuals and functionality move together.
+         playful — where visuals and functionality move together.
         </p>
-        { viewMore && 
-          <p className={viewMore ? styles.show : styles.hidden}>
+          <p className={ `${styles.moreText} ${viewMore ? styles.open : ""}`}>
             I work mainly with React, TypeScript and Next.js, and I’m
              especially interested in creative technologies and Web3.
             Lately, that means exploring Solana, integrating wallets
@@ -50,7 +54,7 @@ function About() {
               a little unexpected.
 
           </p>
-        }
+        
             <button
              className={styles.toggleBtn}
              onClick={() => setViewMore( prev => !prev)}>

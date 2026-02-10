@@ -19,7 +19,7 @@ function Projects() {
   const { connected } = useWallet();
 
   return (
-    <section className={style.projectSection}>
+    <section id="projects" className={style.projectSection}>
 
         <div className={style.menu}> 
 

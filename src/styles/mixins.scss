@@ -304,8 +304,8 @@ color: var(--color-pink);
     background:
       radial-gradient(
         circle at center,
-        rgba(255, 153, 0, 0.264) 0%,
-        rgba(255, 153, 0, 0.209) 20%,
+        rgba(255, 153, 0, 0.20) 0%,
+        rgba(255, 153, 0, 0.15) 20%,
         rgba(255, 153, 0, 0) 40%
       );
   
@@ -416,7 +416,7 @@ color: var(--color-pink);
     transform: scale(0.92);
     opacity: 0.7;
   
-    transition: transform 0.35s ease, opacity 0.35s ease;
+    transition: transform 0.5s ease, opacity 0.35s ease;
   
     box-shadow:
       inset 2px 2px 6px rgba(0, 0, 0, 0.25),
@@ -491,6 +491,15 @@ color: var(--color-pink);
           line-height: 1rem;
         }
       }
+
+      &:focus-visible {
+          transform: scale(1.04);
+
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
     }
   
     .hiddenContainer {
@@ -533,27 +542,14 @@ color: var(--color-pink);
     }
   }
 
-  @mixin hamburgerMenuColor{
-    background-color:  #fbfffaeb;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px); // for Safari
-
-    :global(.dark) & {
-      background-color: #1b1511ed;
-      backdrop-filter: blur(80px);
-      -webkit-backdrop-filter: blur(80px); // for Safari
-    }
-  }
 
   @mixin backgroundProjects{
-    background-color:  #e1d6d6eb;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px); // for Safari
+    background-color:  #f7f3f3ec;
+
 
     :global(.dark) & {
-      background-color: #1e1a1694;
-      backdrop-filter: blur(80px);
-      -webkit-backdrop-filter: blur(80px); // for Safari
+      background-color: #29211bf1;
+
     }
   }
 
@@ -566,15 +562,23 @@ color: var(--color-pink);
   }
 
   @mixin GlassWindow{
-    background-color: rgba(213, 213, 213, 0.475);
+    background-color: rgba(183, 177, 177, 0.475);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(244, 242, 242, 0.527);
 
     :global(.dark) & {
-      background-color: rgba(74, 67, 67, 0.603);
+      background-color: rgba(26, 21, 21, 0.603);
       backdrop-filter: blur(10px);
       border: 2px solid rgba(45, 45, 45, 0.3);
 
+    }
+  }
+
+  @mixin menuBackground() {
+    background-color: #f6f6f6d5;
+
+    :global(.dark) & {
+      background-color: #29211bd5;
     }
   }
 
