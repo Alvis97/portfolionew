@@ -1,5 +1,6 @@
 //Homepage
 
+//Menu buttons
 @mixin btnRing {
   display: flex;
   justify-content: center;
@@ -89,39 +90,13 @@
 
 }
 
+//Modal background and inside colors
+@mixin modalBackground{
+  background-color: #39333397;
 
-
-@mixin themeBtn {
-    padding: 12px 15px;
-    color: var(--color-red);
-    background-color: transparent;
-    font-family: var(--font-onest);
-    font-size: 1rem;
-    position: relative;
-    border: 1px solid var(--color-red);
-    cursor: pointer;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.5s ease, transform 1s ease;
-    background-color: rgba(249, 221, 221, 0.138);
-
-    :global(.dark) & {
-        color: var(--color-light);
-        border: 1px solid var(--color-light);
-        font-size: 1rem;
-    }
-}
-
-@mixin circle{
-    background-color: var(--color-yellow);
-    border-radius: 100%;
-    filter: blur(50px);
-
-    :global(.dark) & {
-      background-color: var(--color-pink27);
-    }
+  :global(.dark) & {
+   background-color: #ffffff2a;
+  }
 }
 
 @mixin modalContent{
@@ -132,14 +107,7 @@
    }
 }
 
-@mixin modalBackground{
-  background-color: #39333397;
-
-  :global(.dark) & {
-   background-color: #ffffff2a;
-  }
-}
-
+//Modal exit btn
 @mixin modalExitBtn{
   border: 2px solid var(--color-dark);
   stroke: var(--color-dark);
@@ -167,7 +135,7 @@
 }
 
 
-
+//Span color
 @mixin orange {
 color: var(--color-pink);
 
@@ -176,6 +144,7 @@ color: var(--color-pink);
   }
 }
 
+//Icon colors
 @mixin iconsOrange{
   fill: var(--color-pink);
   stroke: var(--color-pink);
@@ -189,22 +158,14 @@ color: var(--color-pink);
   }
 }
 
-@mixin red {
-  color: var(--color-red);
-
-  :global(.dark) & {
-    color: var(--color-white);
-  }
-}
-
+//text colors
 @mixin textColor {
-  color: var(--color-red);
+  color: var(--color-dark);
 
   :global(.dark) & {
-    color: var(--color-white);
+    color: var(--color-light);
   }
 }
-
 
 //Links
   @mixin link-styles {
@@ -252,10 +213,6 @@ color: var(--color-pink);
     }
   }
 
-
-
-
-
   @mixin icons{
     fill: var(--color-red);
     stroke: var(--color-red);
@@ -300,6 +257,7 @@ color: var(--color-pink);
     }
   }
 
+  //background homepage 
   @mixin gradientCircle {
     background:
       radial-gradient(
@@ -321,9 +279,9 @@ color: var(--color-pink);
   }
   
   
-
+//background About
 @mixin gradiant2 {
-  // Ljust läge
+
   background: linear-gradient(
     to bottom,
     rgba(255, 153, 0, 0) 0%,       
@@ -332,7 +290,6 @@ color: var(--color-pink);
     rgba(255, 153, 0, 0) 100%        
   );
 
-  // Mörkt läge
   :global(.dark) & {
     background: linear-gradient(
       to bottom,
@@ -344,8 +301,9 @@ color: var(--color-pink);
   }
 }
 
+//Background Projects
 @mixin gradiant3 {
-  // Ljust läge
+
   background: linear-gradient(
     to bottom,
     rgba(255, 153, 0, 0) 0%,       
@@ -354,7 +312,6 @@ color: var(--color-pink);
     rgba(255, 153, 0, 0) 100%        
   );
 
-  // Mörkt läge
   :global(.dark) & {
     background: linear-gradient(
       to bottom,
@@ -366,38 +323,14 @@ color: var(--color-pink);
   }
 }
 
-  
-  @mixin textColor{
-    color: var(--color-red);
 
-    :global(.dark) & {
-      color: var(--color-light);
-    }
-  }
-
-  @mixin projectBox {
-    background-color: #d9c8cd88; // lighter, more glass-like
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3); // subtle glass border
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); // smooth ambient shadow
-    height: 500px;
-    width: 100%;
-    transition: all 0.3s ease;
-  
-    :global(.dark) & {
-      background-color: #98988fa2; // slightly darker background in dark mode
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-    }
-  }
-
+//card design
   @mixin card {
     position: relative;
     overflow: hidden;
     cursor: pointer;
     background-color: rgba(227, 213, 206, 0.942);
+    color: var(--color-dark);
   
     height: 215px;
     width: 325px;
@@ -414,7 +347,6 @@ color: var(--color-pink);
     align-items: center;
   
     transform: scale(0.92);
-    opacity: 0.7;
   
     transition: transform 0.5s ease, opacity 0.35s ease;
   
@@ -458,7 +390,7 @@ color: var(--color-pink);
         width: 100%;
         margin: 5px auto 0 auto;
         letter-spacing: 2px;
-        color: var(--color-white);
+        @include textColor();
 
         @media  screen and (min-width: 767px) {
           font-size: 1rem;
@@ -480,6 +412,7 @@ color: var(--color-pink);
         line-height: 0.8rem;
         font-size: 0.8rem;
         font-weight: 200;
+        @include textColor();
 
         @media  screen and (min-width: 1024px) {
           font-size: 0.6rem;
@@ -513,6 +446,7 @@ color: var(--color-pink);
         font-weight: 200;
         width: 100%;
         margin: 0 auto;
+        @include textColor();
       }
     }
   
@@ -524,56 +458,19 @@ color: var(--color-pink);
         inset -2px -2px 6px rgba(128, 113, 113, 0.6);
     }
   }
-  
-
-  @mixin projectFade{
-    background: linear-gradient(to bottom, #1b151100 0%, rgba(188, 152, 152, 0.39) 100%);
-    height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    z-index: 9000;
-
-    :global(.dark) & {
-      height: 100vh;
-      width: 100vw;
-      box-sizing: border-box;
-      z-index: 9000;
-      background: linear-gradient(to bottom, #1b151100 0%, rgba(188, 152, 152, 0.27) 100%);
-    }
-  }
 
 
+  //Navigation background header & Footer
   @mixin backgroundProjects{
     background-color:  #f7f3f3ec;
 
 
     :global(.dark) & {
       background-color: #29211bf1;
-
     }
   }
 
-  @mixin BackgroundColor{
-    background-color: var(--color-light);
-
-    :global(.dark) & {
-      background-color: var(--color-dark);
-    }
-  }
-
-  @mixin GlassWindow{
-    background-color: rgba(183, 177, 177, 0.475);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(244, 242, 242, 0.527);
-
-    :global(.dark) & {
-      background-color: rgba(26, 21, 21, 0.603);
-      backdrop-filter: blur(10px);
-      border: 2px solid rgba(45, 45, 45, 0.3);
-
-    }
-  }
-
+  //Hamburger background
   @mixin menuBackground() {
     background-color: #f6f6f6d5;
 
@@ -581,6 +478,22 @@ color: var(--color-pink);
       background-color: #29211bd5;
     }
   }
+
+//Solana locker container
+  @mixin GlassWindow{
+    background-color: rgba(217, 203, 203, 0.475);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(223, 215, 215, 0.527);
+
+    :global(.dark) & {
+      background-color: rgba(26, 21, 21, 0.603);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(45, 45, 45, 0.3);
+    }
+  }
+
+
+
 
  
 

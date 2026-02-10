@@ -85,7 +85,7 @@ function Projects() {
         
      
             )}
-                 </FadeUp>
+           </FadeUp>
           </div>
        
 
